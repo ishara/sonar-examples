@@ -1,4 +1,4 @@
-# Usage and Examples
+# Sonar Usage and Examples
 
 Please add usage scenarios or links to articles that mention special use-cases below.
 Note that these examples are usually for Sonar 2.10 and greater versions.
