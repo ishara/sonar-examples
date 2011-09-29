@@ -6,7 +6,7 @@
   <artifactId>sonar-pmd-extension-plugin</artifactId>
   <packaging>sonar-plugin</packaging>
   <version>0.1-SNAPSHOT</version>
-  <name>Examples :: PMD Extension Plugin</name>
+  <name>Sonar Examples :: PMD Extension Plugin</name>
 
   <dependencies>
     <dependency>
