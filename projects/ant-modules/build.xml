@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Modules" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+<project name="Ant Modules" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
 
-  <echo>Root Module</echo>
+  <echo>Root Project</echo>
 
   <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
   
     <!-- 
     
-        TO BE REPLACED
+        PATH MUST BE REPLACED :
         
     -->  
     <classpath path="PATH/TO/sonar-ant-task.jar"/>
@@ -24,7 +24,6 @@
     <ant dir="module-two" target="compile"/>
   </target>
 
-  <property name="sonar.projectKey" value="my:project"/>
   <property name="sonar.modules" value="module-one/build.xml,module-two/build.xml"/>
 
   <target name="sonar">
