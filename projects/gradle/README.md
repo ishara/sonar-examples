@@ -3,8 +3,8 @@ This example demonstrates how to analyse project with [Gradle](http://www.gradle
 Prerequisites
 =============
 
-*   Sonar 2.9
-*   Gradle 1.0-milestone-5
+*   Sonar 2.9 or higher
+*   Gradle 1.0-milestone-5 or higher
 
 Execution
 =========
