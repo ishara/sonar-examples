@@ -1,4 +1,4 @@
-This example demonstrates how to analyse C project with Sonar Runner.
+This example demonstrates how to analyse C projects with Sonar Runner.
 
 Prerequisites
 =============

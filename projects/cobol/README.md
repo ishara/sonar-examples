@@ -1,4 +1,4 @@
-This example demonstrates how to analyse Cobol project with Sonar Runner.
+This example demonstrates how to analyse Cobol projects with Sonar Runner.
 
 Prerequisites
 =============
