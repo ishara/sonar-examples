@@ -4,4 +4,4 @@ Prerequisites
 =============
 
 *   Sonar 2.6 or higher
-*   Sonar Runner 1.1 or higher
+*   Sonar Runner 1.2 or higher
