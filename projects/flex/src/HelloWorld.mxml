@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns="*" 
+    layout="vertical"
+    creationComplete = "initApp()" >
+
+    <mx:Script>
+        <![CDATA[
+            private var myGreeter:Greeter = new Greeter();
+
+            public function initApp():void
+            {
+                // says hello at the start, and asks for the user's name
+                mainTxt.text = myGreeter.sayHello();
+            }
+        ]]>
+    </mx:Script>
+
+    <mx:TextArea id = "mainTxt" width="400" />
+
+</mx:Application>
