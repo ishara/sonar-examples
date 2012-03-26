@@ -15,6 +15,6 @@ import com.google.common.collect.Lists;
 public class CustomCRulesPlugin extends SonarPlugin {
 
   public List getExtensions() {
-    return Lists.newArrayList(TokenOnFirstLineCheck.class);
+    return Lists.newArrayList(GotoStatementCheck.class);
   }
 }
