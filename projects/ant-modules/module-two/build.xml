@@ -3,6 +3,9 @@
 
   <echo>Module Two</echo>
 
+  <property name="build.dir" value="build" />
+  <property name="classes.dir" value="${build.dir}/bin" />
+
   <!-- 
   
   Only Sonar properties must be set :
@@ -10,11 +13,8 @@
   -->
   <property name="sonar.projectKey" value="my:module-two" />
   <property name="sonar.sources" value="src/java" />
+  <property name="sonar.binaries" value="${classes.dir}" />
 
-
-
-  <property name="build.dir" value="build" />
-  <property name="classes.dir" value="${build.dir}/bin" />
 
   <path id="classpath">
   </path>
