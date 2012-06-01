@@ -1,0 +1,464 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP
+* :LineIncrement 10
+* <Natural Source Header
+DEFINE DATA
+GLOBAL USING GO-G
+LOCAL
+1 £I      (N2)
+1 £J      (N2)
+1 £K      (N2)
+1 £L      (N2)
+1 £IND-X  (N2)
+1 £IND-O  (N2)
+1 £MAX    (N7)
+1 £VALEUR (N7)
+1 £VAL-X  (N7)
+1 £VAL-O  (N7)
+1 £X1     (N2)
+1 £Y1     (N2)
+1 £NUM    (N1)
+1 £DX     (N2)
+1 £DY     (N2)
+1 £X-RES  (N2)
+1 £Y-RES  (N2)
+1 £ZONE   (N16)
+1 REDEFINE £ZONE
+  2 FIL   (N11)
+  2 AL    (N1)
+  2 FIL1  (N4)
+1 PREMIERE (A1) INIT<'O'>
+1 £II(N6)
+1 £HEUR   (N7)
+1 £CLIGN  (A1)
+1 £ZN-MSG (A20)
+1 £RESTART (A1)
+END-DEFINE
+MOVE 'N' TO AUTO
+*
+SET KEY
+PF1 = PGM NAMED 'AIDE'
+PF2 = PGM NAMED 'N JEU'
+PF3 = PGM NAMED 'FIN'
+PF4 = PGM NAMED 'AUTO'
+PF5 = PGM NAMED 'ORDI'
+PF6 = PGM NAMED 'CONS'
+*
+PERFORM INITS
+REPEAT
+  PERFORM PLACE-CURS
+  FOR £I = 1 TO 17
+    FOR £J = 1 TO 17
+      MOVE TABLEAU(£I,£J) TO TAB-MAP(£I,£J)
+    END-FOR
+  END-FOR
+  IF (AUTO = 'O') AND (GAGNE = 'N') AND (NB-LIGNE LE 0) THEN
+    SET CONTROL 'N'
+  END-IF
+  INPUT WITH TEXT ZN-MSG MARK NO-CURS USING MAP 'GO-M'
+  RESET ZN-MSG
+*
+  MOVE 'N' TO £RESTART
+  FOR £I = 1 TO 17
+    FOR £J = 1 TO 17
+      IF (TABLEAU(£I,£J) NE TAB-MAP(£I,£J)) THEN
+        MOVE 'POUR JOUER IL FAUT POSITIONNER LE CURSEUR' TO ZN-MSG
+        MOVE 'O' TO £RESTART
+        MOVE 17 TO £I £J
+      END-IF
+    END-FOR
+  END-FOR
+  IF (£RESTART = 'O') THEN
+    ESCAPE TOP
+  END-IF
+*
+  IF (COMMANDE NE 'AUTO') THEN
+    PERFORM CALC-XY
+  END-IF
+  PERFORM TRAIT
+  UNTIL COMMANDE = 'FIN'
+END-REPEAT
+*
+* ----------------------- *
+*  ROUTINE D'INIT DU JEU  *
+* ----------------------- *
+DEFINE SUBROUTINE INITS
+RESET ZN-MSG ZN-COUP
+  TABLEAU(*,*)
+  VALEUR-X(*,*)  VALEUR-O(*,*)
+  LIGNE-X(*,*,*) LIGNE-O(*,*,*)
+MOVE 'X' TO JOUEUR
+COMPUTE NB-LIGNE = 2 * 2 * (17 * (17 - 4) + ( 17 - 4) * (17 - 4))
+MOVE 'N' TO GAGNE
+COMPUTE X = (17 + 1) / 2
+MOVE X TO Y
+END-SUBROUTINE
+*
+* -------------------------------------------- *
+*  ROUTINE DE PLACEMENT DU CURSEUR SUR LA MAP  *
+* -------------------------------------------- *
+DEFINE SUBROUTINE PLACE-CURS
+COMPUTE NO-CURS = Y + 17 * (X - 1)
+END-SUBROUTINE
+*
+* -------------------------------------------------------- *
+*  ROUTINE DE CALCUL DU COUP JOUE PAR POSITION DU CURSEUR  *
+* -------------------------------------------------------- *
+DEFINE SUBROUTINE CALC-XY
+MOVE X TO £X-RES
+MOVE Y TO £Y-RES
+COMPUTE X = *CURS-LINE - 3
+COMPUTE Y = (*CURS-COL - 4) / 2
+IF (X < 1 OR X > 17 OR Y < 1 OR Y > 17) THEN
+  MOVE £X-RES TO X
+  MOVE £Y-RES TO Y
+  PERFORM PLACE-CURS
+  REINPUT 'CECI N''EST PAS UNE POSITION DE JEU' MARK NO-CURS
+END-IF
+END-SUBROUTINE
+*
+* ----------------------- *
+*  ROUTINE DE TRAITEMENT  *
+* ----------------------- *
+DEFINE SUBROUTINE TRAIT
+PERFORM DECODE-COM
+IF ((GAGNE = 'O' OR NB-LIGNE LE 0) AND COMMANDE NE 'FIN') THEN
+  MOVE 'NEUF' TO COMMANDE
+END-IF
+PERFORM FAIT-COM
+IF (COMMANDE = 'JOUEUR') THEN
+  PERFORM JOUEUR
+END-IF
+IF (COMMANDE = 'ORDI' OR = 'AUTO') THEN
+  PERFORM ORDINATEUR
+END-IF
+END-SUBROUTINE
+*
+* ------------------------------------ *
+*  ROUTINE DE DECODAGE DE LA COMMANDE  *
+* ------------------------------------ *
+DEFINE SUBROUTINE DECODE-COM
+DECIDE ON FIRST VALUE OF *PF-KEY
+  VALUE 'PF1'
+    MOVE 'AIDE' TO COMMANDE
+  VALUE 'PF2'
+    MOVE 'NEUF' TO COMMANDE
+  VALUE 'PF3'
+    MOVE 'FIN' TO COMMANDE
+  VALUE 'PF4'
+    MOVE 'AUTO' TO COMMANDE
+  VALUE 'PF5'
+    MOVE 'ORDI' TO COMMANDE
+  VALUE 'PF6'
+    MOVE 'CONSEIL' TO COMMANDE
+  NONE VALUE
+    IF (COMMANDE NE 'AUTO') THEN
+      MOVE 'JOUEUR' TO COMMANDE
+    END-IF
+END-DECIDE
+END-SUBROUTINE
+*
+* -------------------------------------- *
+*  ROUTINE DE TRAITEMENT DE LA COMMANDE  *
+* -------------------------------------- *
+DEFINE SUBROUTINE FAIT-COM
+DECIDE ON FIRST VALUE OF COMMANDE
+  VALUE 'NEUF'
+    PERFORM INITS
+  VALUE 'CONSEIL'
+    PERFORM CHERCHE-COUP
+  VALUE 'AUTO'
+    MOVE 'O' TO AUTO
+  NONE VALUE IGNORE
+END-DECIDE
+END-SUBROUTINE
+*
+* --------------------------------------- *
+*  ROUTINE DE RECHERCHE DU MEILLEUR COUP  *
+* --------------------------------------- *
+DEFINE SUBROUTINE CHERCHE-COUP
+MOVE -9999999 TO £MAX
+COMPUTE X = (17 + 1) / 2
+COMPUTE Y = (17 + 1) / 2
+IF (TABLEAU(X,Y) = ' ') THEN
+  MOVE 4 TO £MAX
+END-IF
+FOR £I = 1 TO 17
+  FOR £J = 1 TO 17
+    IF (TABLEAU(£I,£J) = ' ') THEN
+      PERFORM ALEATOIRE
+      IF (JOUEUR = 'X') THEN
+        COMPUTE £VALEUR = VALEUR-X(£I,£J) * (16 + ATTACK) / 16
+          + VALEUR-O(£I,£J) + ALEAT
+      ELSE
+        COMPUTE £VALEUR = VALEUR-O(£I,£J) * (16 + ATTACK) / 16
+          + VALEUR-X(£I,£J) + ALEAT
+      END-IF
+      IF (£VALEUR > £MAX) THEN
+        MOVE £I TO X
+        MOVE £J TO Y
+        MOVE £VALEUR TO £MAX
+      END-IF
+    END-IF
+  END-FOR
+END-FOR
+END-SUBROUTINE
+*
+* -------------------------------------- *
+*  ROUTINE DE GESTION DU JEU DE L'HOMME  *
+* -------------------------------------- *
+DEFINE SUBROUTINE JOUEUR
+IF (TABLEAU(X,Y) = ' ') THEN
+  PERFORM JOUE-DONC-LA
+  IF (GAGNE = 'O') THEN
+    COMPRESS 'VOUS AVEZ GAGNE ...     ' £ZN-MSG INTO ZN-MSG
+  END-IF
+  MOVE 'ORDI' TO COMMANDE
+ELSE
+  REINPUT 'LA CASE EST DEJA OCCUPEE' MARK NO-CURS
+END-IF
+END-SUBROUTINE
+*
+* ------------------------------------------- *
+*  ROUTINE DE GESTION DU JEU DE L'ORDINATEUR  *
+* ------------------------------------------- *
+DEFINE SUBROUTINE ORDINATEUR
+IF (GAGNE = 'O' OR NB-LIGNE LE 0) THEN
+  MOVE 'N' TO AUTO
+  IF (COMMANDE NE 'FIN' AND GAGNE = 'N') THEN
+    MOVE '==== MATCH NUL ====' TO ZN-MSG
+  END-IF
+ELSE
+  PERFORM CHERCHE-COUP
+  PERFORM JOUE-DONC-LA
+  IF (GAGNE = 'O') THEN
+    COMPRESS 'RIGOLO  !!!!              ' £ZN-MSG INTO ZN-MSG
+  END-IF
+END-IF
+END-SUBROUTINE
+*
+* -------------------------------------- *
+*  ROUTINE DE VALORISATION DU COUP JOUE  *
+* -------------------------------------- *
+DEFINE SUBROUTINE JOUE-DONC-LA
+MOVE 'N' TO GAGNE
+MOVE ' ' TO LIGNE-GAGNANTE
+  /* --- LIGNES HORIZONTALES
+MOVE 0 TO £I
+FOR £K = 0 TO 4
+  COMPUTE £X1 = X - £K
+  COMPUTE £Y1 = Y
+  IF ( £X1 GE 1 AND £X1 LE 13) THEN    /* 13 = 17 - 4
+    PERFORM AJOUTE-LIGNE
+    IF (GAGNE = 'O' AND LIGNE-GAGNANTE = ' ') THEN
+      MOVE 'HORIZ' TO LIGNE-GAGNANTE
+    END-IF
+    FOR £L = 0 TO 4
+      MOVE VALEUR-X(£X1 + £L,£Y1) TO £VAL-X
+      MOVE VALEUR-O(£X1 + £L,£Y1) TO £VAL-O
+      PERFORM MAJ-LIGNE
+      MOVE £VAL-X TO VALEUR-X(£X1 + £L,£Y1)
+      MOVE £VAL-O TO VALEUR-O(£X1 + £L,£Y1)
+    END-FOR
+  END-IF
+END-FOR
+  /* --- LIGNES DIAGONALES (BAS-GAUCHE)
+MOVE 1 TO £I
+FOR £K = 0 TO 4
+  COMPUTE £X1 = X - £K
+  COMPUTE £Y1 = Y - £K
+  IF (£X1 GE 1 AND £X1 LE 13) AND     /* 13 = 17 - 4
+      (£Y1 GE 1 AND £Y1 LE 13) THEN
+    PERFORM AJOUTE-LIGNE
+    IF (GAGNE = 'O' AND LIGNE-GAGNANTE = ' ') THEN
+      MOVE 'BASGAUCHE' TO LIGNE-GAGNANTE
+    END-IF
+    FOR £L = 0 TO 4
+      MOVE VALEUR-X(£X1 + £L,£Y1 + £L) TO £VAL-X
+      MOVE VALEUR-O(£X1 + £L,£Y1 + £L) TO £VAL-O
+      PERFORM MAJ-LIGNE
+      MOVE £VAL-X TO VALEUR-X(£X1 + £L,£Y1 + £L)
+      MOVE £VAL-O TO VALEUR-O(£X1 + £L,£Y1 + £L)
+    END-FOR
+  END-IF
+END-FOR
+  /* --- LIGNES DIAGONALES (BAS-DROIT)
+MOVE 3 TO £I
+FOR £K = 0 TO 4
+  COMPUTE £X1 = X + £K
+  COMPUTE £Y1 = Y - £K
+  IF (£X1 GE 5 AND £X1 LE 17) AND
+      (£Y1 GE 1 AND £Y1 LE 13) THEN    /* 13 = 17 - 4
+    PERFORM AJOUTE-LIGNE
+    IF (GAGNE = 'O' AND LIGNE-GAGNANTE = ' ') THEN
+      MOVE 'BASDROIT' TO LIGNE-GAGNANTE
+    END-IF
+    FOR £L = 0 TO 4
+      MOVE VALEUR-X(£X1 - £L,£Y1 + £L) TO £VAL-X
+      MOVE VALEUR-O(£X1 - £L,£Y1 + £L) TO £VAL-O
+      PERFORM MAJ-LIGNE
+      MOVE £VAL-X TO VALEUR-X(£X1 - £L,£Y1 + £L)
+      MOVE £VAL-O TO VALEUR-O(£X1 - £L,£Y1 + £L)
+    END-FOR
+  END-IF
+END-FOR
+  /* --- LIGNES VERTICALES
+MOVE 2 TO £I
+FOR £K = 0 TO 4
+  COMPUTE £X1 = X
+  COMPUTE £Y1 = Y - £K
+  IF ( £Y1 GE 1 AND £Y1 LE 13) THEN    /* 13 = 17 - 4
+    PERFORM AJOUTE-LIGNE
+    IF (GAGNE = 'O' AND LIGNE-GAGNANTE = ' ') THEN
+      MOVE 'VERT' TO LIGNE-GAGNANTE
+    END-IF
+    FOR £L = 0 TO 4
+      MOVE VALEUR-X(£X1,£Y1 + £L) TO £VAL-X
+      MOVE VALEUR-O(£X1,£Y1 + £L) TO £VAL-O
+      PERFORM MAJ-LIGNE
+      MOVE £VAL-X TO VALEUR-X(£X1,£Y1 + £L)
+      MOVE £VAL-O TO VALEUR-O(£X1,£Y1 + £L)
+    END-FOR
+  END-IF
+END-FOR
+  /* --- MISE A JOUR DU TABLEAU DE JEU
+MOVE JOUEUR TO TABLEAU(X,Y)
+IF (GAGNE = 'O') THEN
+  PERFORM MONTRE-GAGNANT
+END-IF
+IF (JOUEUR = 'X') THEN
+  MOVE 'O' TO JOUEUR
+ELSE
+  MOVE 'X' TO JOUEUR
+END-IF
+  /*
+END-SUBROUTINE
+*
+* ---------------------------- *
+*  ROUTINE DE MAJ D'UNE LIGNE  *
+* ---------------------------- *
+DEFINE SUBROUTINE MAJ-LIGNE
+  /*
+MOVE LIGNE-X(£I,£X1,£Y1) TO £IND-X
+MOVE LIGNE-O(£I,£X1,£Y1) TO £IND-O
+IF (JOUEUR = 'X') THEN
+  IF (LIGNE-O(£I,£X1,£Y1) = 0) THEN
+    COMPUTE £VAL-X = £VAL-X + POIDS(£IND-X + 1)
+      - POIDS(£IND-X)
+  ELSE
+    IF (LIGNE-X(£I,£X1,£Y1) = 1) THEN
+      COMPUTE £VAL-O = £VAL-O - POIDS(£IND-O + 1)
+    END-IF
+  END-IF
+ELSE
+  IF (LIGNE-X(£I,£X1,£Y1) = 0) THEN
+    COMPUTE £VAL-O = £VAL-O + POIDS(£IND-O + 1)
+      - POIDS(£IND-O)
+  ELSE
+    IF (LIGNE-O(£I,£X1,£Y1) = 1) THEN
+      COMPUTE £VAL-X = £VAL-X - POIDS(£IND-X + 1)
+    END-IF
+  END-IF
+END-IF
+END-SUBROUTINE
+*
+* ----------------------------- *
+*  ROUTINE D'AJOUT D'UNE LIGNE  *
+* ----------------------------- *
+DEFINE SUBROUTINE AJOUTE-LIGNE
+IF (JOUEUR = 'X') THEN
+  MOVE LIGNE-X(£I,£X1,£Y1) TO £NUM
+ELSE
+  MOVE LIGNE-O(£I,£X1,£Y1) TO £NUM
+END-IF
+ADD 1 TO £NUM
+IF (£NUM = 1) THEN
+  SUBTRACT 1 FROM NB-LIGNE
+END-IF
+IF (£NUM = 5) THEN
+  MOVE 'O' TO GAGNE
+END-IF
+IF (JOUEUR = 'X') THEN
+  MOVE £NUM TO LIGNE-X(£I,£X1,£Y1)
+ELSE
+  MOVE £NUM TO LIGNE-O(£I,£X1,£Y1)
+END-IF
+END-SUBROUTINE
+*
+* ----------------------------- *
+*  ROUTINE MONTRANT LE GAGNANT  *
+* ----------------------------- *
+DEFINE SUBROUTINE MONTRE-GAGNANT
+MOVE X TO £X-RES
+MOVE Y TO £Y-RES
+DECIDE ON FIRST VALUE OF LIGNE-GAGNANTE
+  VALUE 'HORIZ'
+    MOVE 1 TO £DX
+    MOVE 0 TO £DY
+  VALUE 'BASGAUCHE'
+    MOVE 1 TO £DX
+    MOVE 1  TO £DY
+  VALUE 'VERT'
+    MOVE 0 TO £DX
+    MOVE 1 TO £DY
+  VALUE 'BASDROIT'
+    MOVE -1 TO £DX
+    MOVE 1  TO  £DY
+  NONE VALUE IGNORE
+END-DECIDE
+  /*
+REPEAT WHILE ((X + £DX) GE 1 AND (X  + £DX) LE 17) AND
+    ((Y + £DY) GE 1 AND (Y  + £DY) LE 17) AND
+    (TABLEAU(X + £DX,Y + £DY) NE ' ') AND
+    (TABLEAU(X + £DX,Y + £DY) = JOUEUR)
+  COMPUTE X = X + £DX
+  COMPUTE Y = Y + £DY
+END-REPEAT
+PERFORM CLIGNOTE
+MOVE £X-RES TO X
+MOVE £Y-RES TO Y
+END-SUBROUTINE
+*
+* ---------------------------------------------------- *
+*  ROUTINE DE CLIGNOTEMENT DE LA COMBINAISON GAGNANTE  *
+* ---------------------------------------------------- *
+DEFINE SUBROUTINE CLIGNOTE
+IF (JOUEUR = 'X') THEN
+  MOVE '*' TO £CLIGN
+  MOVE '     ( * = X )' TO £ZN-MSG
+ELSE
+  MOVE '$' TO £CLIGN
+  MOVE '     ( $ = O )' TO £ZN-MSG
+END-IF
+FOR £I = 1 TO 5
+  MOVE £CLIGN TO TABLEAU(X,Y)
+  COMPUTE X = X - £DX
+  COMPUTE Y = Y - £DY
+END-FOR
+END-SUBROUTINE
+*
+* --------------------------------------------- *
+*  ROUTINE DE GENERATION D'UN NOMBRE ALEATOIRE  *
+* --------------------------------------------- *
+DEFINE SUBROUTINE ALEATOIRE
+IF (PREMIERE = 'O') THEN
+  MOVE *DATN TO £ZONE
+  MOVE *TIMN TO £HEUR
+  COMPUTE £ZONE = £ZONE * £HEUR
+  MOVE 'N' TO PREMIERE
+END-IF
+REPEAT
+  IF (£ZONE LT 100000000000)
+    COMPUTE £ZONE = £ZONE * 79
+  END-IF
+  IF (£II = ((£II / 2) * 2)) THEN
+    COMPUTE £ZONE = (£ZONE / 8) * 7
+  ELSE
+    COMPUTE £ZONE = (£ZONE / 7) * 8
+  END-IF
+  UNTIL (AL LE 4)
+END-REPEAT
+MOVE AL TO ALEAT
+END-SUBROUTINE
+END
