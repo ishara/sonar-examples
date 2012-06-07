@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.03" errors="0" skipped="0" tests="1" name="example.OneTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\bin"/>
+    <property name="java.vm.version" value="20.2-b06"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\tools\New-sonar-examples\ut\ut-maven-runTests"/>
+    <property name="java.runtime.version" value="1.6.0_27-b07"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="C:\tools\New-sonar-examples\ut\ut-maven-runTests"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="surefire.real.class.path" value="C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefirebooter6407125444935909773.jar;C:\Users\DAVID~1.RAC\AppData\Local\Temp\jacocoagent6788793069858426754.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\DAVID~1.RAC\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\Program Files\Java\jdk1.6.0_27\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Hewlett-Packard\Drive Encryption\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files\SlikSvn\bin\;C:\tools\apache-maven-2.2.1\bin;C:\Program Files\Bitvise Tunnelier;C:\Program Files\Git\cmd;C:\tools\sonar-runner-1.2\bin;C:\Program Files\TortoiseSVN\bin;C:\tools\sonar-autocontrol-2.2\bin;C:\tools\apache-ant-1.8.4\bin;."/>
+    <property name="surefire.test.class.path" value="C:\tools\New-sonar-examples\ut\ut-maven-runTests\target\test-classes;C:\tools\New-sonar-examples\ut\ut-maven-runTests\target\classes;C:\Users\david.racodon\.m2\repository\junit\junit\4.8.1\junit-4.8.1.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\jacoco-maven-plugin\0.5.3.201107060350\jacoco-maven-plugin-0.5.3.201107060350.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-plugin-api\2.1.0\maven-plugin-api-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-project\2.1.0\maven-project-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-settings\2.1.0\maven-settings-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-model\2.1.0\maven-model-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\codehaus\plexus\plexus-utils\1.5.6\plexus-utils-1.5.6.jar;C:\Users\david.racodon\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.8.1\plexus-interpolation-1.8.1.jar;C:\Users\david.racodon\.m2\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-9-stable-1\plexus-container-default-1.0-alpha-9-stable-1.jar;C:\Users\david.racodon\.m2\repository\classworlds\classworlds\1.1-alpha-2\classworlds-1.1-alpha-2.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-profile\2.1.0\maven-profile-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-artifact-manager\2.1.0\maven-artifact-manager-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-repository-metadata\2.1.0\maven-repository-metadata-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-artifact\2.1.0\maven-artifact-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-beta-5\wagon-provider-api-1.0-beta-5.jar;C:\Users\david.racodon\.m2\repository\backport-util-concurrent\backport-util-concurrent\3.1\backport-util-concurrent-3.1.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-plugin-registry\2.1.0\maven-plugin-registry-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\org.jacoco.agent\0.5.3.201107060350\org.jacoco.agent-0.5.3.201107060350-runtime.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\org.jacoco.core\0.5.3.201107060350\org.jacoco.core-0.5.3.201107060350.jar;C:\Users\david.racodon\.m2\repository\asm\asm\3.2\asm-3.2.jar;C:\Users\david.racodon\.m2\repository\asm\asm-commons\3.2\asm-commons-3.2.jar;C:\Users\david.racodon\.m2\repository\asm\asm-tree\3.2\asm-tree-3.2.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\org.jacoco.report\0.5.3.201107060350\org.jacoco.report-0.5.3.201107060350.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\david.racodon"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="david.racodon"/>
+    <property name="java.class.path" value="C:\tools\New-sonar-examples\ut\ut-maven-runTests\target\test-classes;C:\tools\New-sonar-examples\ut\ut-maven-runTests\target\classes;C:\Users\david.racodon\.m2\repository\junit\junit\4.8.1\junit-4.8.1.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\jacoco-maven-plugin\0.5.3.201107060350\jacoco-maven-plugin-0.5.3.201107060350.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-plugin-api\2.1.0\maven-plugin-api-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-project\2.1.0\maven-project-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-settings\2.1.0\maven-settings-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-model\2.1.0\maven-model-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\codehaus\plexus\plexus-utils\1.5.6\plexus-utils-1.5.6.jar;C:\Users\david.racodon\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.8.1\plexus-interpolation-1.8.1.jar;C:\Users\david.racodon\.m2\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-9-stable-1\plexus-container-default-1.0-alpha-9-stable-1.jar;C:\Users\david.racodon\.m2\repository\classworlds\classworlds\1.1-alpha-2\classworlds-1.1-alpha-2.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-profile\2.1.0\maven-profile-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-artifact-manager\2.1.0\maven-artifact-manager-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-repository-metadata\2.1.0\maven-repository-metadata-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-artifact\2.1.0\maven-artifact-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\wagon\wagon-provider-api\1.0-beta-5\wagon-provider-api-1.0-beta-5.jar;C:\Users\david.racodon\.m2\repository\backport-util-concurrent\backport-util-concurrent\3.1\backport-util-concurrent-3.1.jar;C:\Users\david.racodon\.m2\repository\org\apache\maven\maven-plugin-registry\2.1.0\maven-plugin-registry-2.1.0.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\org.jacoco.agent\0.5.3.201107060350\org.jacoco.agent-0.5.3.201107060350-runtime.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\org.jacoco.core\0.5.3.201107060350\org.jacoco.core-0.5.3.201107060350.jar;C:\Users\david.racodon\.m2\repository\asm\asm\3.2\asm-3.2.jar;C:\Users\david.racodon\.m2\repository\asm\asm-commons\3.2\asm-commons-3.2.jar;C:\Users\david.racodon\.m2\repository\asm\asm-tree\3.2\asm-tree-3.2.jar;C:\Users\david.racodon\.m2\repository\org\jacoco\org.jacoco.report\0.5.3.201107060350\org.jacoco.report-0.5.3.201107060350.jar;"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_27\jre"/>
+    <property name="sun.java.command" value="C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefirebooter6407125444935909773.jar C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefire6131042539904900392tmp C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefire8444445203568231394tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.6.0_27"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_27\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="C:\Users\david.racodon\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.01" classname="example.OneTest" name="testFoo"/>
+</testsuite>
