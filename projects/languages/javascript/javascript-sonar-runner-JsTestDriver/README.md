@@ -9,5 +9,5 @@ Prerequisites
 Usage
 =====
 * In run-tests.bat, replace <path_to_browser> by the path to your browser executable. Ex: C:\Users\myUser\AppData\Local\Google\Chrome\Application\chrome.exe
-* Run the test by executing run-tests.bat 
-* Run the following command: sonar-runner
+* Run the tests by executing "run-tests.bat" to execute JsTestDriver unit tests and gather code coverage statistics
+* Run the following command: "sonar-runner" to analyse JavaScript code with Sonar and import unit test results
