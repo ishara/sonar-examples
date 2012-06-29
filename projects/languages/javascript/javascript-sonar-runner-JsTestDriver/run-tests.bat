@@ -1,0 +1,1 @@
+java -jar jstestdriver/JsTestDriver-1.3.4.b.jar --port 9876 --tests all --browser "<path_to_browser>" --testOutput jstestdriver --config jstestdriver/jsTestDriver.conf
