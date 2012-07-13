@@ -1,0 +1,159 @@
+1VA Pac  3.5 V03                              SUIVI QUALITE                     ETAT DETAILLE            PAGE     1   DATE 16/03/2011
+0                                         RESULTATS PAR ENTITE                                                                       
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                 NIVEAU D'ANALYSE : C                                                                                
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE1  F1                                           
+-RESULTAT PAR INDICATEUR DE QUALITE                                                                                                  
+0------------------------------------------------------------------------------------------------------------------------------------
+ : CODE   NOM DE L'INDICATEUR                 NOTE DIAGNOSTIC                              NIV  COMPT   SEUILS :   NO     DE     HN :
+ ------------------------------------------------------------------------------------------------------------------------------------
+ : IGB001 MODIFICATION DU DEBUT DE PROGRAMME   100                                           A       0              0      0      1 :
+ : IGD001 CONTROLE VARIANTE DE GENERATION PAC  100                                           C       1              1      0      0 :
+ : IGD003 CONTROLE GENERATION INDICATEUR SQL   100                                           C       1              1      0      0 :
+ : IGF001 NOMBRE D'ACCES AUX TABLES DB2        100                                           B       0             10     15 999999 :
+ : IGM001 NOMBRE DE MSP APPELEES               100                                           B       8             40     50 999999 :
+ : IGM002 OVERRIDE DE LIGNES DE MSP EN -W      100                                           A       0              0      0      1 :
+ : IGM003 OVERRIDE DE LIGNES DE MSP EN -P      100                                           A       0              0      0      1 :
+ : IGM005 PRESENCE SPECIFIQUE EN FONCTION 94   100                                           A       0              0      0      1 :
+ : IGM006 PRESENCE SPECIFIQUE EN FONCTION 97   100                                           A       0              0      0      1 :
+ : IGP001 QUANTITE BRUTE DE -P SPECIFIQUE      100                                           B     537         999990 999995 999999 :
+ : IGP004 QUANTITE TECHNIQUE NETTE DE -P       100                                           B     146            500   1500 999999 :
+ : IGP012 NOMBRE NET DE CALL PAR PROGRAMME     100                                           B       0              0      0      1 :
+ : IGP013 NOMBRE NET D'ORDRES COBOL PUR        100                                           A       0              0      0      1 :
+ : IGP014 NOMBRE NET D'OPERATEURS 'GDI'        100                                           B       0              2      3 999999 :
+ : IGP015 PRESENCE D'OPERATEURS SUP (NET)      100                                           A       0              0      0      1 :
+ : IGP017 ORDRES "DISPLAY" DANS LE SPECIFIQUE    0 IL EXISTE DES ORDRES DISPLAY HORS MACRO   A      11              0      0      1 :
+ : IGP019 PRESENCE DE MACRO EN F91 ET F92      100                                           A       0              0      0      1 :
+ : IGP020 PRESENCE DE MACRO EN FONCTION 93     100                                           A       0              0      0      1 :
+ : IGP021 PRESENCE DE CODE EN FONCTION 96      100                                           A       0              0      0      1 :
+ : IGP022 PRESENCE SPECIFIQUE EN FONCTION 98   100                                           A       0              0      0      1 :
+ : IGP023 PRESENCE SS/FONCTION DE AA A AF      100                                           B       0              1      2 999999 :
+ : IGP025 ORDRE SQL DANS SPECIFIQUE : EXEC SQL 100                                           A       0              0      0      1 :
+ : IGP026 CLAUSE DB2 DANS SPECIFIQUE -W (1)    100                                           A       0              0      0      1 :
+ : IGP027 CLAUSE DB2 DANS SPECIFIQUE -W (2)    100                                           A       0              0      0      1 :
+ : IGP028 CLAUSE DB2 DANS SPECIFIQUE -W (3)    100                                           A       0              0      0      1 :
+ : IGP029 CLAUSE DB2 DANS SPECIFIQUE -W (4)    100                                           A       0              0      0      1 :
+ : IGP030 CLAUSE DB2 DANS SPECIFIQUE -W (5)    100                                           A       0              0      0      1 :
+ : IGP031 CLAUSE DB2 DANS SPECIFIQUE -W (6)    100                                           A       0              0      0      1 :
+ : IGP032 COMMANDE DB2 DANS SPECIFIQUE -W (1)  100                                           A       0              0      0      1 :
+ : IGP033 CLAUSE DB2 DANS SPECIFIQUE -P (1)    100                                           A       0              0      0      1 :
+ : IGP034 CLAUSE DB2 DANS SPECIFIQUE -P (2)    100                                           A       0              0      0      1 :
+ : IGP035 CLAUSE DB2 DANS SPECIFIQUE -P (3)    100                                           A       0              0      0      1 :
+ : IGP036 COMMANDE DB2 DANS SPECIFIQUE -P (1)  100                                           A       0              0      0      1 :
+ : IGP037 COMMANDE DB2 DANS SPECIFIQUE -P (2)  100                                           A       0              0      0      1 :
+ : IGP038 COMMANDE DB2 DANS SPECIFIQUE -P (3)  100                                           A       0              0      0      1 :
+ : IGP039 PRESENCE ORDRE SEARCH ALL            100                                           B       0              0      0      1 :
+ : IGT001 EXISTENCE DE TITRE A CHAQUE SS-FCT   100                                           B       0              1      0 999999 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                              SUIVI QUALITE                     ETAT DETAILLE            PAGE     2   DATE 16/03/2011
+-RESULTAT PAR INDICATEUR DE QUALITE                                                                                                  
+0------------------------------------------------------------------------------------------------------------------------------------
+ : CODE   NOM DE L'INDICATEUR                 NOTE DIAGNOSTIC                              NIV  COMPT   SEUILS :   NO     DE     HN :
+ ------------------------------------------------------------------------------------------------------------------------------------
+ : IGW003 QUANTITE TECHNIQUE NETTE DE WORKING  100                                           B      63             80    200 999999 :
+ : IGW004 NOMBRE NET DE FICHIERS EN WORKING    100                                           B       0             10     20 999999 :
+ : IGW005 NOMBRE NET DE CLAUSE PIC EN WORKING  100                                           A       0              0      0 999999 :
+ : IGW006 EMPLACEMENT WORKING SPECIFIQUE       100                                           A       0              0      0      1 :
+ : IGW007 WORKING DE MACRO MAL IMPLANTEE         0 WORKING MACRO MAL IMPLANTEE               A       4              0      0      1 :
+ : IGW008 PRESENCE DE WORKING EN PARAGRAPHE AA 100                                           A       0              0      0      1 :
+ : IGW009 NOMBRE NET DE RUBRIQUES EN WORKING   100                                           B      38             40     60 999999 :
+ : IRD001 NATURE ET TYPE MODULE TP (SERVEUR)     0 NATURE OU TYPE DE PROGRAMME ERRONE        C       0              1      0      0 :
+ : IRM001 CTRL MACRO SQUELETTE TP (SERVEUR)      0 ABSENCE MACRO SQUELETTE TP 'AAST4.'       A       0              1      0      0 :
+ : IRM002 CALL DE SOUS-PGM EN TP HORS MACRO    100                                           A       0              0      0      1 :
+ : IRM003 PRESENCE MACRO COMPLEMENT DB2          0 MACRO COMPLEMENT DB2 ABSENTE : AAST53     A       0              1      0      0 :
+ : IRM005 PRESENCE MACRO GESTION ERREUR DB2    100                                           B       0              0      0      1 :
+ : IRM006 PRESENCE MACRO GESTION ERREUR SPITAB 100                                           A       0              0      0      1 :
+ : IRM007 PRESENCE MACRO GESTION ERREUR APPLI. 100                                           A       0              0      0      1 :
+ : IRM012 PRESENCE DE VUES DB2 EN TP           100 AUCUN ACCES DB2 PAR LES VUES : BRAVO !    A       0              0      0      1 :
+ : IRM013 ACCES SPITAB AVEC CHARGEMENT TABLE   100                                           A       0              0      0      1 :
+ : IRP001 SPECIFIQUE DANS FONCTION RESERVEE      0 PRESENCE DE CODE EN FONCTION RESERVEE     A       2              0      0      1 :
+ : IRP002 QUANTITE SPECIFIQUE DE F71 A F93      50 QUANTITE DE -P IMPORTANTE DE F71 A F93    A     163            150    500 999999 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+-DIAGNOSTIC GENERAL                                                                                                                  
+0------------------------------------------------------------------------------------------------------------------------------------
+ : NOTE :    GENERALE         PAR ORIGINE :     ANALYSE      REALISATION    ETUDE-TECHNIQUE                                         :
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :                 83                                                 90                 61                                         :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                              SUIVI QUALITE                     ETAT DETAILLE            PAGE     3   DATE 16/03/2011
+0                                         RESULTATS PAR ENTITE                                                                       
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                 NIVEAU D'ANALYSE : C                                                                                
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE2  F2                                                       
+-RESULTAT PAR INDICATEUR DE QUALITE                                                                                                  
+0------------------------------------------------------------------------------------------------------------------------------------
+ : CODE   NOM DE L'INDICATEUR                 NOTE DIAGNOSTIC                              NIV  COMPT   SEUILS :   NO     DE     HN :
+ ------------------------------------------------------------------------------------------------------------------------------------
+ : IGB001 MODIFICATION DU DEBUT DE PROGRAMME   100                                           A       0              0      0      1 :
+ : IGD001 CONTROLE VARIANTE DE GENERATION PAC  100                                           C       1              1      0      0 :
+ : IGD003 CONTROLE GENERATION INDICATEUR SQL   100                                           C       1              1      0      0 :
+ : IGF001 NOMBRE D'ACCES AUX TABLES DB2        100                                           B       0             10     15 999999 :
+ : IGM001 NOMBRE DE MSP APPELEES               100                                           B      19             40     50 999999 :
+ : IGM002 OVERRIDE DE LIGNES DE MSP EN -W      100                                           A       0              0      0      1 :
+ : IGM003 OVERRIDE DE LIGNES DE MSP EN -P      100                                           A       0              0      0      1 :
+ : IGM005 PRESENCE SPECIFIQUE EN FONCTION 94   100                                           A       0              0      0      1 :
+ : IGM006 PRESENCE SPECIFIQUE EN FONCTION 97   100                                           A       0              0      0      1 :
+ : IGP001 QUANTITE BRUTE DE -P SPECIFIQUE      100                                           B     849         999990 999995 999999 :
+ : IGP004 QUANTITE TECHNIQUE NETTE DE -P       100                                           B     209            500   1500 999999 :
+ : IGP012 NOMBRE NET DE CALL PAR PROGRAMME     100                                           B       0              0      0      1 :
+ : IGP013 NOMBRE NET D'ORDRES COBOL PUR        100                                           A       0              0      0      1 :
+ : IGP014 NOMBRE NET D'OPERATEURS 'GDI'        100                                           B       0              2      3 999999 :
+ : IGP015 PRESENCE D'OPERATEURS SUP (NET)        0 IL EXISTE UN OPERATEUR SUP EN SPECIFIQUE  A       1              0      0      1 :
+ : IGP017 ORDRES "DISPLAY" DANS LE SPECIFIQUE  100                                           A       0              0      0      1 :
+ : IGP019 PRESENCE DE MACRO EN F91 ET F92        0 PRESENCE DE MACROS EN F91 OU F92          A      15              0      0      1 :
+ : IGP020 PRESENCE DE MACRO EN FONCTION 93     100                                           A       0              0      0      1 :
+ : IGP021 PRESENCE DE CODE EN FONCTION 96      100                                           A       0              0      0      1 :
+ : IGP022 PRESENCE SPECIFIQUE EN FONCTION 98   100                                           A       0              0      0      1 :
+ : IGP023 PRESENCE SS/FONCTION DE AA A AF        0 TROP DE S/FONCTION PROCHE DU CODE AA      B      12              1      2 999999 :
+ : IGP025 ORDRE SQL DANS SPECIFIQUE : EXEC SQL 100                                           A       0              0      0      1 :
+ : IGP026 CLAUSE DB2 DANS SPECIFIQUE -W (1)    100                                           A       0              0      0      1 :
+ : IGP027 CLAUSE DB2 DANS SPECIFIQUE -W (2)    100                                           A       0              0      0      1 :
+ : IGP028 CLAUSE DB2 DANS SPECIFIQUE -W (3)    100                                           A       0              0      0      1 :
+ : IGP029 CLAUSE DB2 DANS SPECIFIQUE -W (4)    100                                           A       0              0      0      1 :
+ : IGP030 CLAUSE DB2 DANS SPECIFIQUE -W (5)    100                                           A       0              0      0      1 :
+ : IGP031 CLAUSE DB2 DANS SPECIFIQUE -W (6)    100                                           A       0              0      0      1 :
+ : IGP032 COMMANDE DB2 DANS SPECIFIQUE -W (1)  100                                           A       0              0      0      1 :
+ : IGP033 CLAUSE DB2 DANS SPECIFIQUE -P (1)    100                                           A       0              0      0      1 :
+ : IGP034 CLAUSE DB2 DANS SPECIFIQUE -P (2)    100                                           A       0              0      0      1 :
+ : IGP035 CLAUSE DB2 DANS SPECIFIQUE -P (3)    100                                           A       0              0      0      1 :
+ : IGP036 COMMANDE DB2 DANS SPECIFIQUE -P (1)  100                                           A       0              0      0      1 :
+ : IGP037 COMMANDE DB2 DANS SPECIFIQUE -P (2)  100                                           A       0              0      0      1 :
+ : IGP038 COMMANDE DB2 DANS SPECIFIQUE -P (3)  100                                           A       0              0      0      1 :
+ : IGP039 PRESENCE ORDRE SEARCH ALL            100                                           B       0              0      0      1 :
+ : IGT001 EXISTENCE DE TITRE A CHAQUE SS-FCT   100                                           B       0              1      0 999999 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                              SUIVI QUALITE                     ETAT DETAILLE            PAGE     4   DATE 16/03/2011
+-RESULTAT PAR INDICATEUR DE QUALITE                                                                                                  
+0------------------------------------------------------------------------------------------------------------------------------------
+ : CODE   NOM DE L'INDICATEUR                 NOTE DIAGNOSTIC                              NIV  COMPT   SEUILS :   NO     DE     HN :
+ ------------------------------------------------------------------------------------------------------------------------------------
+ : IGW003 QUANTITE TECHNIQUE NETTE DE WORKING   50 QUANTITE TECH. NETTE DE -W IMPORTANTE     B      81             80    200 999999 :
+ : IGW004 NOMBRE NET DE FICHIERS EN WORKING    100                                           B       3             10     20 999999 :
+ : IGW005 NOMBRE NET DE CLAUSE PIC EN WORKING    0 NOMBRE DE CLAUSES PIC ANORMAL             A       3              0      0 999999 :
+ : IGW006 EMPLACEMENT WORKING SPECIFIQUE       100                                           A       0              0      0      1 :
+ : IGW007 WORKING DE MACRO MAL IMPLANTEE       100                                           A       0              0      0      1 :
+ : IGW008 PRESENCE DE WORKING EN PARAGRAPHE AA 100                                           A       0              0      0      1 :
+ : IGW009 NOMBRE NET DE RUBRIQUES EN WORKING   100                                           B      39             40     60 999999 :
+ : IRD001 NATURE ET TYPE MODULE TP (SERVEUR)     0 NATURE OU TYPE DE PROGRAMME ERRONE        C       0              1      0      0 :
+ : IRM001 CTRL MACRO SQUELETTE TP (SERVEUR)      0 ABSENCE MACRO SQUELETTE TP 'AAST4.'       A       0              1      0      0 :
+ : IRM002 CALL DE SOUS-PGM EN TP HORS MACRO    100                                           A       0              0      0      1 :
+ : IRM003 PRESENCE MACRO COMPLEMENT DB2          0 MACRO COMPLEMENT DB2 ABSENTE : AAST53     A       0              1      0      0 :
+ : IRM004 PRESENCE MACRO COMPLEMENT SPITAB       0 MACRO COMPLEMENT SPITAB ABSENTE : AAST52  A       0              1      0      0 :
+ : IRM005 PRESENCE MACRO GESTION ERREUR DB2      0 UTILISER LA MSP DE GESTION D'ERREUR       B       1              0      0      1 :
+ : IRM006 PRESENCE MACRO GESTION ERREUR SPITAB 100                                           A       0              0      0      1 :
+ : IRM007 PRESENCE MACRO GESTION ERREUR APPLI. 100                                           A       0              0      0      1 :
+ : IRM012 PRESENCE DE VUES DB2 EN TP           100 AUCUN ACCES DB2 PAR LES VUES : BRAVO !    A       0              0      0      1 :
+ : IRM013 ACCES SPITAB AVEC CHARGEMENT TABLE   100                                           A       0              0      0      1 :
+ : IRP001 SPECIFIQUE DANS FONCTION RESERVEE    100                                           A       0              0      0      1 :
+ : IRP002 QUANTITE SPECIFIQUE DE F71 A F93     100                                           A      30            150    500 999999 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+-DIAGNOSTIC GENERAL                                                                                                                  
+0------------------------------------------------------------------------------------------------------------------------------------
+ : NOTE :    GENERALE         PAR ORIGINE :     ANALYSE      REALISATION    ETUDE-TECHNIQUE                                         :
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :                 82                                                 87                 62                                         :
+ ------------------------------------------------------------------------------------------------------------------------------------

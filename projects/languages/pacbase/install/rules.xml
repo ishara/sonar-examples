@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <rule key="IGP019" priority="MAJOR" >
+    <name>PRESENCE DE MACRO EN F91 ET F92</name>
+    <configKey>IGP019</configKey>
+	<description></description>
+  </rule>
+  <rule key="IRM005" priority="MAJOR" >
+    <name>PRESENCE MACRO GESTION ERREUR DB2</name>
+    <configKey>IRM005</configKey>
+	<description></description>
+  </rule>
+  <rule key="IGP017" priority="MAJOR" >
+    <name>ORDRES "DISPLAY" DANS LE SPECIFIQUE</name>
+    <configKey>IGP017</configKey>
+	<description></description>
+  </rule>
+  <rule key="IGP015" priority="MAJOR" >
+    <name>PRESENCE D'OPERATEURS SUP (NET)</name>
+    <configKey>IGP015</configKey>
+	<description></description>
+  </rule>
+  <rule key="IRP001" priority="MAJOR" >
+    <name>SPECIFIQUE DANS FONCTION RESERVEE</name>
+    <configKey>IRP001</configKey>
+	<description></description>
+  </rule>
+  <rule key="IRP002" priority="MAJOR" >
+    <name>QUANTITE SPECIFIQUE DE F71 A F93</name>
+    <configKey>IRP002</configKey>
+	<description></description>
+  </rule>
+  <rule key="ISM002" priority="MAJOR" >
+    <name>PRESENCE MACRO COMPLEMENT DB2</name>
+    <configKey>ISM002</configKey>
+	<description></description>
+  </rule>
+  <rule key="IRD001" priority="MAJOR" >
+    <name>NATURE ET TYPE MODULE TP (SERVEUR)</name>
+    <configKey>IRD001</configKey>
+	<description></description>
+  </rule>
+  <rule key="IGW003" priority="MAJOR" >
+    <name>QUANTITE TECHNIQUE NETTE DE WORKING</name>
+    <configKey>IGW003</configKey>
+	<description></description>
+  </rule>
+  <rule key="IGP023" priority="MAJOR" >
+    <name>PRESENCE SS/FONCTION DE AA A AF</name>
+    <configKey>IGP023</configKey>
+	<description></description>
+  </rule>
+  <rule key="IGW005" priority="MAJOR" >
+    <name>NOMBRE NET DE CLAUSE PIC EN WORKING</name>
+    <configKey>IGW005</configKey>
+	<description></description>
+  </rule>
+  <rule key="IGW007" priority="MAJOR" >
+    <name>WORKING DE MACRO MAL IMPLANTEE</name>
+    <configKey>IGW007</configKey>
+	<description></description>
+  </rule>	
+  <rule key="IRM004" priority="MAJOR" >
+    <name>PRESENCE MACRO COMPLEMENT SPITAB</name>
+    <configKey>IRM004</configKey>
+	<description></description>
+  </rule>
+  <rule key="IRM001" priority="MAJOR" >
+    <name>CTRL MACRO SQUELETTE TP (SERVEUR)</name>
+    <configKey>IRM001</configKey>
+    <description></description>
+  </rule>
+   <rule key="IRM003" priority="MAJOR" >
+    <name>PRESENCE MACRO COMPLEMENT DB2</name>
+    <configKey>IRM003</configKey>
+    <description></description>
+  </rule>
+ </rules>

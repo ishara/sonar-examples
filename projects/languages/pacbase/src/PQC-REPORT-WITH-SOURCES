@@ -1,0 +1,438 @@
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     1   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE1                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGP017   ORDRES "DISPLAY" DANS LE SPECIFIQUE      NOTE :  0 HN   COMPT :    11                  SEUILS   :      0       0       1:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  92  300     MESW-MS01-LBLCH                    00                                                                 :
+ :            -P  92  320     MES'ALGO DE TARIF ‚LABOR‚'         00                                                                 :
+ :            -P  92AL300     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92AL320     MESW-MS01-ZGALT                    00                                                                 :
+ :            -P  92AL340     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92BL300     MESW-MS01-ZGGAR                    00                                                                 :
+ :            -P  92BL320     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92CL300     MESW-MS01-ZGETA                    00                                                                 :
+ :            -P  92CL320     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92DL400     MESW-MS01-ZGORD                    00                                                                 :
+ :            -P  92DL420     MESW-MS01-LSEPA                    00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGW007   WORKING DE MACRO MAL IMPLANTEE           NOTE :  0 HN   COMPT :     4                  SEUILS   :      0       0       1:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -W    V1020      77               5-TVTCETA-FC01                                  00000AA3T14                         :
+ :            -W    V1021                       PIC S9(7) COMP-3 VALUE ZERO.                    00000AA3T14                         :
+ :            -W    V2020      77               5-TVTCETA-FC02                                  00000AA3T14                         :
+ :            -W    V2021                       PIC S9(7) COMP-3 VALUE ZERO.                    00000AA3T14                         :
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRD001   NATURE ET TYPE MODULE TP (SERVEUR)       NOTE :  0 HN   COMPT :     0                  SEUILS   :      1       0       0:
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRM001   CTRL MACRO SQUELETTE TP (SERVEUR)        NOTE :  0 HN   COMPT :     0                  SEUILS   :      1       0       0:
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRM003   PRESENCE MACRO COMPLEMENT DB2            NOTE :  0 HN   COMPT :     0                  SEUILS   :      1       0       0:
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRP001   SPECIFIQUE DANS FONCTION RESERVEE        NOTE :  0 HN   COMPT :     2                  SEUILS   :      0       0       1:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  70FT002     *  'FILE1 FIN'                    00                                                                 :
+ :            -P  70FT003     *                                  00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     2   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE1                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRP002   QUANTITE SPECIFIQUE DE F71 A F93         NOTE : 50 DE   COMPT :   163                  SEUILS   :    150     500  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  91  000     N  CHARGEMENT EN ZC DE SORTIE      05BL                                                               :
+ :            -P  91  001     *  --------------------------      00                                                                 :
+ :            -P  91  100     *  'CHARGEMENT EN ZC DE SORTIE'    00                                                                 :
+ :            -P  91  101     *                                  00                                                                 :
+ :            -P  91  200     *  MOVE DANS LES RUBRIQUES         00                                                                 :
+ :            -P  91  201     *  CORRESPONDANTES                 00                                                                 :
+ :            -P  91  202     *  ---------------                 00                                                                 :
+ :            -P  91AL000     N  NUM‚RO D'ALGO TARIF             10ITRR00-ITARAL NOT =                                              :
+ :            -P  91AL001     *  -------------------             00                 W-BR00-ITARAL                                   :
+ :            -P  91AL100     A  1       ISO01R                  00                                                                 :
+ :            -P  91AL101     *                                  00                                                                 :
+ :            -P  91AL120     M  RR00-ITARAL                     00                                                                 :
+ :            -P  91AL121                KN14-ITARA0(ISO01R)     00                                                                 :
+ :            -P  91AL122                W-BR00-ITARAL           00                                                                 :
+ :            -P  91AL123     *                                  00                                                                 :
+ :            -P  91ET000     N  NUM‚RO D'‚TAPE                  10BL                                                               :
+ :            -P  91ET001     *  --------------                  00                                                                 :
+ :            -P  91ET100     M  RR00-CTARNE                     00                                                                 :
+ :            -P  91ET101                KN14-CTARNE(ISO01R,     00                                                                 :
+ :            -P  91ET102                            RR00-ITARAT,00                                                                 :
+ :            -P  91ET103                            RR00-IGACET)00                                                                 :
+ :            -P  91ET120     M  RR00-CTAROE                     00                                                                 :
+ :            -P  91ET121                KN14-CTAROE(ISO01R,     00                                                                 :
+ :            -P  91ET122                            RR00-ITARAT,00                                                                 :
+ :            -P  91ET123                            RR00-IGACET)00                                                                 :
+ :            -P  91ET140     M  RR00-QTARAE                     00                                                                 :
+ :            -P  91ET141                KN14-QTARAE(ISO01R,     00                                                                 :
+ :            -P  91ET142                            RR00-ITARAT,00                                                                 :
+ :            -P  91ET143                            RR00-IGACET)00                                                                 :
+ :            -P  91ET144     *                                  00                                                                 :
+ :            -P  91OR000     N  NUM‚RO D'ORDRE                  10BL                                                               :
+ :            -P  91OR001     *  --------------                  00                                                                 :
+ :            -P  91OR100     M  RR00-CTARTO                     00                                                                 :
+ :            -P  91OR101                KN14-CTARTO(ISO01R,     00                                                                 :
+ :            -P  91OR102                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR103                            RR00-IGACET,00                                                                 :
+ :            -P  91OR104                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR120     M  RR00-CORPDE                     00                                                                 :
+ :            -P  91OR121                KN14-CORPDE(ISO01R,     00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     3   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE1                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRP002   QUANTITE SPECIFIQUE DE F71 A F93         NOTE : 50 DE   COMPT :   163                  SEUILS   :    150     500  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  91OR122                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR123                            RR00-IGACET,00                                                                 :
+ :            -P  91OR124                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR140     M  RR00-CORPD2                     00                                                                 :
+ :            -P  91OR141                KN14-CORPD2(ISO01R,     00                                                                 :
+ :            -P  91OR142                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR143                            RR00-IGACET,00                                                                 :
+ :            -P  91OR144                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR160     M  RR00-CTART1                     00                                                                 :
+ :            -P  91OR161                KN14-CTART1(ISO01R,     00                                                                 :
+ :            -P  91OR162                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR163                            RR00-IGACET,00                                                                 :
+ :            -P  91OR164                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR180     M  RR00-ITARA1                     00                                                                 :
+ :            -P  91OR181                KN14-ITARA1(ISO01R,     00                                                                 :
+ :            -P  91OR182                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR183                            RR00-IGACET,00                                                                 :
+ :            -P  91OR184                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR200     M  RR00-ITART1                     00                                                                 :
+ :            -P  91OR201                KN14-ITART1(ISO01R,     00                                                                 :
+ :            -P  91OR202                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR203                            RR00-IGACET,00                                                                 :
+ :            -P  91OR204                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR220     M  RR00-IGACE1                     00                                                                 :
+ :            -P  91OR221                KN14-IGACE1(ISO01R,     00                                                                 :
+ :            -P  91OR222                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR223                            RR00-IGACET,00                                                                 :
+ :            -P  91OR224                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR240     M  RR00-IGACO1                     00                                                                 :
+ :            -P  91OR241                KN14-IGACO1(ISO01R,     00                                                                 :
+ :            -P  91OR242                            RR00-ITARAT,00                                                                 :
+ :            -P  91OR243                            RR00-IGACET,00                                                                 :
+ :            -P  91OR244                            RR00-IGACOE)00                                                                 :
+ :            -P  91OR245     *                                  00                                                                 :
+ :            -P  91PH000     N  NUM‚RO DE PHASE                 10BL                                                               :
+ :            -P  91PH001     *  ---------------                 00                                                                 :
+ :            -P  91PH120     M  RR00-VECGO2                     00                                                                 :
+ :            -P  91PH121                KN14-VECGA (ISO01R,     00                                                                 :
+ :            -P  91PH122                            RR00-ITARAT)00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     4   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE1                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRP002   QUANTITE SPECIFIQUE DE F71 A F93         NOTE : 50 DE   COMPT :   163                  SEUILS   :    150     500  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  91PH123     *                                  00                                                                 :
+ :            -P  92  000     N  ‚CRITURE DE LA ZCS EN SYSOUT    05BL                                                               :
+ :            -P  92  001     *  ----------------------------    00                                                                 :
+ :            -P  92  300     MESW-MS01-LBLCH                    00                                                                 :
+ :            -P  92  320     MES'ALGO DE TARIF ‚LABOR‚'         00                                                                 :
+ :            -P  92AL000     N  --- ‚CRITURE DES DONN‚ES        15DO1 ISO01R                                                       :
+ :            -P  92AL001     *  --- CONCERNANT L'ALGO TARIF     00                                                                 :
+ :            -P  92AL002     *                                  00                                                                 :
+ :            -P  92AL100     INIW-MS01-ZGALT                    00                                                                 :
+ :            -P  92AL101     *                                  00                                                                 :
+ :            -P  92AL200     M  KN14-ITARA0(J92ALR)             00                                                                 :
+ :            -P  92AL201                        W-MS01-ITARAL   00                                                                 :
+ :            -P  92AL202     *                                  00                                                                 :
+ :            -P  92AL300     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92AL320     MESW-MS01-ZGALT                    00                                                                 :
+ :            -P  92AL340     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92AL341     *                                  00                                                                 :
+ :            -P  92BL000     N  --- ‚CRITURE DES DONN‚ES        20DO1 IEC01M                                                       :
+ :            -P  92BL001     *  --- CONCERNANT LA GARANTIE      00                                                                 :
+ :            -P  92BL002     *                                  00                                                                 :
+ :            -P  92BL100     INIW-MS01-ZGGAR                    99ITKN14-VECGA (J92ALR,J92BLR)                                     :
+ :            -P  92BL101     *                                  00   NOT = ZEROES                                                  :
+ :            -P  92BL200     M  J92BLR                          00                                                                 :
+ :            -P  92BL201                        W-MS01-ITARAT   00                                                                 :
+ :            -P  92BL220     M  KN14-VECGA (J92ALR,J92BLR)      00                                                                 :
+ :            -P  92BL221                        W-MS01-VECGAS   00                                                                 :
+ :            -P  92BL222     *                                  00                                                                 :
+ :            -P  92BL300     MESW-MS01-ZGGAR                    00                                                                 :
+ :            -P  92BL320     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92BL321     *                                  00                                                                 :
+ :            -P  92CL000     N  --- ‚CRITURE DES DONN‚ES        25DO1 IEC02M                                                       :
+ :            -P  92CL001     *  --- CONCERNANT LES ‚TAPES       00                                                                 :
+ :            -P  92CL002     *                                  00                                                                 :
+ :            -P  92CL100     INIW-MS01-ZGETA                    99ITKN14-CTARNE(J92ALR,J92BLR,                                     :
+ :            -P  92CL101     *                                  00  J92CLR) NOT = SPACES                                           :
+ :            -P  92CL200     M  J92CLR                          00                                                                 :
+ :            -P  92CL201                        W-MS01-IGACET   00                                                                 :
+ :            -P  92CL220     M  KN14-CTARNE(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92CL221        J92CLR)                         00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     5   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE1                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRP002   QUANTITE SPECIFIQUE DE F71 A F93         NOTE : 50 DE   COMPT :   163                  SEUILS   :    150     500  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  92CL222                        W-MS01-CTARNE   00                                                                 :
+ :            -P  92CL240     M  KN14-CTAROE(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92CL241        J92CLR)                         00                                                                 :
+ :            -P  92CL242                        W-MS01-CTAROE   00                                                                 :
+ :            -P  92CL260     M  KN14-QTARAE(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92CL261        J92CLR)                         00                                                                 :
+ :            -P  92CL262                        W-MS01-QTARAE   00                                                                 :
+ :            -P  92CL263     *                                  00                                                                 :
+ :            -P  92CL300     MESW-MS01-ZGETA                    00                                                                 :
+ :            -P  92CL320     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92CL321     *                                  00                                                                 :
+ :            -P  92DL000     N  --- ‚CRITURE DES DONN‚ES        30DO1 IEC03M                                                       :
+ :            -P  92DL001     *  --- CONCERNANT LES ORDRES       00                                                                 :
+ :            -P  92DL002     *                                  00                                                                 :
+ :            -P  92DL100     INIW-MS01-ZGORD                    99ITKN14-CTARTO(J92ALR,J92BLR,                                     :
+ :            -P  92DL101     *                                  00  J92CLR,J92DLR) NOT = SPACES                                    :
+ :            -P  92DL200     M  J92DLR                          00                                                                 :
+ :            -P  92DL201                          W-MS01-IGACOE 00                                                                 :
+ :            -P  92DL220     M  KN14-CTARTO(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL221        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL222                          W-MS01-CTARTO 00                                                                 :
+ :            -P  92DL240     M  KN14-CORPDE(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL241        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL242                          W-MS01-CORPDE 00                                                                 :
+ :            -P  92DL260     M  KN14-CORPD2(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL261        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL262                          W-MS01-CORPD2 00                                                                 :
+ :            -P  92DL280     M  KN14-CTART1(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL281        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL282                          W-MS01-CTART1 00                                                                 :
+ :            -P  92DL300     M  KN14-ITARA1(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL301        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL302                          W-MS01-ITARA1 00                                                                 :
+ :            -P  92DL320     M  KN14-ITART1(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL321        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL322                          W-MS01-ITART1 00                                                                 :
+ :            -P  92DL340     M  KN14-IGACE1(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL341        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL342                          W-MS01-IGACE1 00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     6   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE1                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRP002   QUANTITE SPECIFIQUE DE F71 A F93         NOTE : 50 DE   COMPT :   163                  SEUILS   :    150     500  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  92DL360     M  KN14-IGACO1(J92ALR,J92BLR,      00                                                                 :
+ :            -P  92DL361        J92CLR,J92DLR)                  00                                                                 :
+ :            -P  92DL362                          W-MS01-IGACO1 00                                                                 :
+ :            -P  92DL363     *                                  00                                                                 :
+ :            -P  92DL400     MESW-MS01-ZGORD                    00                                                                 :
+ :            -P  92DL420     MESW-MS01-LSEPA                    00                                                                 :
+ :            -P  92DL421     *                                  00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     7   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE2                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGP015   PRESENCE D'OPERATEURS SUP (NET)          NOTE :  0 HN   COMPT :     1                  SEUILS   :      0       0       1:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  202C120     SUPTVTDPBM/VA00/VX/WO/14/00/       00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGP019   PRESENCE DE MACRO EN F91 ET F92          NOTE :  0 HN   COMPT :    15                  SEUILS   :      0       0       1:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  92RR000     N  --                            --15ITIK                              BSIER2                         :
+ :            -P  92RR040     *  -- GESTION ERREUR               00  ='1'                            BSIER2                         :
+ :            -P  92RR060     *  -- (IK)                         00                                  BSIER2                         :
+ :            -P  92RR080     *  --                            --00                                  BSIER2                         :
+ :            -P  92RR100     M  'FILE256'       KN30-GANO02      00                                  BSIER2                         :
+ :            -P  92RR120     M  KN30-GANO02    X802-GANO02      00                                  BSIER2                         :
+ :            -P  92RR160     P  F99PE                           00                                  BSIER2                         :
+ :            -P  92RR280     M  X802-LANO02    KN30-LANO02      00                                  BSIER2                         :
+ :            -P  92RR290     STR'/   /'             PROGR       00                                  BSIER2                         :
+ :            -P  92RR300        '/'                'F92RR'      00                                  BSIER2                         :
+ :            -P  92RR310        '/'            X802-GANO02      00                                  BSIER2                         :
+ :            -P  92RR320           DELIMITED BY SIZE INTO       00                                  BSIER2                         :
+ :            -P  92RR330                       DA1N-GTECAS      00                                  BSIER2                         :
+ :            -P  92RR400     *  INSERTION DE CODE SPECIFIQUE    00                                  BSIER2                         :
+ :            -P  92RR900     P  F99YA                           00                                  BSIER2                         :
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGP023   PRESENCE SS/FONCTION DE AA A AF          NOTE :  0 HN   COMPT :    12                  SEUILS   :      1       2  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  42AD000     N  --------------------------------10BL                                                               :
+ :            -P  42AD010     *    En pr‚ambule, convertissons   00                                                                 :
+ :            -P  42AD020     *    la date machine en date DB2   00                                                                 :
+ :            -P  42AD030     *  --------------------------------00                                                                 :
+ :            -P  42AD100     M  SPACE X540                      00                                                                 :
+ :            -P  42AD110     M  'DAT'             X540-CTECFA   00                                                                 :
+ :            -P  42AD120     M  'CNV01'           X540-CTECFN   00                                                                 :
+ :            -P  42AD130     M  DA1N-DIMSTR       X540-KVDT01   00                                                                 :
+ :            -P  42AD140     M  '17'              X540-CVDT01   00                                                                 :
+ :            -P  42AD160     M  '11'              X540-CVDT11   00                                                                 :
+ :            -P  42AD180     P  F97SD                           00                                                                 :
+ :            -P  42AD200     M  X540-KVDT11       WA00-DTECV5   99ITX540-CTECRC = ZERO                                             :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     8   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE2                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGW003   QUANTITE TECHNIQUE NETTE DE WORKING      NOTE : 50 DE   COMPT :    81                  SEUILS   :     80     200  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -W    BB210     FSD: ME BIB: WA SEL: 32=00___ FORM: I DESC: _ NIV: 1 ORG: _ SS: _                                     :
+ :            -W    BB310     FSD: MS BIB: WA SEL: 33=00___ FORM: I DESC: _ NIV: 1 ORG: _ SS: _                                     :
+ :            -W    BB360     I01               W-MS10-Z91106.                                  00000      S9(9)V99                 :
+ :            -W    BB420      01               W1-WA44.                                        00000                               :
+ :            -W    BB440     I   05            W1-QMACSI.                                      00000      9(2)                     :
+ :            -W    BB460         05            W1-ZGSIN1  OCCURS 2.                            00000                               :
+ :            -W    BB480     I      10         W1-CSINPR.                                      00002      X(3)                     :
+ :            -W    BB500     I      10         W1-QSINAN.                                      00002      S9(3)                    :
+ :            -W    BB520      01               W2-WA45.                                        00000                               :
+ :            -W    BB540     I   05            W2-QMACSI.                                      00000      9(2)                     :
+ :            -W    BB560         05            W2-ZGSIN2  OCCURS 2.                            00000                               :
+ :            -W    BB580     I      10         W2-CSINP4.                                      00002      X(3)                     :
+ :            -W    BB600     I      10         W2-QSINA7.                                      00002      S9(3)                    :
+ :            -W    BC030      01               WA00.                                           00000                               :
+ :            -W    BC040     I   10            WA00-QBMABP.                                    00000      S9V9999                  :
+ :            -W    BC050     I   10            WA00-DTECV5.                                    00000      X(10)                    :
+ :            -W    BC140                                                                       00000                               :
+ :            -W    BC530      01              WB00.                                            00000                               :
+ :            -W    BC540     I  10            WB00-NENT09.                                     00000      X(00002)                 :
+ :            -W    BC550     I  10            WB00-CORPOB.                                     00000      X(3)                     :
+ :            -W    BC560     I  10            WB00-DTECVS.                                     00000      X(8)                     :
+ :            -W    BD210     I01               W-BD00-QBMAPO.                                  00000      S9V9999                  :
+ :            -W    BD230     I01               W-BD05-QBMAPO.                                  00000      S9V9999                  :
+ :            -W    BD250     I01               W-BD10-QBMAPO.                                  00000      S9V9999                  :
+ :            -W    BD410     I01               W-BD00-RCABN0.                                  00000      S9(9)V9(5)               :
+ :            -W    BD420     I01               W-BD10-RCABN0.                                  00000      S9(9)V9(5)               :
+ :            -W    BD510     I01               W-BD20-RCABN0.                                  00000      S9(9)V9(5)               :
+ :            -W    BD530      01               WV00.                                           00000                               :
+ :            -W    BD540     I    05           WV00-RCABNM.                                    00000      S999V99                  :
+ :            -W    BE210     I01               W-BE00-TCABO7.                                  00000      S9(9)V9(5)               :
+ :            -W    BE230     I01               W-BE00-MTRAPT.                                  00000      S9(9)V9(2)               :
+ :            -W    BE310     I01               W-BE00-VEQJA1                                   00000      S9(9)                    :
+ :            -W    BE320                       VALUE 0270.                                     00000                               :
+ :            -W    BV230      01               WV00.                                           00000                               :
+ :            -W    BV240     I   05            WV00-FPARBA.                                    00000      X(01)                    :
+ :            -W    BV250     I   05            WV00-EGA.                                       00000      9(4)                     :
+ :            -W    BV300         05            WV00-DBMAVI.                                    00000                               :
+ :            -W    BV350     I      10           WV00-JXXEFF                                   00000      XX                       :
+ :            -W    BV355                                     VALUE '01'.                       00000                               :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE     9   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE2                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGW003   QUANTITE TECHNIQUE NETTE DE WORKING      NOTE : 50 DE   COMPT :    81                  SEUILS   :     80     200  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -W    BV360     I      10           WV00-ZTECDT                                   00000      X                        :
+ :            -W    BV365                                     VALUE '.'.                        00000                               :
+ :            -W    BV370     I      10           WV00-MXXEFF                                   00000      XX                       :
+ :            -W    BV375                                     VALUE '11'.                       00000                               :
+ :            -W    BV380     I      10           WV00-ZTECDA                                   00000      X                        :
+ :            -W    BV385                                     VALUE '.'.                        00000                               :
+ :            -W    BV390     I      10           WV00-DDATS2.                                  00000      9(4)                     :
+ :            -W    CD300      01           WD00.                                               00000                               :
+ :            -W    CD305        05         WD00-DDAT02.                                        00000                               :
+ :            -W    CD330     I    10           WD00-DDATJ2.                                    00000      9(2)                     :
+ :            -W    CD336     I    10           WD00-ZTECDA.                                    00000      X                        :
+ :            -W    CD337     I    10           WD00-DDATM2.                                    00000      9(2)                     :
+ :            -W    CD338     I    10           WD00-ZTECDT.                                    00000      X                        :
+ :            -W    CD339     I    10           WD00-DDATS2.                                    00000      9(4)                     :
+ :            -W    CD346     I  05         WD00-DDATSA.                                        00000      9(4)                     :
+ :            -W    CD350      01          WE00.                                                00000                               :
+ :            -W    CD360     I  05             WE00-QTARPC.                                    00000      S9(9)                    :
+ :            -W    CD370                                                                       00000                               :
+ :            -W    CD380                                                                       00000                               :
+ :            -W    ER010      01               W-ER00-GTPRCL.                                  00000                               :
+ :            -W    ER020     E  05             W-ER00-NTARTF.                                  00000      X(7)                     :
+ :            -W    ER025     E  05             W-ER00-VECUSA.                                  00000      9(2)                     :
+ :            -W    ER027     E  05             W-ER00-CSISSA.                                  00000      X                        :
+ :            -W    ER030     E  05             W-ER00-CORPDE.                                  00000      X(6)                     :
+ :            -W    ER040     E  05             W-ER00-QBMABP.                                  00000      S9V9999                  :
+ :            -W    ER210      01               W-ER02-GTPRCL.                                  00000                               :
+ :            -W    ER220     E  05             W-ER02-NTARTF.                                  00000      X(7)                     :
+ :            -W    ER230     E  05             W-ER02-VECUSA.                                  00000      9(2)                     :
+ :            -W    ER240     E  05             W-ER02-CSISSA.                                  00000      X                        :
+ :            -W    ER250     E  05             W-ER02-CORPDE.                                  00000      X(6)                     :
+ :            -W    ER260     E  05             W-ER02-QBMABP.                                  00000      S9V9999                  :
+ :            -W    ER305      01               W-ER03-GTPRCL.                                  00000                               :
+ :            -W    ER310     E  05             W-ER03-NENT09.                                  00000      X(00002)                 :
+ :            -W    ER320     E  05             W-ER03-CORPOB.                                  00000      X(3)                     :
+ :            -W    ER330     E  05             W-ER03-DTECVS.                                  00000      X(8)                     :
+ :            -W    VX00E      01               T-VX00.                                         00000                               :
+ :            -W    VX00F        02             L-VX00 OCCURS 1000.                             00000                               :
+ :            -W    VX00G     FSD: VX BIB: WO SEL: 14=00___ FORM: I DESC: _ NIV: 3 ORG: _ SS: _                                     :
+ :            -W    VX00H      01                IVX00.                                         00000                               :
+ ------------------------------------------------------------------------------------------------------------------------------------
+1VA Pac  3.5 V03                             SUIVI QUALITE                                               PAGE    10   DATE 16/03/2011
+0                                        LISTE DES INDICATIFS                                                                        
+0                                    BIBLIOTHEQUE : ABC                                                                              
+                             SESSION DE REFERENCE : 1111                                                                             
+                                    TYPE D'ENTITE : PROGRAMME  BATCH                                                                 
+                                           ENTITE : FILE2                                                                           
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGW003   QUANTITE TECHNIQUE NETTE DE WORKING      NOTE : 50 DE   COMPT :    81                  SEUILS   :     80     200  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -W    VX00I        05              IVX00R PIC S9(6) COMP VALUE ZERO.              00000                               :
+ :            -W    VX00J        05              IVX00L PIC S9(6) COMP VALUE ZERO.              00000                               :
+ :            -W    VX00K        05              IVX00M PIC S9(6) COMP VALUE 1000.              00000                               :
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IGW005   NOMBRE NET DE CLAUSE PIC EN WORKING      NOTE :  0 HN   COMPT :     3                  SEUILS   :      0       0  999999:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -W    VX00I        05              IVX00R PIC S9(6) COMP VALUE ZERO.              00000                               :
+ :            -W    VX00J        05              IVX00L PIC S9(6) COMP VALUE ZERO.              00000                               :
+ :            -W    VX00K        05              IVX00M PIC S9(6) COMP VALUE 1000.              00000                               :
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRD001   NATURE ET TYPE MODULE TP (SERVEUR)       NOTE :  0 HN   COMPT :     0                  SEUILS   :      1       0       0:
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRM001   CTRL MACRO SQUELETTE TP (SERVEUR)        NOTE :  0 HN   COMPT :     0                  SEUILS   :      1       0       0:
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRM003   PRESENCE MACRO COMPLEMENT DB2            NOTE :  0 HN   COMPT :     0                  SEUILS   :      1       0       0:
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRM004   PRESENCE MACRO COMPLEMENT SPITAB         NOTE :  0 HN   COMPT :     0                  SEUILS   :      1       0       0:
+ ------------------------------------------------------------------------------------------------------------------------------------
+0------------------------------------------------------------------------------------------------------------------------------------
+ : IRM005   PRESENCE MACRO GESTION ERREUR DB2        NOTE :  0 HN   COMPT :     1                  SEUILS   :      0       0       1:
+ ------------------------------------------------------------------------------------------------------------------------------------
+ :            -P  92RG060     P  F99D2                           00                                                                 :
+ ------------------------------------------------------------------------------------------------------------------------------------
