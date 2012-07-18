@@ -29,6 +29,7 @@
     <name>Avoid if without using brace</name>
     <configKey>com/mycompany/sonar/pmd/rulesets.xml/AvoidIfWithoutBrace</configKey>
     <priority>CRITICAL</priority>
+	<description>Avoid if without using brace</description>
   </rule>
 
 
@@ -39,6 +40,7 @@
   <rule>
     <key>PreventUseOfEmptyClass</key>
     <priority>MAJOR</priority>
+	<description>Prevent use of EmptyClass class</description>
     <name><![CDATA[Prevent use of EmptyClass]]></name>
     <configKey><![CDATA[net.sourceforge.pmd.rules.XPathRule]]></configKey>
     <priority>MINOR</priority>
