@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="UT coverage with Ant and JaCoCo running tests :: Parent" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+  
+  <target name="clean">
+    <delete dir=".sonar"/>
+    <ant dir="module1" target="clean"/>
+    <ant dir="module2" target="clean"/>
+  </target>
+
+  <target name="compile">
+    <ant dir="module1" target="compile"/>
+    <ant dir="module2" target="compile"/>
+  </target>
+
+  <property name="sonar.modules" value="module1/build.xml,module2/build.xml"/>
+  
+  <!-- Set your Sonar properties -->
+  <!-- <property name="sonar.jdbc.url" value="jdbc:derby://localhost:1527/sonar" />
+  <property name="sonar.jdbc.username" value="sonar" />
+  <property name="sonar.jdbc.password" value="sonar" />
+  <property name="sonar.host.url" value="http://localhost:9000" /> -->
+  
+  <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+    <!-- Update the following line, or remove it and put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+    <classpath path="path/to/sonar/ant/task/lib" />
+  </taskdef>
+		
+  <target name="sonar">
+    <sonar:sonar key="org.codehaus.sonar:example-ut-ant-multimodule-jacoco-runTests-parent" version="1.0" xmlns:sonar="antlib:org.sonar.ant"/>
+  </target>
+
+  <target name="all" depends="clean,compile,sonar"/>
+
+</project>
