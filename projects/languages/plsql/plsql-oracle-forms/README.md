@@ -4,7 +4,7 @@ Prerequisites
 =============
 * Sonar 3.0 or higher
 * Sonar Runner 1.3 or higher
-* Sonar PLSQL Plugin 2.1 or higher
+* Sonar PL/SQL Plugin 2.1 or higher
 
 
 Usage
