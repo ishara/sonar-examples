@@ -4,7 +4,7 @@
 
   <groupId>org.codehaus.sonar</groupId>
   <artifactId>example-groovy-maven</artifactId>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
 
   <name>Simple Groovy Project Analyzed with Maven</name>
 

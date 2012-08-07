@@ -4,7 +4,7 @@
 
   <groupId>org.codehaus.sonar</groupId>
   <artifactId>javascript-maven-JsTestDriver</artifactId>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
 
   <name>JavaScript Sample Project analyzed with Maven reusing JsTestDriver reports</name>
 
