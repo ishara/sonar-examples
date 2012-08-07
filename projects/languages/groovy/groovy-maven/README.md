@@ -8,4 +8,10 @@ Prerequisites
 
 Usage
 =====
-* Run the following command: mvn clean install sonar:sonar
+1. Build project:
+
+        mvn clean install
+
+2. Analyse by Sonar:
+
+        mvn sonar:sonar

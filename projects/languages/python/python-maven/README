@@ -8,4 +8,6 @@ Prerequisites
 
 Usage
 =====
-* Run the following command: mvn sonar:sonar
+Analyse by Sonar:
+
+        mvn sonar:sonar
