@@ -1,66 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.codehaus.sonar</groupId>
-	<artifactId>javascript-maven-JsTestDriver</artifactId>
-	<version>1.0</version>
-	<name>JavaScript Sample Project analyzed with Maven reusing JsTestDriver reports</name>
-	
-	<properties>
-		<sonar.language>js</sonar.language>
-		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-		<sonar.javascript.jstestdriver.reportsfolder>target/jstestdriver</sonar.javascript.jstestdriver.reportsfolder>
-	</properties>
+  <groupId>org.codehaus.sonar</groupId>
+  <artifactId>javascript-maven-JsTestDriver</artifactId>
+  <version>1.0</version>
 
-	<build>
-		<sourceDirectory>src/main/js</sourceDirectory>
-		<testSourceDirectory>src/test/js</testSourceDirectory>
+  <name>JavaScript Sample Project analyzed with Maven reusing JsTestDriver reports</name>
 
-		<plugins>
-			<plugin>
-				<groupId>com.googlecode.jstd-maven-plugin</groupId>
-				<artifactId>jstd-maven-plugin</artifactId>
-				<version>1.3.2.5</version>
-				<configuration>
-					<verbose>true</verbose>
-					<browser>"<path_to_browser>"</browser>
-					<port>9876</port>
-					<testOutput>target/jstestdriver</testOutput>
-				</configuration>
-				<executions>
-					<execution>
-						<id>run-tests</id>
-						<goals>
-							<goal>test</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+  <properties>
+    <sonar.language>js</sonar.language>
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+    <sonar.javascript.jstestdriver.reportsfolder>target/jstestdriver</sonar.javascript.jstestdriver.reportsfolder>
+  </properties>
 
-	<!-- JsTestDriver Dependencies -->
-	<dependencies>
-		<dependency>
-			<groupId>com.googlecode.jstd-maven-plugin</groupId>
-			<artifactId>jstd-maven-plugin</artifactId>
-			<version>1.3.2.5</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+  <build>
+    <sourceDirectory>src/main/js</sourceDirectory>
+    <testSourceDirectory>src/test/js</testSourceDirectory>
 
-	<repositories>
-		<repository>
-			<id>jstd-maven-plugin google code repo</id>
-			<url>http://jstd-maven-plugin.googlecode.com/svn/maven2</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>jstd-maven-plugin google code repo</id>
-			<url>http://jstd-maven-plugin.googlecode.com/svn/maven2</url>
-		</pluginRepository>
-	</pluginRepositories>
+    <plugins>
+      <plugin>
+        <groupId>com.googlecode.jstd-maven-plugin</groupId>
+        <artifactId>jstd-maven-plugin</artifactId>
+        <version>1.3.2.5</version>
+        <configuration>
+          <verbose>true</verbose>
+          <browser>"<path_to_browser>"</browser>
+          <port>9876</port>
+          <testOutput>target/jstestdriver</testOutput>
+        </configuration>
+        <executions>
+          <execution>
+            <id>run-tests</id>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- JsTestDriver Dependencies -->
+  <dependencies>
+    <dependency>
+      <groupId>com.googlecode.jstd-maven-plugin</groupId>
+      <artifactId>jstd-maven-plugin</artifactId>
+      <version>1.3.2.5</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>jstd-maven-plugin google code repo</id>
+      <url>http://jstd-maven-plugin.googlecode.com/svn/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>jstd-maven-plugin google code repo</id>
+      <url>http://jstd-maven-plugin.googlecode.com/svn/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+
 </project>
