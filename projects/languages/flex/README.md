@@ -5,4 +5,4 @@ Prerequisites
 
 * Sonar 2.11 or higher
 * Maven 2.2 or higher
-* Sonar Flex Plugin
+* Sonar Flex Plugin 1.1 or higher

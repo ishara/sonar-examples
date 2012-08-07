@@ -19,18 +19,4 @@
     <sourceDirectory>src</sourceDirectory>
   </build>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>flexpmd.opensource.adobe</id>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <name>FlexPMD repository on opensource.adobe.com</name>
-      <url>http://opensource.adobe.com/svn/opensource/flexpmd/maven-repository/release/</url>
-    </pluginRepository>
-  </pluginRepositories>
-
 </project>
