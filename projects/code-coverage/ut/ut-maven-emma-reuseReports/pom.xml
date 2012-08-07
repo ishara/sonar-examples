@@ -9,6 +9,7 @@
   <name>UT coverage with Maven and Emma running tests</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- Tells Sonar to run the unit tests -->
     <sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
     <!-- Tells Sonar to use Emma as the code coverage tool -->

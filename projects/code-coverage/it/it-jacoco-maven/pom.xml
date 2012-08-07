@@ -8,6 +8,8 @@
   <name>IT coverage with JaCoCo and Maven</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     <!--  Feed Sonar with the JaCoCo integration tests coverage report (that you have previously generated) -->
     <sonar.jacoco.itReportPath>${project.basedir}/reports/jacoco.exec</sonar.jacoco.itReportPath>
   </properties>

@@ -9,6 +9,7 @@
   <name>JavaScript Sample Project analyzed with Maven reusing JsTestDriver reports</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>js</sonar.language>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.javascript.jstestdriver.reportsfolder>target/jstestdriver</sonar.javascript.jstestdriver.reportsfolder>

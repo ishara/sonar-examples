@@ -9,6 +9,7 @@
   <name>Python project analyzed with Maven</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.language>py</sonar.language>
   </properties>
 
