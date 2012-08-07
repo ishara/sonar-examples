@@ -10,4 +10,4 @@ Usage
 =====
 Analyse by Sonar:
 
-        mvn sonar:sonar
+    mvn sonar:sonar
