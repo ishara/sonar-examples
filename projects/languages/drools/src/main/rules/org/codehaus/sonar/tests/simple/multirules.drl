@@ -1,0 +1,20 @@
+package org.codehaus.sonar.tests.simple
+
+declare SonarUser
+	name : String
+end
+
+rule "Rule 1"   
+    when
+        u: SonarUser ( )
+    then
+        System.out.println("Hello " + u.getName() + " from rule 1");
+end
+
+
+rule "Rule 2"   
+    when
+        u: SonarUser (name == "Jeremie" )
+    then
+        System.out.println("Hello " + u.getName() + " from rule 2");
+end
