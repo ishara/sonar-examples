@@ -1,4 +1,4 @@
-This example demonstrates how to analyze C# projects with the Sonar Runner.
+This example demonstrates how to analyze C# projects with the Sonar Runner or Maven.
 
 Prerequisites
 =============
