@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.501" errors="0" skipped="0" tests="1" name="example.OneTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\bin"/>
+    <property name="java.vm.version" value="20.2-b06"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\git\sonar-examples\projects\code-coverage\ut\ut-maven-emma-runTests"/>
+    <property name="java.runtime.version" value="1.6.0_27-b07"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="C:\git\sonar-examples\projects\code-coverage\ut\ut-maven-emma-runTests"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="surefire.real.class.path" value="C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefirebooter7007157500388350710.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\DAVID~1.RAC\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Java\jdk1.6.0_27\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Hewlett-Packard\Drive Encryption\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files\SlikSvn\bin\;C:\Program Files\Bitvise Tunnelier;C:\Program Files\Git\cmd;C:\tools\sonar-runner-1.4\bin;C:\Program Files\TortoiseSVN\bin;C:\tools\sonar-autocontrol-2.2\bin;C:\tools\apache-ant-1.8.4\bin;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\Cppcheck\;C:\tools\Python27;C:\tools\Python27\Scripts;C:\tools\apache-maven-2.2.1\bin;C:\Program Files\Gallio\bin;."/>
+    <property name="surefire.test.class.path" value="C:\git\sonar-examples\projects\code-coverage\ut\ut-maven-emma-runTests\target\test-classes;C:\git\sonar-examples\projects\code-coverage\ut\ut-maven-emma-runTests\target\generated-classes\emma\classes;C:\Users\david.racodon\.m2\repository\junit\junit\4.8.1\junit-4.8.1.jar;C:\Users\david.racodon\.m2\repository\emma\emma\2.1.5320\emma-2.1.5320.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\david.racodon"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="david.racodon"/>
+    <property name="java.class.path" value="C:\git\sonar-examples\projects\code-coverage\ut\ut-maven-emma-runTests\target\test-classes;C:\git\sonar-examples\projects\code-coverage\ut\ut-maven-emma-runTests\target\generated-classes\emma\classes;C:\Users\david.racodon\.m2\repository\junit\junit\4.8.1\junit-4.8.1.jar;C:\Users\david.racodon\.m2\repository\emma\emma\2.1.5320\emma-2.1.5320.jar;"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_27\jre"/>
+    <property name="sun.java.command" value="C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefirebooter7007157500388350710.jar C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefire7148230750155011974tmp C:\Users\DAVID~1.RAC\AppData\Local\Temp\surefire7949526708386061619tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.6.0_27"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_27\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="C:\Users\david.racodon\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.483" classname="example.OneTest" name="testFoo"/>
+</testsuite>

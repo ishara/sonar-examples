@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.codehaus.sonar</groupId>
+  <artifactId>example-ut-maven-emma-reuseReports</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>UT coverage with Maven reusing JUnit and Emma reports</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	
+    <!-- Tells Sonar to reuse existing reports -->
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+	
+	<!-- Tells Sonar where the unit tests execution reports are -->
+	<sonar.surefire.reportsPath>reports/junit</sonar.surefire.reportsPath>
+	
+    <!-- Tells Sonar to use Emma as the code coverage tool -->
+    <sonar.core.codeCoveragePlugin>emma</sonar.core.codeCoveragePlugin>
+
+	<!-- Tells Sonar where the unit tests code coverage reports are -->
+	<sonar.emma.reportPath>reports/emma</sonar.emma.reportPath>
+  </properties>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+       </plugin>
+    </plugins>
+  </build>
+
+</project>
