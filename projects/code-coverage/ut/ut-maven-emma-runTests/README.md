@@ -1,10 +1,19 @@
-This example demonstrates how to analyse project with Maven and Cobertura, running tests.
+This example demonstrates how to analyze a project with Maven and Emma, running tests.
 
 Prerequisites
 =============
-* Sonar 2.12 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 2.6 or higher
+* [Sonar Emma Plugin](http://docs.codehaus.org/display/SONAR/Sonar+Emma+Plugin) 1.2.1 or higher
 
 Usage
 =====
-* Run the following command: mvn clean install sonar:sonar
+* Compile the project:
+
+        mvn clean install
+  	
+		
+* Analyze it with Sonar using Maven:
+
+        mvn sonar:sonar
+
 
