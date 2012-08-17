@@ -8,6 +8,6 @@ Prerequisites
 
 Usage
 =====
-* Analyze the sample PHP project with Sonar using the Sonar Runner:
+* Analyze the PHP project with Sonar using the Sonar Runner:
 
         sonar-runner
