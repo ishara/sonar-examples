@@ -1,4 +1,4 @@
-This example demonstrates how to analyze PHP projects with the Sonar Runner.
+This example demonstrates how to analyze PHP projects with the Sonar Runner running unit tests.
 
 Prerequisites
 =============
@@ -8,7 +8,6 @@ Prerequisites
 
 Usage
 =====
-* Download the project sample from [https://github.com/SonarCommunity/sonar-php/tree/master/math-php-test](https://github.com/SonarCommunity/sonar-php/tree/master/math-php-test)
-* Analyze it with Sonar using the Sonar Runner:
+* Analyze the sample PHP project with Sonar using the Sonar Runner:
 
         sonar-runner
