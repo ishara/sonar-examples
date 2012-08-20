@@ -53,7 +53,7 @@
 		</junit>
 	</target>
 
-	<!-- ========= Define Sonar target ========= -->
+	<!-- ========= Define Sonar properties ========= -->
 	<property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-multimodule-jacoco-runTests-module1" />
 	<property name="sonar.sources" value="${src.dir}" />
 	<property name="sonar.tests" value="${test.dir}" />
@@ -67,14 +67,10 @@
 	<property name="sonar.jacoco.antTargets" value="run-tests" />
 	<!-- 3. Tells Sonar to use JaCoCo as the code coverage engine -->
 	<property name="sonar.core.codeCoveragePlugin" value="jacoco" />
-	
-	<target name="sonar" depends="compile">
-		<sonar:sonar key="org.codehaus.sonar:example-ut-ant-multimodule-jacoco-runTests-module1" version="1.0" xmlns:sonar="antlib:org.sonar.ant" />
-	</target>
 
 	<!-- ========= The main target "all" ========= -->
 	<!-- Note that depending on the "run-tests" target is not mandatory, as Sonar Ant task will launch it thanks to the "sonar.jacoco.antTargets" property -->
 	<!-- However, note that compiling is required before running the Sonar Ant task -->
-	<target name="all" depends="clean,compile,sonar" />
+	<target name="all" depends="clean,compile" />
 
 </project>
