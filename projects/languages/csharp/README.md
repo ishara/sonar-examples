@@ -4,7 +4,7 @@ Prerequisites
 =============
 * [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
 * [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.3 or higher or Maven 2.2.1 or higher
-* [Sonar C# Plugin](http://docs.codehaus.org/display/SONAR/C-Sharp+Plugins+Ecosystem) 1.3 or higher
+* [Sonar C# Plugin](http://docs.codehaus.org/display/SONAR/C%23+Plugins+Ecosystem) 1.3 or higher
 
 Usage
 =====
