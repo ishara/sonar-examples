@@ -1,4 +1,4 @@
-This example demonstrates how to analyze Delphi projects with the Sonar Runner.
+This example demonstrates how to analyze a Delphi project with the Sonar Runner.
 
 Prerequisites
 =============
