@@ -4,7 +4,7 @@ Prerequisites
 =============
 * [Sonar 2.11](http://www.sonarsource.org/downloads/) or higher
 * [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
-* [Sonar Drools Plugin](http://docs.codehaus.org/display/SONAR/Drools+plugin) 0.2 or higher
+* [Sonar Drools Plugin](http://docs.codehaus.org/display/SONAR/Drools+Plugin) 0.2 or higher
 
 Usage
 =====
