@@ -2,11 +2,12 @@ This example demonstrates how to analyze PL/SQL from Oracle Forms.
 
 Prerequisites
 =============
-* Sonar 3.0 or higher
-* Sonar Runner 1.3 or higher
-* Sonar PL/SQL Plugin 2.1 or higher
-
+* [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
+* [Sonar PL/SQL Plugin](http://www.sonarsource.com/products/plugins/languages/plsql/) 2.1 or higher
 
 Usage
 =====
-* Run the following command: sonar-runner
+* Analyze the project with Sonar using the Sonar Runner:
+
+        sonar-runner
