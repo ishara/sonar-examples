@@ -7,7 +7,7 @@ Prerequisites
 
 Usage
 ======
-* Build project and execute all tests:
+* Build the project and execute all the tests:
 
         gradle build
 
