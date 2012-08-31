@@ -1,11 +1,15 @@
-This example demonstrates how to analyse JavaScript projects with Sonar Runner.
+This example demonstrates how to analyze a simple JavaScript project with the Sonar Runner.
 
 Prerequisites
 =============
-* Sonar 2.11 or higher
-* Sonar JavaScript Plugin 1.0 or higher
-* Sonar Runner 1.3 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
+* [Sonar JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) 1.0 or higher
 
 Usage
 =====
-* Run the following command: sonar-runner
+* Analyze the project with Sonar using the Sonar Runner:
+
+        sonar-runner
+
+
