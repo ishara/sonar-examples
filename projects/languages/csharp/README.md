@@ -8,7 +8,7 @@ Prerequisites
 
 Usage
 =====
-* Download the project sample from [http://svn.codehaus.org/sonar-plugins/trunk/dotnet/tools/dotnet-tools-commons/src/test/resources/solution/Example/](http://svn.codehaus.org/sonar-plugins/trunk/dotnet/tools/dotnet-tools-commons/src/test/resources/solution/Example/)
+* Download the project sample from [https://github.com/SonarCommunity/sonar-dotnet/tree/master/tools/dotnet-tools-commons/src/test/resources/solution/Example](https://github.com/SonarCommunity/sonar-dotnet/tree/master/tools/dotnet-tools-commons/src/test/resources/solution/Example)
 * Compile it:
 
         mvn clean install
