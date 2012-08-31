@@ -1,17 +1,17 @@
-This example demonstrates how to analyse Groovy projects with Maven.
+This example demonstrates how to analyze a Groovy project with Maven.
 
 Prerequisites
 =============
-* Sonar 2.5 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 2.5 or higher
 * Maven 2.2 or higher
-* Sonar Groovy Plugin 0.6 or higher
+* [Sonar Groovy Plugin](http://docs.codehaus.org/display/SONAR/Groovy+Plugin) 0.6 or higher
 
 Usage
 =====
-1. Build project:
+* Compile the project:
 
         mvn clean install
 
-2. Analyse by Sonar:
+* Analyze it with Sonar using Maven:
 
         mvn sonar:sonar
