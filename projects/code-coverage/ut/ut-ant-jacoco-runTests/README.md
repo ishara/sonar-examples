@@ -1,4 +1,4 @@
-This example demonstrates how to analyze a project with Ant and Jacoco, running tests.
+This example demonstrates how to analyze a Java project with Ant and Jacoco, running tests.
 
 Prerequisites
 =============
