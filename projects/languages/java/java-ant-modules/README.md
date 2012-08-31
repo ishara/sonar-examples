@@ -1,4 +1,4 @@
-This example demonstrates how to analyze a Java project with Ant.
+This example demonstrates how to analyze a multi-module Java project with Ant.
 
 Prerequisites
 =============
