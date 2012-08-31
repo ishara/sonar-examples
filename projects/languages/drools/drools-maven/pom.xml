@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.codehaus.sonar</groupId>
-	<artifactId>example-drools</artifactId>
+	<artifactId>example-drools-maven</artifactId>
 	<version>1.0</version>
-	<name>Simple Drools Project</name>
+	<name>Drools Project Analyzed with Maven</name>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
