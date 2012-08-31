@@ -11,7 +11,6 @@ Usage
 * Feed Sonar with the Pacbase rules:
   * copy the install/rules.xml file to the /extensions/rules/pacbase directory
   * restart your Sonar server
-
 * Analyze the project with Sonar using the Sonar Runner:
 
         sonar-runner
