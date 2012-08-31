@@ -1,4 +1,4 @@
-This example demonstrates how to analyze a project with Ant reusing existing JUnit and JaCoCo reports.
+This example demonstrates how to analyze a Java project with Ant reusing existing JUnit and JaCoCo reports.
 
 Prerequisites
 =============
