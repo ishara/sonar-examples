@@ -1,9 +1,10 @@
-This example demonstrates how to analyse JavaScript project with Maven and running unit tests with JsTestDriver.
+This example demonstrates how to analyze a JavaScript project with Maven running unit tests with JsTestDriver.
 
 Prerequisites
 =============
-* Sonar 2.11 or higher
-* Sonar JavaScript Plugin 1.0 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
+* [Sonar JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) 1.0 or higher
 
 Usage
 =====
@@ -14,6 +15,6 @@ Usage
 
         mvn test
 
-* Analyse JavaScript code by Sonar and import unit test results:
+* Analyze the JavaScript code with Sonar and import unit tests results:
 
         mvn sonar:sonar
