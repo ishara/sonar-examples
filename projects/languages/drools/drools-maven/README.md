@@ -1,8 +1,8 @@
-This example demonstrates how to analyze Drools projects with Maven.
+This example demonstrates how to analyze a Drools project with Maven.
 
 Prerequisites
 =============
-* [Sonar 2.4](http://www.sonarsource.org/downloads/) or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
 * Maven 2.2.1 or higher
 * [Sonar Drools Plugin](http://docs.codehaus.org/display/SONAR/Drools+Plugin) 0.2 or higher
 
