@@ -1,10 +1,13 @@
-This example demonstrates how to analyse Groovy projects with the Sonar Runner.
+This example demonstrates how to analyze a Groovy project with the Sonar Runner.
 
 Prerequisites
 =============
-* Sonar 2.5 or higher
-* Sonar Groovy Plugin 0.6 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
+* [Sonar Groovy Plugin](http://docs.codehaus.org/display/SONAR/Groovy+Plugin) 0.6 or higher
 
 Usage
 =====
-* Run the following command: sonar-runner
+* Analyze it with Sonar using the Sonar Runner:
+
+        sonar-runner
