@@ -1,10 +1,18 @@
-This example demonstrates how to analyse project with Maven and JaCoCo, running tests.
+This example demonstrates how to analyze a Java project with Maven and JaCoCo, running tests.
 
 Prerequisites
 =============
-* Sonar 2.12 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 2.12 or higher
+* Maven 2.2.1 or higher
 
 Usage
 =====
-* Run the following command: mvn clean install sonar:sonar
+* Build the project and run the tests:
+
+        mvn clean install
+
+* Analyze the project with Sonar using Maven:
+
+        mvn sonar:sonar
+
 
