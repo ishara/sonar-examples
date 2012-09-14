@@ -3,14 +3,9 @@
 
   <echo>Root Project</echo>
 
-  <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
-  
-    <!-- 
-    
-        PATH MUST BE REPLACED :
-        
-    -->  
-    <classpath path="PATH/TO/sonar-ant-task.jar"/>
+  <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml"> 
+   <!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+   <classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
   </taskdef>
 
   <target name="clean">
@@ -27,11 +22,11 @@
   <property name="sonar.modules" value="module-one/build.xml,module-two/build.xml"/>
 
   <target name="sonar">
+     <!-- Add your basic Sonar configuration below: sonar.jdbc.*, sonar.sources, etc. properties -->
     <sonar:sonar key="my:project" version="0.1-SNAPSHOT">
     </sonar:sonar>
   </target>
 
-  <target name="all"
-          depends="clean,compile,sonar"/>
+  <target name="all" depends="clean,compile,sonar"/>
 
 </project>
