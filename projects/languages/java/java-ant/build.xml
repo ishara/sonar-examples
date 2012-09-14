@@ -31,10 +31,6 @@
 		<property name="sonar.sources" value="${src.dir}" />
 		<property name="sonar.binaries" value="${classes.dir}" />
 		
-		<property name="sonar.jdbc.username" value="postgres" />
-		<property name="sonar.jdbc.password" value="admin" />
-		<property name="sonar.jdbc.url" value="jdbc:postgresql://localhost/dory" />
-		
 		<sonar:sonar key="org.codehaus.sonar:example-java-ant" version="1.0" xmlns:sonar="antlib:org.sonar.ant" />
 	</target>
 
