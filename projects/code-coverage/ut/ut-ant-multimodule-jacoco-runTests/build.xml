@@ -22,7 +22,7 @@
   
   <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
     <!-- Update the following line, or remove it and put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
-    <classpath path="path/to/sonar/ant/task/lib" />
+    <classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
   </taskdef>
 		
   <target name="sonar">
