@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="UT coverage with Ant reusing JUnit and JaCoCo reports" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+
+	<!-- ========= Define the main properties of this project ========= -->
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="target" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="reports.dir" value="reports" />
+	<property name="reports.junit" value="${reports.dir}/junit" />
+	<property name="reports.jacoco" value="${reports.dir}/coverage/jacoco.exec" />
+	
+	<!-- Define the Sonar properties -->
+    <property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-jacoco-reuseReports" />
+    <property name="sonar.projectName" value="UT coverage with Ant reusing JUnit and JaCoCo reports" />
+    <property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.sources" value="${src.dir}" />
+	<property name="sonar.binaries" value="${classes.dir}" />
+
+	<!-- Tells Sonar to reuse existing reports for unit tests execution and coverage reports -->
+	<property name="sonar.dynamicAnalysis" value="reuseReports" />
+
+	<!-- Tells Sonar where the unit tests execution reports are -->
+	<property name="sonar.surefire.reportsPath" value="${reports.junit}" />  
+	
+	<!-- Tells Sonar that the code coverage tool by unit tests is JaCoCo -->
+	<property name="sonar.core.codeCoveragePlugin" value="jacoco" />
+	
+	<!-- Tells Sonar where the unit tests code coverage report is -->
+	<property name="sonar.jacoco.reportPath" value="${reports.jacoco}" /> 
+	
+    <!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
+	
+	  <property name="sonar.jdbc.url" value="jdbc:postgresql://localhost/sonar32" />
+	  <property name="sonar.jdbc.username" value="postgres" />
+	  <property name="sonar.jdbc.password" value="admin" />
+	
+
+	<!-- ========= Define "regular" targets: clean, compile, ... ========= -->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+	<target name="init">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${classes.dir}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" destdir="${classes.dir}" fork="true" debug="true" includeAntRuntime="false" />
+	</target>
+
+	<!-- ========= Define Sonar target ========= -->
+	<target name="sonar" depends="compile">
+		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+			<classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
+		</taskdef>
+		
+		<!-- Execute Sonar -->
+		<sonar:sonar />
+	</target>
+
+	<!-- ========= The main target "all" ========= -->
+	<target name="all" depends="clean,compile,sonar" />
+
+</project>
