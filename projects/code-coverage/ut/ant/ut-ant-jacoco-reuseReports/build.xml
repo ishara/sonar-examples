@@ -29,14 +29,15 @@
 	<property name="sonar.jacoco.reportPath" value="${reports.jacoco}" /> 
 	
     <!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
-	
-	  <property name="sonar.jdbc.url" value="jdbc:postgresql://localhost/sonar32" />
-	  <property name="sonar.jdbc.username" value="postgres" />
-	  <property name="sonar.jdbc.password" value="admin" />
-	
+	<!-- 
+	  <property name="sonar.jdbc.url" value="jdbc:..." />
+	  <property name="sonar.jdbc.username" value="..." />
+	  <property name="sonar.jdbc.password" value="..." />
+	-->
 
 	<!-- ========= Define "regular" targets: clean, compile, ... ========= -->
 	<target name="clean">
+	    <delete dir=".sonar" />
 		<delete dir="${build.dir}" />
 	</target>
 
