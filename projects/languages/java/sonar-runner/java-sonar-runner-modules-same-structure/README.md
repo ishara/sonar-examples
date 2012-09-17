@@ -8,6 +8,6 @@ Prerequisites
 
 Usage
 =====
-* Analyze it with Sonar using the Sonar Runner:
+* Analyze the project with Sonar using the Sonar Runner:
 
         sonar-runner

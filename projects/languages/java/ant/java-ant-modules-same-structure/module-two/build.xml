@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Multi-module Java Project analyzed with the Sonar Ant Task (same structure for every module) - Module Two" default="all" basedir=".">
+
+  <property name="build.dir" value="build" />
+  <property name="classes.dir" value="${build.dir}/bin" />
+  <property name="sources.dir" value="src/java" />
+
+  <path id="classpath">
+  </path>
+
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+
+  <target name="init">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${classes.dir}" />
+  </target>
+
+  <target name="compile" depends="init">
+    <javac destdir="${classes.dir}" classpathref="classpath" fork="true" debug="true" includeAntRuntime="false">
+      <src path="${sources.dir}" />
+    </javac>
+  </target>
+
+  <target name="all" depends="clean,compile" />
+
+</project>

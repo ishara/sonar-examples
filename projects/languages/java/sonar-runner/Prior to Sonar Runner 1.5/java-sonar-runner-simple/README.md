@@ -1,13 +1,12 @@
-This example demonstrates how to analyze a Java project with the Sonar Runner.
+This example demonstrates how to analyze a simple Java project with the Sonar Runner (prior to Sonar Runner 1.5).
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 3.1 or higher
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
-* Make sure that the PMD rule 'JUnit assertions should include a message' is activated on your default profile to get violations on test files (or set a specific quality profile in the sonar-project.properties file).
+* [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4
 
 Usage
 =====
-* Analyze it with Sonar using the Sonar Runner:
+* Analyze the project with Sonar using the Sonar Runner:
 
         sonar-runner

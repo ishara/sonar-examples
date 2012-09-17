@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Simple Java Ant Project" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+<project name="Simple Java Project analyzed with the Sonar Ant Task" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
 
 	<!-- ========= Define the main properties of this project ========= -->
 	<property name="src.dir" value="src" />
 	<property name="build.dir" value="target" />
 	<property name="classes.dir" value="${build.dir}/classes" />
+	
+	<!-- Define the Sonar properties -->
+    <property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant" />
+    <property name="sonar.projectName" value="Simple Java Project analyzed with the Sonar Ant Task" />
+    <property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.sources" value="src" />
+	<property name="sonar.binaries" value="build" />
+	
+  <!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
+	<!--
+	  <property name="sonar.jdbc.url" value="jdbc:..." />
+	  <property name="sonar.jdbc.username" value="..." />
+	  <property name="sonar.jdbc.password" value="..." />
+	-->
 
 	<!-- ========= Define "regular" targets: clean, compile, ... ========= -->
 	<target name="clean">
@@ -26,13 +40,9 @@
 			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
 			<classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
 		</taskdef>
-
-		<!-- Add your basic Sonar configuration below: sonar.jdbc.*, sonar.sources, etc. properties -->
 		
-		<property name="sonar.sources" value="${src.dir}" />
-		<property name="sonar.binaries" value="${classes.dir}" />
-		
-		<sonar:sonar key="org.codehaus.sonar:example-java-ant" version="1.0" xmlns:sonar="antlib:org.sonar.ant" />
+		<!-- Execute Sonar -->
+		<sonar:sonar />
 	</target>
 
 	<!-- ========= The main target "all" ========= -->
