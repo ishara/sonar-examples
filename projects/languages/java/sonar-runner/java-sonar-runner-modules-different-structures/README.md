@@ -1,4 +1,5 @@
 This example demonstrates how to analyze a multi-module Java project with the Sonar Runner.
+Modules have different structures.
 
 Prerequisites
 =============
