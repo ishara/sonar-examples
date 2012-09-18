@@ -2,8 +2,8 @@ This example demonstrates how to add information on integration tests coverage f
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.5 or higher
 
 Usage
 =====
