@@ -11,9 +11,9 @@
 	<property name="reports.junit.xml.dir" value="${reports.dir}/junit" />
 	
 	<!-- Define the Sonar properties -->
-    <property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-jacoco-runTests" />
-    <property name="sonar.projectName" value="UT coverage with Ant and JaCoCo running tests" />
-    <property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-jacoco-runTests" />
+	<property name="sonar.projectName" value="UT coverage with Ant and JaCoCo running tests" />
+	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.sources" value="${src.dir}" />
 	<property name="sonar.tests" value="${test.dir}" />
 	<property name="sonar.binaries" value="${classes.dir}" />
