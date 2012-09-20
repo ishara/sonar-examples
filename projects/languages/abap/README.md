@@ -3,13 +3,13 @@ This example demonstrates how to analyze an SAP ABAP project with the Sonar Runn
 Prerequisites
 =============
 
-* [Sonar](http://www.sonarsource.org/downloads/) 2.12 or higher
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
-* [Sonar ABAP Plugin](http://www.sonarsource.com/products/plugins/languages/abap/) 2.0.1 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 2.0 or higher
+* [Sonar ABAP Plugin](http://www.sonarsource.com/products/plugins/languages/abap/) 2.0.2 or higher
 
 Usage
 =====
-* Analyze it with Sonar using the Sonar Runner:
+* Analyze the project with Sonar using the Sonar Runner:
 
         sonar-runner
 

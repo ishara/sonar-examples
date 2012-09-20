@@ -2,8 +2,8 @@ This example demonstrates how to analyze a Natural project with the Sonar Runner
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/dowhttp://www.sonarsource.com/products/plugins/languages/natural/nloads/) 2.11 or higher
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 2.0 or higher
 * [Sonar Natural Plugin](http://www.sonarsource.com/products/plugins/languages/natural/) 1.2.1 or higher
 
 Usage

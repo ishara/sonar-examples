@@ -3,7 +3,7 @@ This example demonstrates how to analyze a Pacbase project with the Sonar Runner
 Prerequisites
 =============
 * [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 1.4 or higher
+* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 2.0 or higher
 * [Sonar Pacbase Plugin](http://www.sonarsource.com/products/plugins/languages/pacbase/) 1.2 or higher
 
 Usage
