@@ -18,6 +18,7 @@
 	<property name="sonar.binaries" value="${classes.dir}" />
 	<property name="sonar.surefire.reportsPath" value="${reports.junit.xml.dir}" />   
 	<property name="sonar.modules" value="module1,module2"/>
+	<property name="sonar.sourceEncoding" value="UTF-8" />
 	
 	<!-- Override some properties at module level -->
 	<property name="module1.sonar.projectName" value="Module One" />

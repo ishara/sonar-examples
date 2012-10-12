@@ -11,7 +11,8 @@
 	<property name="sonar.projectName" value="Simple Java Project analyzed with the Sonar Ant Task" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.sources" value="src" />
-	<property name="sonar.binaries" value="build" />
+	<property name="sonar.binaries" value="target" />
+	<property name="sonar.sourceEncoding" value="UTF-8" />
 	
 	<!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
 	<!--

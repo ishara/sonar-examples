@@ -8,6 +8,7 @@
   <property name="sonar.projectVersion" value="1.0" />
   <property name="sonar.sources" value="src/java" />
   <property name="sonar.binaries" value="build/bin" />
+  <property name="sonar.sourceEncoding" value="UTF-8" />
   
   <!-- Set modules IDs -->
   <property name="sonar.modules" value="module-one,module-two"/>

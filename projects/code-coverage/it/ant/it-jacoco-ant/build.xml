@@ -13,6 +13,7 @@
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.sources" value="${src.dir}" />
 	<property name="sonar.binaries" value="${classes.dir}" />
+	<property name="sonar.sourceEncoding" value="UTF-8" />
 	
 	<!-- Feed Sonar with the JaCoCo integration tests coverage report (that you have previously generated) -->
 	<property name="sonar.jacoco.itReportPath" value="${reports.dir}/jacoco.exec" />

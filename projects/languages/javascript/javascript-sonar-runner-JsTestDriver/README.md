@@ -8,12 +8,11 @@ Prerequisites
 
 Usage
 =====
-* In run-tests.bat, replace <path_to_browser> by the path to your browser executable. Examples with Chrome:
+* Execute JsTestDriver unit tests and gather code coverage statistics. Replace <path_to_browser> by the path to your browser executable. Examples with Chrome:
   * Windows: C:\Users\myUser\AppData\Local\Google\Chrome\Application\chrome.exe
   * Mac: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
-* Execute JsTestDriver unit tests and gather code coverage statistics:
 
-        run-tests.bat
+        java -jar jstestdriver/JsTestDriver-1.3.4.b.jar --port 9876 --tests all --browser "<path_to_browser>" --testOutput jstestdriver --config jstestdriver/jsTestDriver.conf
 
 * Analyze the JavaScript code with Sonar and import unit tests results:
 

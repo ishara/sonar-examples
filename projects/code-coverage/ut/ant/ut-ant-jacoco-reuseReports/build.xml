@@ -15,6 +15,7 @@
     <property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.sources" value="${src.dir}" />
 	<property name="sonar.binaries" value="${classes.dir}" />
+	<property name="sonar.sourceEncoding" value="UTF-8" />
 
 	<!-- Tells Sonar to reuse existing reports for unit tests execution and coverage reports -->
 	<property name="sonar.dynamicAnalysis" value="reuseReports" />

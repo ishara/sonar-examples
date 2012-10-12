@@ -17,6 +17,7 @@
 	<property name="sonar.sources" value="${src.dir}" />
 	<property name="sonar.tests" value="${test.dir}" />
 	<property name="sonar.binaries" value="${classes.dir}" />
+	<property name="sonar.sourceEncoding" value="UTF-8" />
 	<property name="sonar.surefire.reportsPath" value="${reports.junit.xml.dir}" />   
 
 	<!-- The following properties are required to use JaCoCo: -->
