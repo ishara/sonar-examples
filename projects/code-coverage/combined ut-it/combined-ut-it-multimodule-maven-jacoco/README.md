@@ -1,4 +1,5 @@
 This example demonstrates how to collect code coverage by integration tests, tests are located in a separate Java Maven module.
+Sonar aggregates these code coverages to compute an overall code coverage (this feature requires Sonar 3.3).
 
 Prerequisites
 =============
