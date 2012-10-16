@@ -14,7 +14,7 @@
   <property name="sonar.modules" value="java-module,javascript-module"/>
   
   <!-- Set modules languages -->
-  <property name="java-module.sonar.langauge" value="java"/>
+  <property name="java-module.sonar.language" value="java"/>
   <property name="javascript-module.sonar.language" value="js"/>
   
   <!-- Override some properties at module level -->
