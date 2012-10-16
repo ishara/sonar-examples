@@ -7,7 +7,7 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
 
-  <name>Multi-language project (Java / JavaScript) analyzed with the Maven</name>
+  <name>Multi-language project (Java / JavaScript) analyzed with Maven</name>
 
   <modules>
     <module>java-module</module>
