@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Multi-language project (Java / JavaScript) analyzed with the Sonar Ant Task - JavaScript Module" default="all" basedir=".">
+
+  <path id="classpath">
+  </path>
+
+  <target name="clean">
+  </target>
+
+  <target name="init">
+  </target>
+
+  <target name="compile" depends="init">
+  </target>
+
+  <target name="all" depends="clean,compile" />
+
+</project>
