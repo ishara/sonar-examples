@@ -6,6 +6,7 @@
   <property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant-modules-same-structure" />
   <property name="sonar.projectName" value="Multi-module Java Project analyzed with the Sonar Ant Task (same structure for every module)" />
   <property name="sonar.projectVersion" value="1.0" />
+  <property name="sonar.language" value="java" />
   <property name="sonar.sources" value="src/java" />
   <property name="sonar.binaries" value="build/bin" />
   <property name="sonar.sourceEncoding" value="UTF-8" />

@@ -13,6 +13,7 @@
     <property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-jacoco-reuseReports" />
     <property name="sonar.projectName" value="UT coverage with Ant reusing JUnit and JaCoCo reports" />
     <property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.language" value="java" />
 	<property name="sonar.sources" value="${src.dir}" />
 	<property name="sonar.binaries" value="${classes.dir}" />
 	<property name="sonar.sourceEncoding" value="UTF-8" />
