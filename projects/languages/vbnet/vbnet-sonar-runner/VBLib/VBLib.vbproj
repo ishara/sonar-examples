@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{D37F0B9F-CEAE-4EA8-AF19-B6AD38D199D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VBLib</RootNamespace>
+    <AssemblyName>VBLib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+
+  <!-- ====================================================== -->  
+  <!-- Part to edit to add VB.NET files that must be analysed -->
+  <ItemGroup>
+    <Compile Include="bar\Module1.vb" />
+    <Compile Include="foo\Module1.vb" />
+    <Compile Include="foo\Module1_copy.vb" />
+  </ItemGroup>
+  <!-- ====================================================== -->
+  
+</Project>
