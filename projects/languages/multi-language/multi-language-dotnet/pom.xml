@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.codehaus.sonar</groupId>
+  <artifactId>multi-language-dotnet</artifactId>
+  <version>1.0</version>
+  <name>Multi-Language .NET Solution analyzed with Maven</name>
+  <packaging>netpack</packaging>
+
+  <properties>
+    <visual.studio.solution>MultiLanguage.sln</visual.studio.solution>
+    <dotnet.tool.version>4.0</dotnet.tool.version>
+	<!-- For SONAR -->
+    <sonar.language>cs</sonar.language>
+    <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+  </properties>
+  
+  <build>
+    <!-- For SONAR -->
+    <sourceDirectory>${basedir}</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.sonar-plugins.dotnet</groupId>
+        <artifactId>maven-dotnet-plugin</artifactId>
+	    <version>0.6</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>
