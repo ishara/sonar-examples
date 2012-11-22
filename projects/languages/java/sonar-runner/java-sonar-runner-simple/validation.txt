@@ -1,4 +1,4 @@
-start sonar
+start server
 sonar-runner
 verify java-sonar-runner-simple
   measure ncloc is 10
