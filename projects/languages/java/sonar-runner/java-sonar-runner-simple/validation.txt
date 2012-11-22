@@ -1,0 +1,10 @@
+start sonar
+sonar-runner
+verify java-sonar-runner-simple
+  measure ncloc is 10
+  measure files is 1
+verify java-sonar-runner-simple:[default].Helloworld
+  measure lines is 13
+  measure ncloc is 10
+  measure statements is 3
+  measure classes is 1
