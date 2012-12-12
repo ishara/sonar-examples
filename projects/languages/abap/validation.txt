@@ -1,0 +1,4 @@
+start server
+sonar-runner
+verify abap.examples.simple-project
+  measure ncloc is 218
