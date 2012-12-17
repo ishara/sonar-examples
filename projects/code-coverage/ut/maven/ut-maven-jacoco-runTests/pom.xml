@@ -15,7 +15,7 @@
     <!-- Tells Sonar to run the unit tests -->
     <sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
     <!-- Tells Sonar to use JaCoCo as the code coverage tool -->
-    <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
   </properties>
 
   <dependencies>

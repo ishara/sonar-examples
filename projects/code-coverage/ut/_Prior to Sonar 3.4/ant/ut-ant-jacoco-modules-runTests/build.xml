@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="UT coverage with Ant and JaCoCo running tests :: Parent" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+  
+	<!-- ========= Define the main properties of this project ========= -->
+	<property name="src.dir" value="src" />
+	<property name="test.dir" value="test" />
+	<property name="build.dir" value="target" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="reports.dir" value="${build.dir}/reports" />
+	<property name="reports.junit.xml.dir" value="${reports.dir}/junit" />
+	
+	<!-- Define the Sonar properties -->
+	<property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-jacoco-modules-runTests" />
+	<property name="sonar.projectName" value="UT coverage with Ant and JaCoCo running tests :: Parent" />
+	<property name="sonar.projectVersion" value="1.0" />
+	<property name="sonar.language" value="java" />
+	<property name="sonar.sources" value="${src.dir}" />
+	<property name="sonar.tests" value="${test.dir}" />
+	<property name="sonar.binaries" value="${classes.dir}" />
+	<property name="sonar.surefire.reportsPath" value="${reports.junit.xml.dir}" />   
+	<property name="sonar.modules" value="module1,module2"/>
+	<property name="sonar.sourceEncoding" value="UTF-8" />
+	
+	<!-- Override some properties at module level -->
+	<property name="module1.sonar.projectName" value="Module One" />
+    <property name="module2.sonar.projectName" value="Module Two" />
+
+	<!-- The following properties are required to use JaCoCo: -->
+	<property name="sonar.dynamicAnalysis" value="reuseReports" />
+	<property name="sonar.core.codeCoveragePlugin" value="jacoco" />
+	<property name="sonar.jacoco.reportPath" value="target/jacoco.exec" />
+
+	<!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
+	<!--
+		<property name="sonar.jdbc.url" value="jdbc:..." />
+		<property name="sonar.jdbc.username" value="..." />
+		<property name="sonar.jdbc.password" value="..." />
+	-->
+
+	<!-- ========= Define "regular" targets: clean, compile, test, ... ========= -->
+	<target name="clean">
+		<delete dir=".sonar"/>
+		<ant dir="module1" target="clean"/>
+		<ant dir="module2" target="clean"/>
+	</target>
+
+	<target name="compile">
+		<ant dir="module1" target="compile"/>
+		<ant dir="module2" target="compile"/>
+	</target>
+
+	<target name="test" depends="compile">
+		<ant dir="module1" target="test"/>
+		<ant dir="module2" target="test"/>
+	</target>
+	
+    <!-- ========= Define Sonar target ========= -->
+	<target name="sonar" depends="compile">
+		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+			<classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
+		</taskdef>
+		
+		<!-- Execute Sonar -->
+		<sonar:sonar />
+	</target>
+
+	<!-- ========= The main target "all" ========= -->
+	<target name="all" depends="clean,compile,test,sonar" />
+
+</project>

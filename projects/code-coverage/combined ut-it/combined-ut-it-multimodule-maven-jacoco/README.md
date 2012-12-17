@@ -3,7 +3,7 @@ Sonar aggregates code coverage by unit tests and integration tersts to compute a
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 2.12 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 3.4 or higher
 * Maven 2.2.1 or higher
 
 Usage

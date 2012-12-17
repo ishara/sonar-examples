@@ -14,7 +14,7 @@
     <!-- Tells Sonar to run the unit tests -->
     <sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
     <!-- Tells Sonar to use Cobertura as the code coverage tool -->
-    <sonar.core.codeCoveragePlugin>cobertura</sonar.core.codeCoveragePlugin>
+    <sonar.java.coveragePlugin>cobertura</sonar.java.coveragePlugin>
   </properties>
 
   <dependencies>

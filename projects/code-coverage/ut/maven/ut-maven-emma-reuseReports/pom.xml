@@ -19,7 +19,7 @@
 	<sonar.surefire.reportsPath>reports/junit</sonar.surefire.reportsPath>
 	
     <!-- Tells Sonar to use Emma as the code coverage tool -->
-    <sonar.core.codeCoveragePlugin>emma</sonar.core.codeCoveragePlugin>
+    <sonar.java.coveragePlugin>emma</sonar.java.coveragePlugin>
 
 	<!-- Tells Sonar where the unit tests code coverage reports are -->
 	<sonar.emma.reportPath>reports/emma</sonar.emma.reportPath>

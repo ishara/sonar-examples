@@ -25,7 +25,7 @@
 	<property name="sonar.surefire.reportsPath" value="${reports.junit}" />  
 	
 	<!-- Tells Sonar that the code coverage tool by unit tests is JaCoCo -->
-	<property name="sonar.core.codeCoveragePlugin" value="jacoco" />
+	<property name="sonar.java.coveragePlugin" value="jacoco" />
 	
 	<!-- Tells Sonar where the unit tests code coverage report is -->
 	<property name="sonar.jacoco.reportPath" value="${reports.jacoco}" /> 

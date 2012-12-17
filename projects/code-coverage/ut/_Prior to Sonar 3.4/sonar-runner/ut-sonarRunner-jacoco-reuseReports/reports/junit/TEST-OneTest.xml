@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="DAVID-PORTABLE" name="OneTest" tests="1" time="0.4" timestamp="2012-05-31T10:29:30">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="ant.file.type.UT coverage with JaCoCo and Ant" value="file" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="os.name" value="Windows 7" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_27\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_27\jre\classes" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="C:\tools\apache-ant-1.8.4" />
+    <property name="java.runtime.version" value="1.6.0_27-b07" />
+    <property name="sonar.core.codeCoveragePlugin" value="jacoco" />
+    <property name="sonar.jdbc.password" value="dory" />
+    <property name="user.name" value="david.racodon" />
+    <property name="sonar.surefire.reportsPath" value="target/reports/junit" />
+    <property name="build.dir" value="target" />
+    <property name="user.language" value="en" />
+    <property name="sonar.jacoco.antTargets" value="run-tests" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\bin" />
+    <property name="reports.dir" value="target/reports" />
+    <property name="ant.project.default-target" value="all" />
+    <property name="ant.project.name" value="UT coverage with JaCoCo and Ant" />
+    <property name="reports.junit.xml.dir" value="target/reports/junit" />
+    <property name="java.version" value="1.6.0_27" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\endorsed" />
+    <property name="sonar.jdbc.username" value="dory" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="sonar.sources" value="src" />
+    <property name="classes.dir" value="target/classes" />
+    <property name="java.class.version" value="50.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_27\jre" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="ant.file" value="C:\tools\New-sonar-examples\ut\ut-jacoco-ant\build.xml" />
+    <property name="os.version" value="6.1" />
+    <property name="path.separator" value=";" />
+    <property name="lib.junit.dir" value="lib" />
+    <property name="java.vm.version" value="20.2-b06" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\tools\apache-ant-1.8.4\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="sonar.tests" value="test" />
+    <property name="user.home" value="C:\Users\david.racodon" />
+    <property name="sonar.binaries" value="target/classes" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="test.dir" value="test" />
+    <property name="ant.file.UT coverage with JaCoCo and Ant" value="C:\tools\New-sonar-examples\ut\ut-jacoco-ant\build.xml" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_27\jre\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\Program Files\Java\jdk1.6.0_27\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;c:\Program Files\Hewlett-Packard\Drive Encryption\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files\SlikSvn\bin\;C:\tools\apache-maven-2.2.1\bin;C:\Program Files\Bitvise Tunnelier;C:\Program Files\Git\cmd;C:\tools\sonar-runner-1.2\bin;C:\Program Files\TortoiseSVN\bin;C:\tools\sonar-autocontrol-2.2\bin;C:\tools\apache-ant-1.8.4\bin;." />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OneTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\tools\New-sonar-examples\ut\ut-jacoco-ant\target\reports\junit\TEST-OneTest.xml crashfile=C:\tools\New-sonar-examples\ut\ut-jacoco-ant\junitvmwatcher7577169947414760041.properties propsfile=C:\tools\New-sonar-examples\ut\ut-jacoco-ant\junit236588872707358796.properties" />
+    <property name="java.class.path" value="C:\tools\New-sonar-examples\ut\ut-jacoco-ant\target\classes;C:\tools\New-sonar-examples\ut\ut-jacoco-ant\lib\junit-4.10.jar;C:\tools\apache-ant-1.8.4\lib\ant-launcher.jar;C:\tools\apache-ant-1.8.4\lib\ant.jar;C:\tools\apache-ant-1.8.4\lib\ant-junit.jar;C:\tools\apache-ant-1.8.4\lib\ant-junit4.jar;C:\Users\DAVID~1.RAC\AppData\Local\Temp\jacocoagent1677484470111530983.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="java.io.tmpdir" value="C:\Users\DAVID~1.RAC\AppData\Local\Temp\" />
+    <property name="sonar.jdbc.url" value="jdbc:postgresql://localhost/sonardory" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="os.arch" value="x86" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_27\jre\lib\ext;C:\windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\tools\New-sonar-examples\ut\ut-jacoco-ant" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="basedir" value="C:\tools\New-sonar-examples\ut\ut-jacoco-ant" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="C:\tools\apache-ant-1.8.4\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="src.dir" value="src" />
+    <property name="ant.project.invoked-targets" value="all" />
+    <property name="sonar.projectDescription" value="Example application using Ant and Jacoco" />
+  </properties>
+  <testcase classname="OneTest" name="testFoo" time="0.0050" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

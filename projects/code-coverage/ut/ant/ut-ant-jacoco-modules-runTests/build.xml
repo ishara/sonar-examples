@@ -27,7 +27,7 @@
 
 	<!-- The following properties are required to use JaCoCo: -->
 	<property name="sonar.dynamicAnalysis" value="reuseReports" />
-	<property name="sonar.core.codeCoveragePlugin" value="jacoco" />
+	<property name="sonar.java.coveragePlugin" value="jacoco" />
 	<property name="sonar.jacoco.reportPath" value="target/jacoco.exec" />
 
 	<!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->

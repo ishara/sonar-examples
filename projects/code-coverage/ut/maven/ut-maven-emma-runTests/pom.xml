@@ -14,7 +14,7 @@
     <!-- Tells Sonar to run the unit tests -->
     <sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
     <!-- Tells Sonar to use Emma as the code coverage tool -->
-    <sonar.core.codeCoveragePlugin>emma</sonar.core.codeCoveragePlugin>
+    <sonar.java.coveragePlugin>emma</sonar.java.coveragePlugin>
   </properties>
 
   <dependencies>

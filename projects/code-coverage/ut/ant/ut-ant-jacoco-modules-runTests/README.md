@@ -2,7 +2,7 @@ This example demonstrates how to analyze a multi-module Java project with Ant an
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
+* [Sonar](http://www.sonarsource.org/downloads/) 3.4 or higher
 * [Sonar Ant Task](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Ant+Task) 2.0 or higher
 * [JaCoCo Ant Task](http://www.eclemma.org/jacoco/) 0.5.6 or higher
 * [Ant](http://ant.apache.org/) 1.7.1 or higher
