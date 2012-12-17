@@ -1,0 +1,9 @@
+start server
+sonar-runner
+verify org.codehaus.sonar:javascript-sonar-runner
+  measure lines is 14
+  measure ncloc is 10
+  measure files is 1
+verify org.codehaus.sonar:javascript-sonar-runner:[root].Person.js
+  measure lines is 14
+  measure ncloc is 10
