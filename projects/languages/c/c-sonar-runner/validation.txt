@@ -1,9 +1,0 @@
-start server
-sonar-runner
-verify org.codehaus.sonar:c-sonar-runner
-  measure lines is 19
-  measure ncloc is 7
-  measure files is 1
-verify org.codehaus.sonar:c-sonar-runner:[root].main.c
-  measure lines is 19
-  measure ncloc is 7
