@@ -1,4 +1,5 @@
 start server
+  with plugin javascript 1.1
 sonar-runner
 verify java-sonar-runner-simple
   measure ncloc is 10
