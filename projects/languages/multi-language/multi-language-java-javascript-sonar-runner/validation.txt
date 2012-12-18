@@ -1,0 +1,14 @@
+start server
+  with plugin javascript 1.1
+sonar-runner
+verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner
+  measure lines is 21
+  measure ncloc is 16
+  measure files is 2
+  measure classes is 1
+verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:java-module:[default].Helloworld
+  measure lines is 8
+  measure ncloc is 6
+verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:javascript-module:Person.js
+  measure lines is 13
+  measure ncloc is 10

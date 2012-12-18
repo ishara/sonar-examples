@@ -1,0 +1,15 @@
+start server
+sonar-runner
+verify org.codehaus.sonar:example-ut-sonarRunner-jacoco-reuseReports
+  measure lines is 11
+  measure ncloc is 9
+  measure files is 1
+  measure classes is 1
+  measure tests is 1
+  measure coverage is 60.0
+  measure test_success_density is 100.0
+verify org.codehaus.sonar:example-ut-sonarRunner-jacoco-reuseReports:[default].One
+  measure lines is 11
+  measure ncloc is 9
+  measure lines_to_cover is 5
+  measure uncovered_lines is 2

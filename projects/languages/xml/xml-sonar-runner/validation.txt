@@ -1,0 +1,10 @@
+start server
+  with plugin xml 0.2
+sonar-runner
+verify org.codehaus.sonar:example-xml-sonar-runner
+  measure lines is 233
+  measure ncloc is 233
+  measure files is 1
+verify org.codehaus.sonar:example-xml-sonar-runner:sonar_backup.xml
+  measure lines is 233
+  measure ncloc is 233

@@ -1,0 +1,10 @@
+start server
+  with plugin php 1.1
+sonar-runner
+verify org.codehaus.sonar:php-sonar-runner
+  measure lines is 2337
+  measure ncloc is 1133
+  measure files is 6
+verify org.codehaus.sonar:php-sonar-runner:Math.php
+  measure lines is 215
+  measure ncloc is 116
