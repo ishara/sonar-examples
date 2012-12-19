@@ -9,3 +9,4 @@ verify org.codehaus.sonar:example-groovy-sonar-runner
 verify org.codehaus.sonar:example-groovy-sonar-runner:example/Greeting.groovy
   measure lines is 7
   measure ncloc is 6
+stop server

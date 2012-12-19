@@ -13,3 +13,4 @@ verify org.codehaus.sonar:example-ut-sonarRunner-jacoco-reuseReports:[default].O
   measure ncloc is 9
   measure lines_to_cover is 5
   measure uncovered_lines is 2
+stop server

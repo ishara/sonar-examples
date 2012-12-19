@@ -12,3 +12,4 @@ verify org.codehaus.sonar:example-it-jacoco-sonar-runner:[default].One
   measure ncloc is 9
   measure it_lines_to_cover is 5
   measure it_uncovered_lines is 2
+stop server

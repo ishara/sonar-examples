@@ -12,3 +12,4 @@ verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:ja
 verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:javascript-module:Person.js
   measure lines is 13
   measure ncloc is 10
+stop server

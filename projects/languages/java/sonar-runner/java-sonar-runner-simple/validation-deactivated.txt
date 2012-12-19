@@ -8,4 +8,4 @@ verify java-sonar-runner-simple:[default].Helloworld
   measure ncloc is 10
   measure statements is 3
   measure classes is 1
-  
+stop server

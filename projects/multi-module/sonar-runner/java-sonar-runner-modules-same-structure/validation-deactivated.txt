@@ -21,3 +21,4 @@ verify java-sonar-runner-modules-same-structure:module2
 verify java-sonar-runner-modules-same-structure:module2:[default].Helloworld2
   measure lines is 7
   measure ncloc is 5
+stop server

@@ -17,3 +17,4 @@ verify org.codehaus.sonar:example-combining-ut-and-it-coverage:example.HelloWorl
   measure uncovered_lines is 6
   measure it_lines_to_cover is 10
   measure it_uncovered_lines is 5
+stop server

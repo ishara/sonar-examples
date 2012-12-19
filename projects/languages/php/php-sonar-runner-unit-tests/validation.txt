@@ -11,3 +11,4 @@ verify org.codehaus.sonar:php-sonar-runner-unit-tests
 verify org.codehaus.sonar:php-sonar-runner-unit-tests:Math.php
   measure lines is 215
   measure ncloc is 116
+stop server

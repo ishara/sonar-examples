@@ -8,3 +8,4 @@ verify org.codehaus.sonar:javascript-sonar-runner
 verify org.codehaus.sonar:javascript-sonar-runner:Person.js
   measure lines is 14
   measure ncloc is 10
+stop server

@@ -8,3 +8,4 @@ verify org.codehaus.sonar:example-web-sonar-runner
 verify org.codehaus.sonar:example-web-sonar-runner:sample.xhtml
   measure lines is 48
   measure ncloc is 35
+stop server

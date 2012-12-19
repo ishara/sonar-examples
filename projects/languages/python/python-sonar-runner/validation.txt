@@ -8,3 +8,4 @@ verify org.codehaus.sonar:example-python-sonar-runner
 verify org.codehaus.sonar:example-python-sonar-runner:badfortune.py
   measure lines is 93
   measure ncloc is 41
+stop server
