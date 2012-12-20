@@ -1,7 +1,7 @@
 start server
 sonar-runner
 verify org.codehaus.sonar:example-combining-ut-and-it-coverage
-  measure lines is 20
+  measure lines is 21
   measure ncloc is 15
   measure files is 1
   measure classes is 1
@@ -11,7 +11,7 @@ verify org.codehaus.sonar:example-combining-ut-and-it-coverage
   measure it_coverage is 50.0
   measure overall_coverage is 80.0
 verify org.codehaus.sonar:example-combining-ut-and-it-coverage:example.HelloWorld
-  measure lines is 20
+  measure lines is 21
   measure ncloc is 15
   measure lines_to_cover is 10
   measure uncovered_lines is 6
