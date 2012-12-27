@@ -12,12 +12,11 @@ Usage
 * Compile it:
 
         mvn clean install
-		
-		
+
 * Analyze it with Sonar using the Sonar Runner:
 
         sonar-runner
-		
+
 * Or analyze it with Sonar using Maven:
 
         mvn sonar:sonar

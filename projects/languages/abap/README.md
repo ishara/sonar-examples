@@ -12,4 +12,3 @@ Usage
 * Analyze the project with Sonar using the Sonar Runner:
 
         sonar-runner
-
