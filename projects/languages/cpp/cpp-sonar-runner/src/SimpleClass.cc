@@ -9,7 +9,7 @@ using namespace std;
 // Declaration of Date class
 class Date {
 
-public:  
+public:
   Date(int, int, int);
   void set(int, int, int);
   void print();
@@ -28,7 +28,7 @@ int main()
    Date today(1,9,1999);
 
    cout << "This program was written on ";
-   today.print(); 
+   today.print();
 
    cout << "This program was modified on ";
    today.set(5,10,1999);
@@ -48,9 +48,19 @@ Date::Date(int d, int m, int y)
 // Date member function definitions
 void Date::set(int d, int m, int y)
 {
-  if(d>0 && d<31) day = d;
-  if(m>0 && m<13) month = m;
-  if(y>0) year =y;
+  if(d>0) {
+    if (d<31){
+      if(m>0) {
+        if (m<13) {
+          if(y>0) {
+            year =y;
+            month = m;
+            day = d;
+          }
+        }
+      }
+    }
+  }
 }
 
 void Date::print()

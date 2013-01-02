@@ -463,9 +463,14 @@
                PERFORM 3100-READ-CUSTOMER-FOR-UPDATE
                IF RESPONSE-CODE = DFHRESP(NORMAL)
                    IF CUSTOMER-MASTER-RECORD = CA-CUSTOMER-RECORD
-                       PERFORM 3200-REWRITE-CUSTOMER-RECORD
-                       MOVE 'Customer record updated.' TO MSG1O
-                       SET SEND-ERASE TO TRUE
+      * Introduce extra nested if as an example of rule violation 
+                       IF VALID-DATA
+                           IF RESPONSE-CODE = DFHRESP(NORMAL)
+                               PERFORM 3200-REWRITE-CUSTOMER-RECORD
+                               MOVE 'Customer record updated.' TO MSG1O
+                               SET SEND-ERASE TO TRUE
+                           END-IF
+                       END-IF
                    ELSE
                        MOVE 'Another user has updated the record.  Try a
       -                     'gain.' TO MSG1O
@@ -531,6 +536,7 @@
            MOVE CA-CUSTOMER-NUMBER TO CM-CUSTOMER-NUMBER.
            PERFORM 3100-READ-CUSTOMER-FOR-UPDATE.
            IF RESPONSE-CODE = DFHRESP(NORMAL)
+               ALTER X TO PROCEED TO Y
                IF CUSTOMER-MASTER-RECORD = CA-CUSTOMER-RECORD
                    PERFORM 4100-DELETE-CUSTOMER-RECORD
                    MOVE 'Customer deleted.' TO MSG1O

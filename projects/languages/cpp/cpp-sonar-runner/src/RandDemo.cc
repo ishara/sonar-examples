@@ -39,6 +39,41 @@ int main()
 	   << count_in << "\t" << n << endl;
     }
   
+  // Sample goto to raise a violation
+  goto L1;
+  
+  //Sample switch with default
+  switch (bob)
+    {
+      case 1: {
+          cout << "1";
+          break;
+      }
+      case 2:
+      {
+          cout <<"2";
+          break;
+      }
+      default:
+      {
+          cout << "3";
+      }
+  } 
+  
+  //Sample switch without default
+  switch (bob)
+    {
+      case 1: {
+          cout << "1";
+          break;
+      }
+      case 2:
+      {
+          cout <<"2";
+          break;
+      }
+  }
+  
   //Integer variables must be converted (cast) for correct division
   fraction_in = static_cast<double>(count_in)/N;
 
