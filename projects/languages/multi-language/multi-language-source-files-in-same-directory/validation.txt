@@ -17,7 +17,7 @@ verify org.codehaus.sonar:multi-language-source-files-in-same-directory:javascri
 verify org.codehaus.sonar:multi-language-source-files-in-same-directory:javascript-module:Person.js
   measure lines is 13
   measure ncloc is 10
-verifity org.codehaus.sonar:multi-language-source-files-in-same-directory:html-module:sample.xhtml
+verify org.codehaus.sonar:multi-language-source-files-in-same-directory:html-module:sample.xhtml
   measure lines is 48
   measure ncloc is 35
 stop server
