@@ -558,7 +558,7 @@
            SET PROCESS-KEY-MAP TO TRUE.
       *
        4100-DELETE-CUSTOMER-RECORD.
-      *
+      * TODO Some comment
            EXEC CICS
                DELETE FILE('CUSTMAS')
                       RESP(RESPONSE-CODE)
