@@ -196,7 +196,7 @@
            MOVE ATTR-NO-HIGHLIGHT TO ACTIONH
                                      CUSTNO1H.
       *
-           IF ACTIONI NOT = '1' AND '2' AND '3'
+           IF ACTIONI NOT = '1' AND '2' AND '3' AND '4' AND '5'
                MOVE ATTR-REVERSE TO ACTIONH
                MOVE -1 TO ACTIONL
                MOVE 'Action must be 1, 2, or 3.' TO MSG1O
