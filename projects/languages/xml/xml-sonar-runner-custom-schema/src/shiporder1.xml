@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<shiporder orderid="1234"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="shiporder.xsd">
+  <shipto>
+    <name>John Smith</name>
+    <address>Main Street</address>
+    <city>New York</city>
+    <country>United States</country>
+  </shipto>
+  <item>
+    <name>Book1</name>
+    <quantity>1</quantity>
+    <price>10.90</price>
+  </item>
+  <item>
+    <name>Book2</name>
+    <quantity>3</quantity>
+     <price>20.00</price>
+  </item>
+</shiporder>
