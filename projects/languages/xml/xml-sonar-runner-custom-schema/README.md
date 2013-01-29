@@ -1,5 +1,5 @@
 This example demonstrates how to analyze an XML project with the Sonar Runner.
-File validation is done with a custom XSD.
+File validation against a custom schema.
 
 Prerequisites
 =============
@@ -9,14 +9,13 @@ Prerequisites
 
 Usage
 =====
-* Copy the 'XML Schema Check' rule:
-** Name: Validation against custom schema
-** Default Severity: Blocker
-** filePattern: leave it empty
-** schemas: schemas/order.xsd
-** Description: Validation against custom schema
+*   Copy the 'XML Schema Check' rule:
+    * Name: Validation against custom schema
+    * Default Severity: Blocker
+    * filePattern: leave it empty
+    * schemas: schemas/order.xsd
+    * Description: Validation against custom schema
 * Activate the 'Validation against custom schema' rule
-
 * Analyze the project with Sonar using the Sonar Runner:
 
         sonar-runner
