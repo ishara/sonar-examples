@@ -13,7 +13,7 @@ Usage
     * Name: Validation against custom schema
     * Default Severity: Blocker
     * filePattern: leave it empty
-    * schemas: schemas/order.xsd
+    * schemas: schemas/shiporder.xsd
     * Description: Validation against custom schema
 * Activate the 'Validation against custom schema' rule
 * Analyze the project with Sonar using the Sonar Runner:
