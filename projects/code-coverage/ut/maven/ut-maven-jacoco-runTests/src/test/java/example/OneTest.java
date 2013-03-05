@@ -10,4 +10,10 @@ public class OneTest {
     assertEquals("foo", one.foo());
   }
 
+  @Test
+  public void testBoth() throws Exception {
+    One one = new One();
+    assertEquals("toto", one.toto());
+    assertEquals("foo", one.foo());
+  }
 }
