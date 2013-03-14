@@ -4,7 +4,7 @@ Prerequisites
 =============
 
 * [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [Sonar Emma Plugin](http://docs.codehaus.org/display/SONAR/Sonar+Emma+Plugin) 1.3 or higher
+* [Sonar Emma Plugin](http://docs.codehaus.org/display/SONAR/Emma+Plugin) 1.3 or higher
 * Maven 3.0.3 or higher
 * [Android SDK](http://developer.android.com/sdk/index.html)
 
