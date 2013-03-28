@@ -1,42 +1,36 @@
-apply plugin: "java"
-apply plugin: "sonar"
+apply plugin: 'java'
+apply plugin: 'sonar-runner'
+apply plugin: 'jacoco'
 
-buildDir = "target"
-
-repositories {
-  mavenCentral()
-  mavenLocal()
+allprojects {  
+  ext.baseVersion = "0.1"
+  ext.snapshotVersion = true
+  
+  group = "org.sonar.tests"
+  version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
 }
 
-configurations {
-  jacoco
+sonarRunner {
+    sonarProperties {
+        property "sonar.projectName", "Simple Java Gradle Project"
+        property "sonar.projectKey", "org.codehaus.sonar:example-java-gradle"
+        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+    }
 }
 
-dependencies {
-  testCompile group: "junit", name: "junit", version: "4.8.1"
-
-  jacoco group: "org.jacoco", name: "org.jacoco.agent", version: "0.5.3.201107060350", classifier: "runtime"
+buildscript {
+    repositories { mavenCentral() }
+    dependencies { classpath 'org.ajoberstar:gradle-jacoco:0.1.0' }
 }
 
 test {
-  jvmArgs "-javaagent:" + configurations.jacoco.asPath + "=destfile=" + buildDir + "/jacoco.exec,includes=example.*"
+  ignoreFailures = true
 }
 
-sonar {
-  server {
-    url = System.getProperty("sonar.host.url") ?: "http://localhost:9000/"
-  }
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.10'
+}
 
-  database {
-    url = System.getProperty("sonar.jdbc.url") ?: "jdbc:derby://localhost:1527/sonar"
-    driverClassName = System.getProperty("sonar.jdbc.driver") ?: "org.apache.derby.jdbc.ClientDriver"
-    username = System.getProperty("sonar.jdbc.username") ?: "sonar"
-    password = System.getProperty("sonar.jdbc.password") ?: "sonar"
-  }
-
-  project {
-    withProjectProperties { props ->
-      props["sonar.core.codeCoveragePlugin"] = "jacoco"
-    }
-  }
+repositories {
+    mavenCentral()
 }
