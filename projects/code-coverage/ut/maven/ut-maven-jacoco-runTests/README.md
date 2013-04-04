@@ -1,7 +1,7 @@
-This example demonstrates how to analyze a project with Maven reusing JUnit and JaCoCo reports.
+This example demonstrates how to analyze a project with Maven running JUnit and JaCoCo.
 There are two options:
-* do not activate the JaCoCo JUnit listener => no information about unit tests covering each covered line
-* activate the JaCoCo JUnit listener => information about unit tests covering each covered line (only available for Sonar 3.5+)
+* do not activate the JaCoCo JUnit listener => no information about mapping unit tests and covered code will be retrieved
+* activate the JaCoCo JUnit listener => information about mapping unit tests and covered code will be retrieved (only available for Sonar 3.5+)
 
 Prerequisites
 =============

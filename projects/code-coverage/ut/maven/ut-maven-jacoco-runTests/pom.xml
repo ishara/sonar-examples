@@ -42,6 +42,8 @@
     </plugins>
   </build>
 
+  
+  <!-- BEGIN: Specific to mapping unit tests and covered code -->
   <profiles>
     <profile>
       <id>coverage-per-test</id>
@@ -74,4 +76,6 @@
       </dependencies>
     </profile>
   </profiles>
+  <!-- END: Specific to mapping unit tests and covered code -->
+  
 </project>
