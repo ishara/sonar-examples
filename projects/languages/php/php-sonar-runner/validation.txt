@@ -1,5 +1,5 @@
 start server
-  with plugin php 1.1
+  with plugin php 1.2
 sonar-runner
 verify org.codehaus.sonar:php-sonar-runner
   measure lines is 2337
