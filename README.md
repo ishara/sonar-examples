@@ -5,7 +5,7 @@ The directory /projects contains sample projects for:
  * the different languages (Java, Cobol, .Net, etc.)
  * the different ways to execute unit tests and get code coverage data
 
-## Sonar Plugins
+## SonarQube Plugins
 
 The directory /plugins contains the most frequent kinds of plugins:
  * Extensions of rule engines like Checkstyle or PMD
