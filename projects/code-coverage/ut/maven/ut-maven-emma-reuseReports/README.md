@@ -2,9 +2,9 @@ This example demonstrates how to analyze a Java project with Maven reusing exist
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 3.4 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.4 or higher
 * Maven 2.2.1 or higher
-* [Sonar Emma Plugin](http://docs.codehaus.org/display/SONAR/Sonar+Emma+Plugin) 1.2.1 or higher
+* [SonarQube Emma Plugin](http://docs.codehaus.org/display/SONAR/Sonar+Emma+Plugin) 1.2.1 or higher
 
 Usage
 =====
@@ -13,7 +13,7 @@ Usage
         mvn clean install
   	
 		
-* Analyze the project with Sonar using Maven:
+* Analyze the project with SonarQube using Maven:
 
         mvn sonar:sonar
 

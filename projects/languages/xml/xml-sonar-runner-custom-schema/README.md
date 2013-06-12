@@ -1,11 +1,11 @@
-This example demonstrates how to analyze an XML project with the Sonar Runner.
+This example demonstrates how to analyze an XML project with the SonarQube Runner.
 File validation against a custom schema.
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 2.0 or higher
-* [Sonar XML Plugin](http://docs.codehaus.org/display/SONAR/XML+Plugin) 1.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
+* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
+* [SonarQube XML Plugin](http://docs.codehaus.org/display/SONAR/XML+Plugin) 1.0 or higher
 
 Usage
 =====
@@ -16,6 +16,6 @@ Usage
     * schemas: schemas/shiporder.xsd
     * Description: Validation against custom schema
 * Activate the 'Validation against custom schema' rule
-* Analyze the project with Sonar using the Sonar Runner:
+* Analyze the project with SonarQube using the SonarQube Runner:
 
         sonar-runner

@@ -2,7 +2,7 @@ This example demonstrates how to analyze a project with Maven reusing JUnit and 
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 3.4 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.4 or higher
 * Maven 2.2.1 or higher
 
 Usage
@@ -11,7 +11,7 @@ Usage
 
         mvn clean install
 
-* Analyze the project with Sonar using Maven:
+* Analyze the project with SonarQube using Maven:
 
         mvn sonar:sonar
 

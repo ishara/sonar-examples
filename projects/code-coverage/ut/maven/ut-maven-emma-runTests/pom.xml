@@ -11,9 +11,9 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<sonar.language>java</sonar.language>
-    <!-- Tells Sonar to run the unit tests -->
+    <!-- Tells SonarQube to run the unit tests -->
     <sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
-    <!-- Tells Sonar to use Emma as the code coverage tool -->
+    <!-- Tells SonarQube to use Emma as the code coverage tool -->
     <sonar.java.coveragePlugin>emma</sonar.java.coveragePlugin>
   </properties>
 

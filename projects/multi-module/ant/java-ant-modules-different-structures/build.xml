@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Multi-module Java Project analyzed with the Sonar Ant Task (modules have different structures)" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+<project name="Multi-module Java Project analyzed with the SonarQube Ant Task (modules have different structures)" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
 
   <!-- ========= Define the main properties of this project ========= -->
-  <!-- Define the Sonar properties -->
+  <!-- Define the SonarQube properties -->
   <property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant-modules-different-structures" />
   <property name="sonar.projectName" value="Multi-module Java Project analyzed with the Sonar Ant Task (modules have different structures)" />
   <property name="sonar.projectVersion" value="1.0" />
@@ -23,7 +23,7 @@
   
   <property name="module-two.sonar.projectName" value="Module Two" />
   
-  <!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
+  <!-- Add your basic SonarQube configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
   <!--
     <property name="sonar.jdbc.url" value="jdbc:..." />
     <property name="sonar.jdbc.username" value="..." />
@@ -42,14 +42,14 @@
     <ant dir="module-two" target="compile"/>
   </target>
   
-  <!-- ========= Define Sonar target ========= -->
+  <!-- ========= Define SonarQube target ========= -->
   <target name="sonar" depends="compile">
     <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
 	  <!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
 	  <classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
     </taskdef>
     
-	<!-- Execute Sonar -->
+	<!-- Execute SonarQube -->
 	<sonar:sonar />
   </target>
 

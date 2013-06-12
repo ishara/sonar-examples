@@ -4,6 +4,6 @@ Usage
 
         mvn clean install
 		
-* Copy the plugin into SONAR_HOME/extensions/plugin
-* Restart your Sonar server
+* Copy the plugin into SONARQUBE_HOME/extensions/plugin
+* Restart your SonarQube server
 * The custom PMD rules are now available

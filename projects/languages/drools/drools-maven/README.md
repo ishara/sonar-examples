@@ -2,9 +2,9 @@ This example demonstrates how to analyze a Drools project with Maven.
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 2.11 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 2.11 or higher
 * Maven 2.2.1 or higher
-* [Sonar Drools Plugin](http://docs.codehaus.org/display/SONAR/Drools+Plugin) 0.2 or higher
+* [SonarQube Drools Plugin](http://docs.codehaus.org/display/SONAR/Drools+Plugin) 0.2 or higher
 
 Usage
 =====
@@ -13,6 +13,6 @@ Usage
         mvn clean install
 		
 		
-* Analyze it with Sonar using Maven:
+* Analyze it with SonarQube using Maven:
 
         mvn sonar:sonar

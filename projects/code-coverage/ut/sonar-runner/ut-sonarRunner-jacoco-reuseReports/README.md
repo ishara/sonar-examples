@@ -1,13 +1,13 @@
-This example demonstrates how to analyze a Java project with the Sonar Runner reusing existing JUnit and JaCoCo reports.
+This example demonstrates how to analyze a Java project with the SonarQube Runner reusing existing JUnit and JaCoCo reports.
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 3.4 or higher
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 2.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.4 or higher
+* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
 
 Usage
 =====
-* Analyze the project with Sonar using the Sonar Runner:
+* Analyze the project with SonarQube using the SonarQube Runner:
 
         sonar-runner
 

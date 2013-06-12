@@ -1,4 +1,4 @@
-This example demonstrates how to use the Sonar web service API (manual_measures).
+This example demonstrates how to use the SonarQube web service API (manual_measures).
 
 Documentation
 =============
@@ -6,11 +6,11 @@ Documentation
 
 Prerequisites
 =============
-* [Sonar](http://www.sonarsource.org/downloads/) 3.5 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.5 or higher
 
 Usage
 =====
-* In src/main/java/sample/Sample.java, set the proper values to connect to your Sonar server and project. 
+* In src/main/java/sample/Sample.java, set the proper values to connect to your SonarQube server and project. 
 * Compile the project:
 
         mvn clean compile assembly:single

@@ -2,8 +2,7 @@ This example demonstrates how to collect code coverage by tests, which executed 
 
 Prerequisites
 =============
-
-* Sonar 2.12 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
 * Maven 3.0.3 or higher
 
 Execution
@@ -13,6 +12,6 @@ Execution
 
         mvn clean install
 
-2.  Analyse by Sonar :
+2.  Analyze with SonarQube:
 
         mvn sonar:sonar

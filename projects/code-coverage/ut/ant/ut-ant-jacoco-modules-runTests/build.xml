@@ -9,7 +9,7 @@
 	<property name="reports.dir" value="${build.dir}/reports" />
 	<property name="reports.junit.xml.dir" value="${reports.dir}/junit" />
 	
-	<!-- Define the Sonar properties -->
+	<!-- Define the SonarQube properties -->
 	<property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-jacoco-modules-runTests" />
 	<property name="sonar.projectName" value="UT coverage with Ant and JaCoCo running tests :: Parent" />
 	<property name="sonar.projectVersion" value="1.0" />
@@ -30,7 +30,7 @@
 	<property name="sonar.java.coveragePlugin" value="jacoco" />
 	<property name="sonar.jacoco.reportPath" value="target/jacoco.exec" />
 
-	<!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
+	<!-- Add your basic SonarQube configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
 	<!--
 		<property name="sonar.jdbc.url" value="jdbc:..." />
 		<property name="sonar.jdbc.username" value="..." />
@@ -54,14 +54,14 @@
 		<ant dir="module2" target="test"/>
 	</target>
 	
-    <!-- ========= Define Sonar target ========= -->
+    <!-- ========= Define SonarQube target ========= -->
 	<target name="sonar" depends="compile">
 		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
 			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
 			<classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
 		</taskdef>
 		
-		<!-- Execute Sonar -->
+		<!-- Execute SonarQube -->
 		<sonar:sonar />
 	</target>
 

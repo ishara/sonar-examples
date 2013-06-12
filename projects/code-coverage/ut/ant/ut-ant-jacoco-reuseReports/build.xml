@@ -9,7 +9,7 @@
 	<property name="reports.junit" value="${reports.dir}/junit" />
 	<property name="reports.jacoco" value="${reports.dir}/coverage/jacoco.exec" />
 	
-	<!-- Define the Sonar properties -->
+	<!-- Define the SonarQube properties -->
     <property name="sonar.projectKey" value="org.codehaus.sonar:example-ut-ant-jacoco-reuseReports" />
     <property name="sonar.projectName" value="UT coverage with Ant reusing JUnit and JaCoCo reports" />
     <property name="sonar.projectVersion" value="1.0" />
@@ -18,19 +18,19 @@
 	<property name="sonar.binaries" value="${classes.dir}" />
 	<property name="sonar.sourceEncoding" value="UTF-8" />
 
-	<!-- Tells Sonar to reuse existing reports for unit tests execution and coverage reports -->
+	<!-- Tells SonarQube to reuse existing reports for unit tests execution and coverage reports -->
 	<property name="sonar.dynamicAnalysis" value="reuseReports" />
 
-	<!-- Tells Sonar where the unit tests execution reports are -->
+	<!-- Tells SonarQube where the unit tests execution reports are -->
 	<property name="sonar.surefire.reportsPath" value="${reports.junit}" />  
 	
-	<!-- Tells Sonar that the code coverage tool by unit tests is JaCoCo -->
+	<!-- Tells SonarQube that the code coverage tool by unit tests is JaCoCo -->
 	<property name="sonar.java.coveragePlugin" value="jacoco" />
 	
-	<!-- Tells Sonar where the unit tests code coverage report is -->
+	<!-- Tells SonarQube where the unit tests code coverage report is -->
 	<property name="sonar.jacoco.reportPath" value="${reports.jacoco}" /> 
 	
-    <!-- Add your basic Sonar configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
+    <!-- Add your basic SonarQube configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
 	<!-- 
 	  <property name="sonar.jdbc.url" value="jdbc:..." />
 	  <property name="sonar.jdbc.username" value="..." />
@@ -52,14 +52,14 @@
 		<javac srcdir="${src.dir}" destdir="${classes.dir}" fork="true" debug="true" includeAntRuntime="false" />
 	</target>
 
-	<!-- ========= Define Sonar target ========= -->
+	<!-- ========= Define SonarQube target ========= -->
 	<target name="sonar" depends="compile">
 		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
 			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
 			<classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
 		</taskdef>
 		
-		<!-- Execute Sonar -->
+		<!-- Execute SonarQube -->
 		<sonar:sonar />
 	</target>
 

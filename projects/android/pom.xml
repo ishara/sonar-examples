@@ -17,7 +17,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <!-- Sonar -->
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.core.codeCoveragePlugin>emma</sonar.core.codeCoveragePlugin>
     <sonar.emma.reportPath>target/emma</sonar.emma.reportPath>
