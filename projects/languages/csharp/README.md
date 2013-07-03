@@ -8,15 +8,10 @@ Prerequisites
 
 Usage
 =====
-* Download the project sample from [https://github.com/SonarCommunity/sonar-dotnet/tree/master/sonar/dotnet/sonar-dotnet-plugin/src/test/resources/solution/Example](https://github.com/SonarCommunity/sonar-dotnet/tree/master/sonar/dotnet/sonar-dotnet-plugin/src/test/resources/solution/Example)
-* Compile it:
+* Compile the project:
 
         mvn clean install
 
 * Analyze it with SonarQube using the SonarQube Runner:
 
         sonar-runner
-
-* Or analyze it with SonarQube using Maven:
-
-        mvn sonar:sonar
