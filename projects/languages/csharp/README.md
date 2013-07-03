@@ -1,4 +1,4 @@
-This example demonstrates how to analyze C# projects with the SonarQube Runner or Maven.
+This example demonstrates how to analyze C# projects with the SonarQube Runner.
 
 Prerequisites
 =============
