@@ -9,10 +9,5 @@ public class One {
 
   public void uncoveredMethod() {
     System.out.println(foo());
-    System.out.println("hhh");
-    System.out.println("hhh");
-	    System.out.println("hhh");
-    System.out.println("hhh");
-
   }
 }
