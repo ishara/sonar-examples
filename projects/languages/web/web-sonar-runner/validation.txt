@@ -1,5 +1,5 @@
 start server
-  with plugin web 1.2
+  with plugin web 2.0
 sonar-runner
 verify org.codehaus.sonar:example-web-sonar-runner
   measure lines is 48
