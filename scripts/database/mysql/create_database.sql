@@ -5,7 +5,7 @@
 
 CREATE DATABASE sonarqube CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-CREATE USER 'sonarqube' IDENTIFIED BY 'sonarqube';
-GRANT ALL ON sonarqube.* TO 'sonarqube'@'%' IDENTIFIED BY 'sonarqube';
-GRANT ALL ON sonarqube.* TO 'sonarqube'@'localhost' IDENTIFIED BY 'sonarqube';
+CREATE USER 'sonar' IDENTIFIED BY 'sonar';
+GRANT ALL ON sonarqube.* TO 'sonar'@'%' IDENTIFIED BY 'sonar';
+GRANT ALL ON sonarqube.* TO 'sonar'@'localhost' IDENTIFIED BY 'sonar';
 FLUSH PRIVILEGES;
