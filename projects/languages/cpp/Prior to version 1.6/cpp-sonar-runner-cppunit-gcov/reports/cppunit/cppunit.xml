@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<TestRun>
+  <FailedTests>
+    <FailedTest id="2">
+      <Name>Test::testAssert</Name>
+      <FailureType>Assertion</FailureType>
+      <Location>
+        <File>../src/example.cpp</File>
+        <Line>31</Line>
+      </Location>
+      <Message>equality assertion failed
+- Expected: 2
+- Actual  : 1
+</Message>
+    </FailedTest>
+    <FailedTest id="3">
+      <Name>Test::testException</Name>
+      <FailureType>Error</FailureType>
+      <Message>uncaught exception of unknown type
+</Message>
+    </FailedTest>
+  </FailedTests>
+  <SuccessfulTests>
+    <Test id="1">
+      <Name>Test::testHelloWorld</Name>
+    </Test>
+  </SuccessfulTests>
+  <Statistics>
+    <Tests>3</Tests>
+    <FailuresTotal>2</FailuresTotal>
+    <Errors>1</Errors>
+    <Failures>1</Failures>
+  </Statistics>
+</TestRun>

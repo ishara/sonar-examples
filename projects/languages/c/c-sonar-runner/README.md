@@ -1,4 +1,4 @@
-This example demonstrates how to analyze a C++ project with the SonarQube Runner.
+This example demonstrates how to analyze a C project with the SonarQube Runner.
 
 Prerequisites
 =============
