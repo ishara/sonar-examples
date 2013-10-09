@@ -3,6 +3,6 @@
 # Command: mysql -u root -p < drop_database.sql
 #
 
-DROP DATABASE IF EXISTS sonarqube;
-DROP USER 'sonarqube'@'localhost';
-DROP USER 'sonarqube'@'%';
+DROP DATABASE IF EXISTS sonar;
+DROP USER 'sonar'@'localhost';
+DROP USER 'sonar'@'%';
