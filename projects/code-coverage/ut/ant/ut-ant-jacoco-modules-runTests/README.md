@@ -2,7 +2,8 @@ This example demonstrates how to analyze a multi-module Java project with Ant an
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.4 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.6 or higher
+* [SonarQube Java Plugin](http://docs.codehaus.org/x/KwChCw) 1.4 or higher
 * [SonarQube Ant Task](http://docs.codehaus.org/x/QYKxDQ) 2.0 or higher
 * [JaCoCo Ant Task](http://www.eclemma.org/jacoco/) 0.5.6 or higher
 * [Ant](http://ant.apache.org/) 1.7.1 or higher

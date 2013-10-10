@@ -16,7 +16,7 @@
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 
     <!-- Tells SonarQube where the unit tests execution reports are -->
-    <sonar.surefire.reportsPath>reports/junit</sonar.surefire.reportsPath>
+    <sonar.junit.reportsPath>reports/junit</sonar.junit.reportsPath>
 
     <!-- Tells SonarQube that the code coverage tool by unit tests is JaCoCo -->
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>

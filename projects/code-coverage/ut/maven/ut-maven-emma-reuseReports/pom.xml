@@ -16,7 +16,7 @@
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 	
 	<!-- Tells Sonar where the unit tests execution reports are -->
-	<sonar.surefire.reportsPath>reports/junit</sonar.surefire.reportsPath>
+	<sonar.junit.reportsPath>reports/junit</sonar.junit.reportsPath>
 	
     <!-- Tells Sonar to use Emma as the code coverage tool -->
     <sonar.java.coveragePlugin>emma</sonar.java.coveragePlugin>

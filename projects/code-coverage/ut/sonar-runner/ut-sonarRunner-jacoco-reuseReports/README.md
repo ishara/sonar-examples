@@ -2,7 +2,8 @@ This example demonstrates how to analyze a Java project with the SonarQube Runne
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.4 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.6 or higher
+* [SonarQube Java Plugin](http://docs.codehaus.org/x/KwChCw) 1.4 or higher
 * [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
 
 Usage
