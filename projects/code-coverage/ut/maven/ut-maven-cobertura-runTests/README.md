@@ -2,7 +2,9 @@ This example demonstrates how to analyze a Java project with Maven and Cobertura
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.4 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.6 or higher
+* [SonarQube Java Ecosystem](http://docs.codehaus.org/x/tZC7DQ) 1.4 or higher
+* [SonarQube Cobertura Plugin](http://docs.codehaus.org/x/fZS7DQ) 1.4 or higher
 * Maven 2.2.1 or higher
 
 Usage
