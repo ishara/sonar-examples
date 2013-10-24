@@ -1,5 +1,5 @@
 start server
-  with plugin xml 1.0
+  with plugin xml 1.0.1
 sonar-runner
 verify org.codehaus.sonar:example-xml-sonar-runner
   measure lines is 233
