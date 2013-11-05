@@ -42,11 +42,12 @@
       <plugin>
         <groupId>com.jayway.maven.plugins.android.generation2</groupId>
         <artifactId>android-maven-plugin</artifactId>
-        <version>3.3.0</version>
+        <!-- Works with Maven 3.0.5, but not with 3.1.x - see http://code.google.com/p/maven-android-plugin/issues/detail?id=395 -->
+        <version>3.7.0</version>
         <extensions>true</extensions>
         <configuration>
           <sdk>
-            <platform>17</platform>
+            <platform>19</platform>
           </sdk>
           <undeployBeforeDeploy>true</undeployBeforeDeploy>
           <test>
