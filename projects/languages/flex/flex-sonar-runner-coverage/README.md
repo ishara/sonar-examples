@@ -1,4 +1,4 @@
-This example demonstrates how to analyze a Flex project with the SonarQube Runner.
+This example demonstrates how to analyze a Flex project with the SonarQube Runner and retrieving code coverage data from a Cobertura report.
 
 Prerequisites
 =============
