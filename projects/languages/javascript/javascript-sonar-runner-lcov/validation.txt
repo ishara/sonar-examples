@@ -1,0 +1,13 @@
+start server
+  with plugin javascript 1.5
+sonar-runner
+verify org.codehaus.sonar:javascript-sonar-runner-lcov
+  measure lines is 141
+  measure ncloc is 107
+  measure files is 4
+  measure coverage is 38.1
+verify org.codehaus.sonar:javascript-sonar-runner-lcov:Car.js
+  measure lines is 50
+  measure ncloc is 42
+  measure coverage is 58.3
+stop server
