@@ -5,7 +5,7 @@
       <Name>Test::testAssert</Name>
       <FailureType>Assertion</FailureType>
       <Location>
-        <File>../src/example.cpp</File>
+        <File>../src/tests/example.cpp</File>
         <Line>31</Line>
       </Location>
       <Message>equality assertion failed
