@@ -1,5 +1,5 @@
 start server
-  with plugin flex 2.0
+  with plugin flex 2.0.1
 sonar-runner
 verify org.codehaus.sonar:flex-sonar-runner-coverage
   measure lines is 22
