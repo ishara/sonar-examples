@@ -1,5 +1,5 @@
 start server
-  with plugin flex 2.0
+  with plugin flex 2.0.1
 sonar-runner
 verify org.codehaus.sonar:example-flex-sonar-runner
   measure lines is 13
