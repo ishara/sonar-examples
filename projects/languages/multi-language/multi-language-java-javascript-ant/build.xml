@@ -4,22 +4,11 @@
   <!-- ========= Define the main properties of this project ========= -->
   <!-- Define the SonarQube properties -->
   <property name="sonar.projectKey" value="org.codehaus.sonar:multi-language-project-java-javascript-ant" />
-  <property name="sonar.projectName" value="Multi-language project (Java / JavaScript) analyzed with the Sonar Ant Task" />
+  <property name="sonar.projectName" value="Multi-language project (Java / JavaScript) analyzed with the SonarQube Ant Task" />
   <property name="sonar.projectVersion" value="1.0" />
   <property name="sonar.sources" value="src" />
-  <property name="sonar.binaries" value="build/bin" />
+  <property name="sonar.binaries" value="classes" />
   <property name="sonar.sourceEncoding" value="UTF-8" />
-  
-  <!-- Set modules IDs -->
-  <property name="sonar.modules" value="java-module,javascript-module"/>
-  
-  <!-- Set modules languages -->
-  <property name="java-module.sonar.language" value="java"/>
-  <property name="javascript-module.sonar.language" value="js"/>
-  
-  <!-- Override some properties at module level -->
-  <property name="java-module.sonar.projectName" value="Java Module" />
-  <property name="javascript-module.sonar.projectName" value="JavaScript Module" />
   
   <!-- Add your basic SonarQube configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
   <!--
@@ -29,15 +18,25 @@
   -->
 
   <!-- ========= Define "regular" targets: clean, compile, ... ========= -->
+  <path id="classpath">
+  </path>
+  
+  <property name="classes.dir" value="classes" />
+  <property name="sources.dir" value="src" />
+  
   <target name="clean">
     <delete dir=".sonar"/>
-    <ant dir="java-module" target="clean"/>
-    <ant dir="javascript-module" target="clean"/>
+	<delete dir="${classes.dir}"/>
+  </target>
+  
+  <target name="init">
+    <mkdir dir="${classes.dir}" />
   </target>
 
-  <target name="compile">
-    <ant dir="java-module" target="compile"/>
-    <ant dir="javascript-module" target="compile"/>
+  <target name="compile" depends="init">
+    <javac destdir="${classes.dir}" classpathref="classpath" fork="true" debug="true" includeAntRuntime="false">
+      <src path="${sources.dir}" />
+    </javac>
   </target>
   
   <!-- ========= Define SonarQube target ========= -->

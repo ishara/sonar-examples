@@ -2,8 +2,8 @@ This example demonstrates how to analyze a multi-language project (Java / JavaSc
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.3 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.2 or higher
+* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.3 or higher
 
 Usage
 =====
