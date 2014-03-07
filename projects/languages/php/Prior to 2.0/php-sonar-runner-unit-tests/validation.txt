@@ -1,0 +1,14 @@
+start server
+  with plugin php 1.2
+sonar-runner
+verify org.codehaus.sonar:php-sonar-runner-unit-tests
+  measure lines is 2331
+  measure ncloc is 1133
+  measure files is 6
+  measure tests is 12
+  measure test_success_density is 41.7
+  measure coverage is 0.2
+verify org.codehaus.sonar:php-sonar-runner-unit-tests:Math.php
+  measure lines is 214
+  measure ncloc is 116
+stop server

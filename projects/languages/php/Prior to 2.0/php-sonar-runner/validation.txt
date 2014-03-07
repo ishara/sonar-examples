@@ -1,11 +1,11 @@
 start server
-  with plugin php 2.0
+  with plugin php 1.2
 sonar-runner
 verify org.codehaus.sonar:php-sonar-runner
-  measure lines is 2337
-  measure ncloc is 1127
+  measure lines is 2331
+  measure ncloc is 1133
   measure files is 6
 verify org.codehaus.sonar:php-sonar-runner:Math.php
-  measure lines is 215
-  measure ncloc is 115
+  measure lines is 214
+  measure ncloc is 116
 stop server
