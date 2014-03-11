@@ -7,7 +7,7 @@ verify org.codehaus.sonar:php-sonar-runner-unit-tests
   measure files is 2
   measure tests is 12
   measure test_success_density is 41.7
-  measure coverage is 0.2
+  measure coverage is 1.0
 verify org.codehaus.sonar:php-sonar-runner-unit-tests:Math.php
   measure lines is 215
   measure ncloc is 115
