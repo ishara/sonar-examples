@@ -2,11 +2,11 @@ start server
   with plugin flex 2.0.1
 sonar-runner
 verify org.codehaus.sonar:example-flex-sonar-runner
-  measure lines is 13
-  measure ncloc is 12
+  measure lines is 12
+  measure ncloc is 11
   measure files is 1
   measure classes is 1
 verify org.codehaus.sonar:example-flex-sonar-runner:Greeter.as
-  measure lines is 13
-  measure ncloc is 12
+  measure lines is 12
+  measure ncloc is 11
 stop server
