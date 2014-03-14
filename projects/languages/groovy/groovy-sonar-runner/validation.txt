@@ -6,7 +6,7 @@ verify org.codehaus.sonar:example-groovy-sonar-runner
   measure ncloc is 17
   measure files is 2
   measure classes is 3
-verify org.codehaus.sonar:example-groovy-sonar-runner:example/Greeting.groovy
+verify org.codehaus.sonar:example-groovy-sonar-runner:example%2FGreeting.groovy
   measure lines is 8
   measure ncloc is 6
 stop server
