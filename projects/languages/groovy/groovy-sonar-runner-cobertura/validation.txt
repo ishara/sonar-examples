@@ -1,0 +1,12 @@
+start server
+  with plugin groovy 0.6
+sonar-runner
+verify org.codehaus.sonar:example-groovy-sonar-runner
+  measure lines is 21
+  measure ncloc is 17
+  measure files is 2
+  measure classes is 3
+verify org.codehaus.sonar:example-groovy-sonar-runner:example/Greeting.groovy
+  measure lines is 7
+  measure ncloc is 6
+stop server
