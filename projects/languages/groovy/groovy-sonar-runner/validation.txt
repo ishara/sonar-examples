@@ -1,5 +1,5 @@
 start server
-  with plugin groovy 1.0.1
+  with plugin groovy 1.0
 sonar-runner
 verify org.codehaus.sonar:example-groovy-sonar-runner
   measure lines is 23
