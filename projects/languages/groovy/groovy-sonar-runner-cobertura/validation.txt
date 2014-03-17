@@ -7,7 +7,7 @@ verify org.codehaus.sonar:example-groovy-sonar-runner-cobertura
   measure files is 2
   measure classes is 3
   measure coverage is 25.0
-verify org.codehaus.sonar:example-groovy-sonar-runner:example/Greeting.groovy
+verify org.codehaus.sonar:example-groovy-sonar-runner-cobertura:example/Greeting.groovy
   measure lines is 8
   measure ncloc is 6
   measure coverage is 100.0
