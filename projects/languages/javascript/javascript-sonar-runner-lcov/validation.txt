@@ -1,5 +1,5 @@
 start server
-  with plugin javascript 1.5
+  with plugin javascript 1.6
 sonar-runner
 verify org.codehaus.sonar:javascript-sonar-runner-lcov
   measure lines is 141
