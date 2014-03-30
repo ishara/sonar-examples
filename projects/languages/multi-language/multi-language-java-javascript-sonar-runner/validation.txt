@@ -6,10 +6,10 @@ verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner
   measure ncloc is 16
   measure files is 2
   measure classes is 1
-verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:java-module:[default].Helloworld
+verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:src/Helloworld.java
   measure lines is 9
   measure ncloc is 6
-verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:javascript-module:Person.js
+verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner:src/Person.js
   measure lines is 13
   measure ncloc is 10
 stop server
