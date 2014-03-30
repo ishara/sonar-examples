@@ -5,7 +5,7 @@ verify org.codehaus.sonar:example-python-sonar-runner
   measure lines is 498
   measure ncloc is 215
   measure files is 9
-verify org.codehaus.sonar:example-python-sonar-runner:badfortune.py
+verify org.codehaus.sonar:example-python-sonar-runner:src/badfortune.py
   measure lines is 93
   measure ncloc is 41
 stop server
