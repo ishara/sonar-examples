@@ -5,7 +5,7 @@ verify org.codehaus.sonar:javascript-sonar-runner
   measure lines is 14
   measure ncloc is 10
   measure files is 1
-verify org.codehaus.sonar:javascript-sonar-runner:Person.js
+verify org.codehaus.sonar:javascript-sonar-runner:src/Person.js
   measure lines is 14
   measure ncloc is 10
 stop server
