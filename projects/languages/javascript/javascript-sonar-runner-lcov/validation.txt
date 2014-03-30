@@ -6,7 +6,7 @@ verify org.codehaus.sonar:javascript-sonar-runner-lcov
   measure ncloc is 107
   measure files is 4
   measure coverage is 38.1
-verify org.codehaus.sonar:javascript-sonar-runner-lcov:com/company/Car.js
+verify org.codehaus.sonar:javascript-sonar-runner-lcov:src/com/company/Car.js
   measure lines is 50
   measure ncloc is 42
   measure coverage is 58.3
