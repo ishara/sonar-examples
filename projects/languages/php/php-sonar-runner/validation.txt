@@ -5,7 +5,7 @@ verify org.codehaus.sonar:php-sonar-runner
   measure lines is 215
   measure ncloc is 115
   measure files is 1
-verify org.codehaus.sonar:php-sonar-runner:Math.php
+verify org.codehaus.sonar:php-sonar-runner:src/Math.php
   measure lines is 215
   measure ncloc is 115
 stop server
