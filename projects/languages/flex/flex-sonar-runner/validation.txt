@@ -6,7 +6,7 @@ verify org.codehaus.sonar:example-flex-sonar-runner
   measure ncloc is 13
   measure files is 1
   measure classes is 1
-verify org.codehaus.sonar:example-flex-sonar-runner:Greeter.as
+verify org.codehaus.sonar:example-flex-sonar-runner:src/Greeter.as
   measure lines is 14
   measure ncloc is 13
 stop server
