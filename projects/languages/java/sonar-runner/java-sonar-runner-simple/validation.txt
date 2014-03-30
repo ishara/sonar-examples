@@ -5,7 +5,7 @@ verify java-sonar-runner-simple
   measure ncloc is 10
   measure files is 1
   measure classes is 1
-verify java-sonar-runner-simple:[default].Helloworld
+verify java-sonar-runner-simple:src/Helloworld
   measure lines is 14
   measure ncloc is 10
 stop server
