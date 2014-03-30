@@ -7,7 +7,7 @@ verify org.codehaus.sonar:example-it-jacoco-sonar-runner
   measure classes is 1
   measure coverage is 0.0
   measure it_coverage is 60.0
-verify org.codehaus.sonar:example-it-jacoco-sonar-runner:[default].One
+verify org.codehaus.sonar:example-it-jacoco-sonar-runner:src/One.java
   measure lines is 12
   measure ncloc is 9
   measure it_lines_to_cover is 5
