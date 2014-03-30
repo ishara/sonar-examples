@@ -7,11 +7,11 @@ verify org.codehaus.sonar:flex-sonar-runner-coverage
   measure files is 2
   measure classes is 2
   measure coverage is 50
-verify org.codehaus.sonar:flex-sonar-runner-coverage:Circle.as
+verify org.codehaus.sonar:flex-sonar-runner-coverage:src/Circle.as
   measure lines is 11
   measure ncloc is 8
   measure coverage is 100
-verify org.codehaus.sonar:flex-sonar-runner-coverage:UncoveredCircle.as
+verify org.codehaus.sonar:flex-sonar-runner-coverage:src/UncoveredCircle.as
   measure lines is 11
   measure ncloc is 8
   measure coverage is 0
