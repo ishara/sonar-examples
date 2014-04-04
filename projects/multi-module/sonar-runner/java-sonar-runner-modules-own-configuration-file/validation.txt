@@ -10,7 +10,7 @@ verify java-sonar-runner-modules-own-configuration-file:module1
   measure ncloc is 5
   measure files is 1
   measure classes is 1
-verify java-sonar-runner-modules-own-configuration-file:module1:[default].Helloworld1
+verify java-sonar-runner-modules-own-configuration-file:module1:src/Helloworld1.java
   measure lines is 9
   measure ncloc is 5
 verify java-sonar-runner-modules-own-configuration-file:module2
@@ -18,7 +18,7 @@ verify java-sonar-runner-modules-own-configuration-file:module2
   measure ncloc is 5
   measure files is 1
   measure classes is 1
-verify java-sonar-runner-modules-own-configuration-file:module2:[default].Helloworld2
+verify java-sonar-runner-modules-own-configuration-file:module2:src/Helloworld2.java
   measure lines is 8
   measure ncloc is 5
 stop server
