@@ -5,6 +5,6 @@ verify org.codehaus.sonar:example-xml-sonar-runner
   measure lines is 233
   measure ncloc is 233
   measure files is 1
-verify org.codehaus.sonar:example-xml-sonar-runner:sonar_backup.xml
+verify org.codehaus.sonar:example-xml-sonar-runner:src/sonar_backup.xml
   measure lines is 233
   measure ncloc is 233
