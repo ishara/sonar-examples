@@ -10,7 +10,7 @@ verify org.codehaus.sonar:example-combining-ut-and-it-coverage
   measure coverage is 40.0
   measure it_coverage is 50.0
   measure overall_coverage is 80.0
-verify org.codehaus.sonar:example-combining-ut-and-it-coverage:example.HelloWorld
+verify org.codehaus.sonar:example-combining-ut-and-it-coverage:src/main/java/example/HelloWorld.java
   measure lines is 21
   measure ncloc is 15
   measure lines_to_cover is 10
