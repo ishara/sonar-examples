@@ -5,7 +5,7 @@ verify org.codehaus.sonar:example-web-sonar-runner
   measure lines is 48
   measure ncloc is 35
   measure files is 1
-verify org.codehaus.sonar:example-web-sonar-runner:sample.xhtml
+verify org.codehaus.sonar:example-web-sonar-runner:src/sample.xhtml
   measure lines is 48
   measure ncloc is 35
 stop server
