@@ -4,19 +4,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.codehaus.sonar</groupId>
-  <artifactId>example-ut-maven-jacoco-runTests</artifactId>
+  <artifactId>example-ut-maven-jacoco</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>UT coverage with Maven and JaCoCo running tests</name>
+  <name>UT coverage with Maven and JaCoCo</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonar.language>java</sonar.language>
-
-    <!-- Tells Sonar to run the unit tests -->
-    <sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
-    <!-- Tells Sonar to use JaCoCo as the code coverage tool -->
-    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+	<sonar.junit.reportsPath>target/surefire-reports</sonar.junit.reportsPath>
+	<sonar.jacoco.reportPath>target/jacoco.exec</sonar.jacoco.reportPath>
   </properties>
 
   <dependencies>
