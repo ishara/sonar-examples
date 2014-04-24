@@ -5,9 +5,7 @@
  */
 package org.sonar.samples.java;
 
-import com.sonar.sslr.api.AstNode;
 import org.apache.commons.lang.StringUtils;
-import org.sonar.java.model.JavaTree;
 import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
 import org.sonar.plugins.java.api.tree.Tree;
 
@@ -58,12 +56,7 @@ public class PrinterVisitor extends BaseTreeVisitor {
   protected void scan(@Nullable Tree tree) {
     if (tree != null) {
       String nodeName = tree.getClass().getInterfaces()[0].getSimpleName();
-      indent().append(nodeName);
-      AstNode node = ((JavaTree) tree).getAstNode();
-      if (node != null) {
-        sb.append(" ").append(node.getTokenLine());
-      }
-      sb.append("\n");
+      indent().append(nodeName).append("\n");
     }
     indentLevel++;
     super.scan(tree);
