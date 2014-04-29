@@ -9,9 +9,9 @@ Prerequisites
 
 Usage
 =====
-* Build the project and execute the unit tests:
+* Prepare jacoco agent to allow coverage report generation, build the project, and execute the unit tests:
 
-        mvn clean install
+        mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean install
 
 * Analyze the project with SonarQube using Maven:
 
