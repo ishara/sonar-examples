@@ -13,6 +13,11 @@ Usage
 
         mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean install
 
+* To get coverage per tests information, you will need to activate the profile when running the instrumented tests:
+
+        mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean install -Pcoverage-per-test
+
 * Analyze the project with SonarQube using Maven:
 
         mvn sonar:sonar
+
