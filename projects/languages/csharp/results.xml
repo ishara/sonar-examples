@@ -169,10 +169,10 @@
     </Module>
     <Module hash="AB-2E-8A-73-E7-FB-3D-82-37-F2-F1-10-A6-10-59-B9-3C-AC-44-16">
       <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
-      <FullName>C:\Users\SonarSource\Documents\Visual Studio 2013\Projects\CSharpPlayground\CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll</FullName>
+      <FullName>CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll</FullName>
       <ModuleName>CalcMultiplyTest</ModuleName>
       <Files>
-        <File uid="1" fullPath="c:\Users\SonarSource\Documents\Visual Studio 2013\Projects\CSharpPlayground\CalcMultiplyTest\MultiplyTest.cs" />
+        <File uid="1" fullPath="CalcMultiplyTest\MultiplyTest.cs" />
       </Files>
       <Classes>
         <Class>
@@ -276,10 +276,10 @@
     </Module>
     <Module hash="41-05-9C-09-18-4D-11-E8-15-83-30-96-37-18-96-7F-1A-73-16-7E">
       <Summary numSequencePoints="6" visitedSequencePoints="3" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="50" branchCoverage="50" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
-      <FullName>C:\Users\SonarSource\Documents\Visual Studio 2013\Projects\CSharpPlayground\CalcMultiplyTest\bin\Debug\MyLibrary.dll</FullName>
+      <FullName>CalcMultiplyTest\bin\Debug\MyLibrary.dll</FullName>
       <ModuleName>MyLibrary</ModuleName>
       <Files>
-        <File uid="3" fullPath="c:\Users\SonarSource\Documents\Visual Studio 2013\Projects\CSharpPlayground\MyLibrary\Calc.cs" />
+        <File uid="3" fullPath="MyLibrary\Calc.cs" />
       </Files>
       <Classes>
         <Class>
