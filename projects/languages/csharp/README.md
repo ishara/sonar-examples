@@ -2,16 +2,28 @@ This example demonstrates how to analyze C# projects with the SonarQube Runner.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 2.11 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 1.3 or higher or Maven 2.2.1 or higher
-* [SonarQube C# Plugin](http://docs.codehaus.org/x/YID_Cw) 1.3 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 3.7 or higher
+* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.3 or higher
+* [SonarQube C# Plugin](http://docs.codehaus.org/x/BIREDg) 3.0 or higher
 
 Usage
 =====
-* Compile the project:
+* First launch MSBuild to build the project in the Debug configuration using the following command:
 
-        mvn clean install
+		MSBuild.exe
 
-* Analyze it with SonarQube using the SonarQube Runner:
+* Run NCover3 using the following command to generate coverage.nccov:
+
+		NCover.Console.exe "C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" CalcAddTest\bin\Debug\CalcAddTest.dll
+
+* Run OpenCover using the following command to generate results.xml:
+
+		OpenCover.Console.exe -register:user -target:"C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" -targetargs:"CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll"
+
+* You also can use a single code coverage tool for both test projects, in that case, edit sonar-project.properties to set for example:
+
+		sonar.cs.opencover.reportsPaths=results1.xml,results2.xml
+
+* Analyze the project using the SonarQube Runner:
 
         sonar-runner
