@@ -5,9 +5,9 @@ Prerequisites
 * [SonarQube](http://www.sonarsource.org/downloads/) 3.7 or higher
 * [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.3 or higher
 * [SonarQube C# Plugin](http://docs.codehaus.org/x/BIREDg) 3.0 or higher
-* Optionally, [Analysis Bootstrapper for Visual Studio Projects](http://docs.codehaus.org/x/TAA1Dg) 1.0 or higher
-* Optionally, [SonarQube StyleCop Plugin](http://docs.codehaus.org/x/BoNEDg) 1.0 or higher
-* Optionally, [SonarQube R# Plugin](http://docs.codehaus.org/x/CINEDg) 1.0 or higher
+* [Analysis Bootstrapper for Visual Studio Projects](http://docs.codehaus.org/x/TAA1Dg) 1.0 or higher (optional but recommended)
+* [SonarQube StyleCop Plugin](http://docs.codehaus.org/x/BoNEDg) 1.0 or higher (optional)
+* [SonarQube R# Plugin](http://docs.codehaus.org/x/CINEDg) 1.0 or higher (optional)
 
 Usage
 =====
