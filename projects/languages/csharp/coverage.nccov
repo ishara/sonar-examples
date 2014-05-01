@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- saved from NCover 3.0 Export url='http://www.ncover.com/' -->
-<coverage profilerVersion="3.4.18.6937" driverVersion="3.4.18.6937" exportversion="3" viewdisplayname="" startTime="2014-05-01T13:24:52.1745363Z" measureTime="2014-05-01T13:24:53.3962931Z" projectName="New Project" buildid="5e8774c6-cfae-4170-b304-a91cfc235a93" coveragenodeid="0" failed="false" satisfactorybranchthreshold="95" satisfactorycoveragethreshold="95" satisfactorycyclomaticcomplexitythreshold="20" satisfactoryfunctionthreshold="80" satisfactoryunvisitedsequencepoints="10" uiviewtype="TreeView" viewguid="New Project" viewfilterstyle="None" viewreportstyle="SequencePointCoveragePercentage" viewsortstyle="Name">
+<coverage profilerVersion="3.4.18.6937" driverVersion="3.4.18.6937" exportversion="3" viewdisplayname="" startTime="2014-05-01T14:55:45.4778877Z" measureTime="2014-05-01T14:55:46.7369037Z" projectName="New Project" buildid="ccf7900c-6167-4942-b5ba-030dc8552d5d" coveragenodeid="0" failed="false" satisfactorybranchthreshold="95" satisfactorycoveragethreshold="95" satisfactorycyclomaticcomplexitythreshold="20" satisfactoryfunctionthreshold="80" satisfactoryunvisitedsequencepoints="10" uiviewtype="TreeView" viewguid="New Project" viewfilterstyle="None" viewreportstyle="SequencePointCoveragePercentage" viewsortstyle="Name">
   <rebasedpaths />
   <filters />
   <documents>
-    <doc id="1" excluded="false" url="CalcAddTest\AddTest.cs" cs="F4A6C3F7782CF009F094321F2EB58D0C" csa="406ea660-64cf-4c82-b6f0-42d48172a799" om="33" nid="0" />
-    <doc id="2" excluded="false" url="MyLibrary\Calc.cs" cs="9EE529392FA3B31A4021F453F178A88E" csa="406ea660-64cf-4c82-b6f0-42d48172a799" om="51" nid="0" />
+    <doc id="1" excluded="false" url="CalcAddTest\AddTest.cs" cs="E9BCE69DB54C0328A30A8C87C9643B83" csa="406ea660-64cf-4c82-b6f0-42d48172a799" om="33" nid="0" />
+    <doc id="2" excluded="false" url="MyLibrary\Calc.cs" cs="CEEB3CE3D18A22B5094CA1422AE96702" csa="406ea660-64cf-4c82-b6f0-42d48172a799" om="51" nid="0" />
     <doc id="0" excluded="false" url="None" cs="" csa="00000000-0000-0000-0000-000000000000" om="0" nid="0" />
   </documents>
   <module moduleId="33" name="CalcAddTest\bin\Debug\CalcAddTest.dll" assembly="CalcAddTest" assemblyIdentity="CalcAddTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL" nid="0">
-    <class name="MyLibraryTest.AddTest" signature="MyLibraryTest.AddTest" excluded="false" nid="0">
+    <class name="CalcAddTest.AddTest" signature="CalcAddTest.AddTest" excluded="false" nid="0">
       <method name=".ctor" signature=".ctor() : void" excluded="false" instrumented="true" cc="1" vc="1" nid="0">
         <seqpnt vc="1" o="6" l="0" el="0" c="0" ec="0" ex="false" fl="131072" doc="1" nid="0" />
       </method>
@@ -29,6 +29,20 @@
         <seqpnt vc="1" o="1" l="13" el="13" c="13" ec="33" ex="false" fl="65536" doc="2" nid="0" />
         <seqpnt vc="1" o="7" l="14" el="14" c="9" ec="10" ex="false" fl="65536" doc="2" nid="0" />
         <seqpnt vc="1" o="8" l="0" el="0" c="0" ec="0" ex="false" fl="131072" doc="2" nid="0" />
+      </method>
+      <method name="Divide" signature="Divide(System.Int32 left,System.Int32 right) : System.Int32 [static]" excluded="false" instrumented="false" cc="2" vc="0" nid="0">
+        <seqpnt vc="0" o="1" l="23" el="23" c="13" ec="28" ex="false" fl="65536" doc="2" nid="0" />
+        <seqpnt vc="0" o="A" l="0" el="0" c="0" ec="0" ex="false" fl="131072" doc="2" nid="0" />
+        <seqpnt vc="0" o="D" l="25" el="25" c="17" ec="63" ex="false" fl="65536" doc="2" nid="0" />
+        <seqpnt vc="0" o="19" l="0" el="0" c="0" ec="0" ex="false" fl="131072" doc="2" nid="0" />
+        <seqpnt vc="0" o="19" l="28" el="28" c="13" ec="33" ex="false" fl="65536" doc="2" nid="0" />
+        <seqpnt vc="0" o="1F" l="29" el="29" c="9" ec="10" ex="false" fl="65536" doc="2" nid="0" />
+        <seqpnt vc="0" o="20" l="0" el="0" c="0" ec="0" ex="false" fl="131072" doc="2" nid="0" />
+      </method>
+      <method name="horrible_code" signature="horrible_code(byref System.Int32 result) : void [static]" excluded="false" instrumented="false" cc="1" vc="0" nid="0">
+        <seqpnt vc="0" o="1" l="33" el="33" c="13" ec="25" ex="false" fl="65536" doc="2" nid="0" />
+        <seqpnt vc="0" o="5" l="0" el="0" c="0" ec="0" ex="false" fl="131072" doc="2" nid="0" />
+        <seqpnt vc="0" o="5" l="34" el="34" c="9" ec="10" ex="false" fl="65536" doc="2" nid="0" />
       </method>
       <method name="Multiply" signature="Multiply(System.Int32 left,System.Int32 right) : System.Int32 [static]" excluded="false" instrumented="false" cc="1" vc="0" nid="0">
         <seqpnt vc="0" o="1" l="18" el="18" c="13" ec="33" ex="false" fl="65536" doc="2" nid="0" />

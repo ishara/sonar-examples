@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using MyLibrary;
 
-namespace MyLibraryTest
+namespace CalcAddTest
 {
     [TestClass]
     public class AddTest

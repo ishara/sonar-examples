@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using MyLibrary;
 
-namespace MyLibraryTest2
+namespace CalcMultiplyTest
 {
     [TestClass]
     public class MultiplyTest

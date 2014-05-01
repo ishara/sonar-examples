@@ -17,5 +17,20 @@ namespace MyLibrary
         {
             return left * right;
         }
+
+        public static int Divide(int left, int right)
+        {
+            if (right == 0)
+            {
+                Console.WriteLine("ERROR: Division by zero!");
+            }
+
+            return left / right;
+        }
+
+        public static void horrible_code(out int result)
+        {
+            result = 42;
+        }
     }
 }

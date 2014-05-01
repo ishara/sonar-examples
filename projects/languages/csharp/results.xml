@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageSession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Summary numSequencePoints="9" visitedSequencePoints="6" numBranchPoints="3" visitedBranchPoints="2" sequenceCoverage="66.67" branchCoverage="66.67" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
+  <Summary numSequencePoints="19" visitedSequencePoints="6" numBranchPoints="7" visitedBranchPoints="2" sequenceCoverage="31.58" branchCoverage="28.57" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" />
   <Modules>
     <Module skippedDueTo="Filter" hash="12-65-6A-66-2E-D6-63-35-62-65-A9-F9-3A-99-F3-2E-1A-A3-76-A4">
       <FullName>C:\Windows\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll</FullName>
@@ -74,7 +74,7 @@
     </Module>
     <Module skippedDueTo="MissingPdb" hash="">
       <FullName>RefEmit_InMemoryManifestModule</FullName>
-      <ModuleName>MetadataViewProxies_3e66c61d-eed0-40d4-b6fa-4f0eb03bff2b</ModuleName>
+      <ModuleName>MetadataViewProxies_d1fac618-bd01-4f47-a54a-29a79b9ac871</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="MissingPdb" hash="EC-EB-0C-B7-2A-06-A8-2E-67-58-FF-C7-30-AF-90-EA-DB-3F-D9-A5">
@@ -159,7 +159,7 @@
     </Module>
     <Module skippedDueTo="MissingPdb" hash="">
       <FullName>RefEmit_InMemoryManifestModule</FullName>
-      <ModuleName>MetadataViewProxies_3e66c61d-eed0-40d4-b6fa-4f0eb03bff2b</ModuleName>
+      <ModuleName>MetadataViewProxies_d1fac618-bd01-4f47-a54a-29a79b9ac871</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="MissingPdb" hash="CD-B3-17-56-CA-2B-DF-F1-86-B3-80-6C-CA-87-A1-BD-64-B6-30-0C">
@@ -167,7 +167,7 @@
       <ModuleName>Microsoft.VisualStudio.TestPlatform.ObjectModel</ModuleName>
       <Classes />
     </Module>
-    <Module hash="AB-2E-8A-73-E7-FB-3D-82-37-F2-F1-10-A6-10-59-B9-3C-AC-44-16">
+    <Module hash="9C-0D-06-A6-32-AA-B4-30-FC-FB-96-E7-DE-C7-4F-C1-48-73-78-83">
       <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
       <FullName>CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll</FullName>
       <ModuleName>CalcMultiplyTest</ModuleName>
@@ -182,12 +182,12 @@
         </Class>
         <Class>
           <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
-          <FullName>MyLibraryTest2.MultiplyTest</FullName>
+          <FullName>CalcMultiplyTest.MultiplyTest</FullName>
           <Methods>
             <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="100" branchCoverage="100" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="3" visitedSequencePoints="3" numBranchPoints="1" visitedBranchPoints="1" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
               <MetadataToken>100663297</MetadataToken>
-              <Name>System.Void MyLibraryTest2.MultiplyTest::TestMethod1()</Name>
+              <Name>System.Void CalcMultiplyTest.MultiplyTest::TestMethod1()</Name>
               <FileRef uid="1" />
               <SequencePoints>
                 <SequencePoint vc="1" uspid="1" ordinal="0" offset="0" sl="13" sc="9" el="13" ec="10" />
@@ -200,7 +200,7 @@
             <Method visited="true" cyclomaticComplexity="1" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
               <MetadataToken>100663298</MetadataToken>
-              <Name>System.Void MyLibraryTest2.MultiplyTest::.ctor()</Name>
+              <Name>System.Void CalcMultiplyTest.MultiplyTest::.ctor()</Name>
               <SequencePoints />
               <BranchPoints />
               <MethodPoint vc="1" uspid="4" ordinal="0" offset="0" />
@@ -274,8 +274,8 @@
       <ModuleName>Microsoft.VisualStudio.TestPlatform.Extensions.VSTestIntegration</ModuleName>
       <Classes />
     </Module>
-    <Module hash="41-05-9C-09-18-4D-11-E8-15-83-30-96-37-18-96-7F-1A-73-16-7E">
-      <Summary numSequencePoints="6" visitedSequencePoints="3" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="50" branchCoverage="50" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
+    <Module hash="41-59-31-4D-F0-D9-9D-6E-9A-3E-42-65-62-C3-74-38-1F-29-4C-94">
+      <Summary numSequencePoints="16" visitedSequencePoints="3" numBranchPoints="6" visitedBranchPoints="1" sequenceCoverage="18.75" branchCoverage="16.67" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" />
       <FullName>CalcMultiplyTest\bin\Debug\MyLibrary.dll</FullName>
       <ModuleName>MyLibrary</ModuleName>
       <Files>
@@ -288,7 +288,7 @@
           <Methods />
         </Class>
         <Class>
-          <Summary numSequencePoints="6" visitedSequencePoints="3" numBranchPoints="2" visitedBranchPoints="1" sequenceCoverage="50" branchCoverage="50" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
+          <Summary numSequencePoints="16" visitedSequencePoints="3" numBranchPoints="6" visitedBranchPoints="1" sequenceCoverage="18.75" branchCoverage="16.67" maxCyclomaticComplexity="2" minCyclomaticComplexity="1" />
           <FullName>MyLibrary.Calc</FullName>
           <Methods>
             <Method visited="false" cyclomaticComplexity="1" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
@@ -317,13 +317,46 @@
               <BranchPoints />
               <MethodPoint xsi:type="SequencePoint" vc="1" uspid="8" ordinal="0" offset="0" sl="17" sc="9" el="17" ec="10" />
             </Method>
+            <Method visited="false" cyclomaticComplexity="2" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="7" visitedSequencePoints="0" numBranchPoints="3" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" />
+              <MetadataToken>100663299</MetadataToken>
+              <Name>System.Int32 MyLibrary.Calc::Divide(System.Int32,System.Int32)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="11" ordinal="0" offset="0" sl="22" sc="9" el="22" ec="10" />
+                <SequencePoint vc="0" uspid="12" ordinal="1" offset="1" sl="23" sc="13" el="23" ec="28" />
+                <SequencePoint vc="0" uspid="13" ordinal="2" offset="12" sl="24" sc="13" el="24" ec="14" />
+                <SequencePoint vc="0" uspid="14" ordinal="3" offset="13" sl="25" sc="17" el="25" ec="63" />
+                <SequencePoint vc="0" uspid="15" ordinal="4" offset="24" sl="26" sc="13" el="26" ec="14" />
+                <SequencePoint vc="0" uspid="16" ordinal="5" offset="25" sl="28" sc="13" el="28" ec="33" />
+                <SequencePoint vc="0" uspid="17" ordinal="6" offset="31" sl="29" sc="9" el="29" ec="10" />
+              </SequencePoints>
+              <BranchPoints>
+                <BranchPoint vc="0" uspid="18" ordinal="0" offset="10" path="0" />
+                <BranchPoint vc="0" uspid="19" ordinal="1" offset="10" path="1" />
+              </BranchPoints>
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="11" ordinal="0" offset="0" sl="22" sc="9" el="22" ec="10" />
+            </Method>
+            <Method visited="false" cyclomaticComplexity="1" sequenceCoverage="0" branchCoverage="0" isConstructor="false" isStatic="true" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="3" visitedSequencePoints="0" numBranchPoints="1" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void MyLibrary.Calc::horrible_code(System.Int32&amp;)</Name>
+              <FileRef uid="3" />
+              <SequencePoints>
+                <SequencePoint vc="0" uspid="20" ordinal="0" offset="0" sl="32" sc="9" el="32" ec="10" />
+                <SequencePoint vc="0" uspid="21" ordinal="1" offset="1" sl="33" sc="13" el="33" ec="25" />
+                <SequencePoint vc="0" uspid="22" ordinal="2" offset="5" sl="34" sc="9" el="34" ec="10" />
+              </SequencePoints>
+              <BranchPoints />
+              <MethodPoint xsi:type="SequencePoint" vc="0" uspid="20" ordinal="0" offset="0" sl="32" sc="9" el="32" ec="10" />
+            </Method>
             <Method visited="false" cyclomaticComplexity="1" sequenceCoverage="0" branchCoverage="0" isConstructor="true" isStatic="false" isGetter="false" isSetter="false">
               <Summary numSequencePoints="0" visitedSequencePoints="0" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" />
-              <MetadataToken>100663299</MetadataToken>
+              <MetadataToken>100663301</MetadataToken>
               <Name>System.Void MyLibrary.Calc::.ctor()</Name>
               <SequencePoints />
               <BranchPoints />
-              <MethodPoint vc="0" uspid="11" ordinal="0" offset="0" />
+              <MethodPoint vc="0" uspid="23" ordinal="0" offset="0" />
             </Method>
           </Methods>
         </Class>
