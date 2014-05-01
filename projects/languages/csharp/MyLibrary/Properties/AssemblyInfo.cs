@@ -1,23 +1,3 @@
-/**
- * Maven and Sonar plugin for .Net
- * Copyright (C) 2010 Jose Chillan and Alexandre Victoor
- * mailto: jose.chillan@codehaus.org or alexvictoor@codehaus.org
- *
- * Sonar is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
- *
- * Sonar is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with Sonar; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
- */
-
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -25,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Example.Core")]
+[assembly: AssemblyTitle("MyLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Codehaus")]
-[assembly: AssemblyProduct("Example.Core")]
-[assembly: AssemblyCopyright("Copyright Codehaus")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("MyLibrary")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -40,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("79c43794-c4cd-4736-a4ad-d6d6fa3976e4")]
+[assembly: Guid("100c361e-5630-412f-a268-3ba58daf1072")]
 
 // Version information for an assembly consists of the following four values:
 //
