@@ -17,11 +17,11 @@ Usage
 
 * Run NCover3 using the following command to generate coverage.nccov:
 
-		NCover.Console.exe "C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" CalcAddTest\bin\Debug\CalcAddTest.dll
+		NCover.Console.exe "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" CalcAddTest\bin\Debug\CalcAddTest.dll
 
 * Run OpenCover using the following command to generate results.xml:
 
-		OpenCover.Console.exe -register:user -target:"C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" -targetargs:"CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll"
+		OpenCover.Console.exe -register:user -target:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" -targetargs:"CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll"
 
 * You also can use a single code coverage tool for both test projects, in that case, edit sonar-project.properties to set for example:
 
