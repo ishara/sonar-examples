@@ -12,3 +12,9 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
+
+# NuGet
+packages/
+
+# Roslyn
+*.sln.ide/
