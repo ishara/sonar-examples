@@ -23,6 +23,10 @@ Usage
 
 		OpenCover.Console.exe -register:user -target:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" -targetargs:"CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll"
 
+* Run dotCover using the following command to generate dotCover.html and the "dotCover" folder:
+
+		dotcover.exe analyse /ReportType=HTML /Output=dotCover.html "/TargetExecutable=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" /TargetWorkingDir=. /TargetArguments=CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll
+
 * You also can use a single code coverage tool for both test projects, in that case, edit sonar-project.properties to set for example:
 
 		sonar.cs.opencover.reportsPaths=results1.xml,results2.xml
