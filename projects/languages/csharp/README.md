@@ -31,6 +31,14 @@ Usage
 
 		sonar.cs.opencover.reportsPaths=results1.xml,results2.xml
 
+* Run MSTest or VSTest using the following command to generate TestResults\CalcMultiplyTest.trx:
+
+		mstest /testcontainer:"CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll" /resultsfile:TestResults\CalcMultiplyTest.trx
+
+		or using VSTest (no way to specify the results filename)
+
+		vstest.console.exe /Logger:trx "CalcMultiplyTest\bin\Debug\CalcMultiplyTest.dll"
+
 * Analyze the project using the SonarQube Runner:
 
         sonar-runner

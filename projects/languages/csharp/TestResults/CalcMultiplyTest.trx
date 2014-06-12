@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="db9562ec-872e-4714-a0bc-e9e96f702955" name="vagrant@WIN7PRO64 2014-06-12 10:10:41" runUser="WIN7PRO64\vagrant" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="945b852b-734f-47f5-b113-9e7b69b823bb">
+    <Deployment userDeploymentRoot="C:\Users\vagrant\Desktop\sonarsource\sonar-examples\projects\languages\csharp\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="vagrant_WIN7PRO64 2014-06-12 10_10_41" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2014-06-12T10:10:41.1934972+02:00" queuing="2014-06-12T10:10:41.4591222+02:00" start="2014-06-12T10:10:41.5528722+02:00" finish="2014-06-12T10:10:42.6153722+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="calcmultiplytest\bin\debug\calcmultiplytest.dll" id="f7a6fd73-279e-f6cb-47a7-209d1752522c">
+      <Execution id="4039dc29-2436-4220-87b8-cc124a0aaf87" />
+      <TestMethod codeBase="C:/Users/vagrant/Desktop/sonarsource/sonar-examples/projects/languages/csharp/CalcMultiplyTest/bin/Debug/CalcMultiplyTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CalcMultiplyTest.MultiplyTest, CalcMultiplyTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="f7a6fd73-279e-f6cb-47a7-209d1752522c" executionId="4039dc29-2436-4220-87b8-cc124a0aaf87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4039dc29-2436-4220-87b8-cc124a0aaf87" testId="f7a6fd73-279e-f6cb-47a7-209d1752522c" testName="TestMethod1" computerName="WIN7PRO64" duration="00:00:00.0117027" startTime="2014-06-12T10:10:41.5528722+02:00" endTime="2014-06-12T10:10:41.7559972+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4039dc29-2436-4220-87b8-cc124a0aaf87">
+    </UnitTestResult>
+  </Results>
+</TestRun>
