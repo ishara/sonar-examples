@@ -27,6 +27,12 @@ Usage
 
 		dotcover.exe analyse /ReportType=HTML /Output=dotCover.html "/TargetExecutable=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" /TargetWorkingDir=. /TargetArguments=CalcDivideTest\bin\Debug\CalcDivideTest.dll
 
+* Run Visual Studio's CodeCoverage.exe using the following commands to generate VisualStudio.coverage.xml:
+
+		"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Dynamic Code Coverage Tools\CodeCoverage.exe" collect /output:VisualStudio.coverage "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" "CalcSubtractTest\bin\Debug\CalcSubtractTest.dll"
+
+		"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Dynamic Code Coverage Tools\CodeCoverage.exe" analyze /output:VisualStudio.coveragexml VisualStudio.coverage
+
 * You also can use a single code coverage tool for all test projects, in that case, edit sonar-project.properties to set for example:
 
 		sonar.cs.opencover.reportsPaths=results1.xml,results2.xml

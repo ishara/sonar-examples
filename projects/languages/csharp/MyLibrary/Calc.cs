@@ -32,5 +32,10 @@ namespace MyLibrary
         {
             result = 42;
         }
+
+        public static int Subtract(int left, int right)
+        {
+            return left - right;
+        }
     }
 }

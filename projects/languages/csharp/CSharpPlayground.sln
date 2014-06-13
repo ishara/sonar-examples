@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary", "MyLibrary\MyLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcDivideTest", "CalcDivideTest\CalcDivideTest.csproj", "{ECDB23DC-612D-4CEF-895E-525A66651420}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcSubtractTest", "CalcSubtractTest\CalcSubtractTest.csproj", "{D9BD6208-37DF-4DEB-B79D-5DF81248D062}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,16 @@ Global
 		{ECDB23DC-612D-4CEF-895E-525A66651420}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{ECDB23DC-612D-4CEF-895E-525A66651420}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{ECDB23DC-612D-4CEF-895E-525A66651420}.Release|Win32.ActiveCfg = Release|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D9BD6208-37DF-4DEB-B79D-5DF81248D062}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
