@@ -27,7 +27,7 @@ Usage
 
 		dotcover.exe analyse /ReportType=HTML /Output=dotCover.html "/TargetExecutable=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" /TargetWorkingDir=. /TargetArguments=CalcDivideTest\bin\Debug\CalcDivideTest.dll
 
-* You also can use a single code coverage tool for both test projects, in that case, edit sonar-project.properties to set for example:
+* You also can use a single code coverage tool for all test projects, in that case, edit sonar-project.properties to set for example:
 
 		sonar.cs.opencover.reportsPaths=results1.xml,results2.xml
 
