@@ -11,7 +11,7 @@ Prerequisites
 
 Usage
 =====
-* After the plugins are installed, enable all C# coding rules:
+* After the plugins are installed, enable all C# coding rules from within the SonarQube interface:
 
 		Quality Profiles > C# Profiles > Sonar way > Activation: Inactive > Search > Bulk Change: Activate all
 
