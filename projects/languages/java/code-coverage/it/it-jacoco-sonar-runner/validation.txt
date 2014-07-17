@@ -5,7 +5,6 @@ verify org.codehaus.sonar:example-it-jacoco-sonar-runner
   measure ncloc is 9
   measure files is 1
   measure classes is 1
-  measure coverage is 0.0
   measure it_coverage is 60.0
 verify org.codehaus.sonar:example-it-jacoco-sonar-runner:src/One.java
   measure lines is 12
