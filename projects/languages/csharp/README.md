@@ -15,7 +15,8 @@ Usage
 
 		Quality Profiles > C# Profiles > Sonar way > Activation: Inactive > Search > Bulk Change: Activate all
 
-* Launch MSBuild to build the project in the Debug configuration using the following command: (you can skip this if you disable all FxCop rules)
+* Launch MSBuild to build the project in the Debug configuration using the following command: 
+  Note: You can skip this step if you disable all FxCop rules, which requires the assemblies to be built.
 
 		MSBuild.exe
 
