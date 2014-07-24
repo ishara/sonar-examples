@@ -15,7 +15,7 @@ Usage
 
 		Quality Profiles > C# Profiles > Sonar way > Activation: Inactive > Search > Bulk Change: Activate all
 
-* Launch MSBuild to build the project in the Debug configuration using the following command:
+* (optional) Launch MSBuild to build the project in the Debug configuration using the following command:
 
 		MSBuild.exe
 
