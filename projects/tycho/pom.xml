@@ -23,8 +23,6 @@
     <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-    <sonar.junit.reportsPath>../${project.artifactId}.tests/target/surefire-reports/</sonar.junit.reportsPath>
-    <sonar.skippedModules>plugin.tests</sonar.skippedModules>
   </properties>
 
   <build>
@@ -32,15 +30,17 @@
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
-        <version>0.12.0</version>
+        <version>0.21.0</version>
         <extensions>true</extensions>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.5.3.201107060350</version>
+        <version>0.7.1.201405082137</version>
         <configuration>
-          <includes>example.*</includes>
+          <includes>
+            <include>example.*</include>
+          </includes>
           <destFile>${project.basedir}/../target/jacoco.exec</destFile>
         </configuration>
         <executions>
