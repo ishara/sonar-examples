@@ -1,9 +1,3 @@
-/*
- * Copyright (C) 2009-2014 SonarSource SA
- * All rights reserved
- * mailto:contact AT sonarsource DOT com
- */
-
 package org.sonar.samples.java;
 
 import java.io.File;
@@ -15,11 +9,7 @@ import org.sonar.java.model.VisitorsBridge;
 import org.sonar.squidbridge.api.SourceFile;
 import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;
 
-/**
- * This class is the test of the ExampleCheck.
- * Checks by running it against a minimal valid file.
- */
-public class ExampleCheckTest {
+public class ForbiddenAnnotationCheckTest {
 
   @Rule
   public CheckMessagesVerifierRule checkMessagesVerifier = new CheckMessagesVerifierRule();
@@ -29,11 +19,10 @@ public class ExampleCheckTest {
 
     // Parse a known file and use an instance of the check under test to raise the issue.
     SourceFile file = JavaAstScanner
-      .scanSingleFile(new File("src/test/files/ExampleCheck.java"), new VisitorsBridge(new ExampleCheck()));
+      .scanSingleFile(new File("src/test/files/ForbiddenAnnotationCheck.java"), new VisitorsBridge(new ForbiddenAnnotationCheck()));
 
     // Check the message raised by the check
     checkMessagesVerifier.verify(file.getCheckMessages())
-      // Expecting an issue at line 9 with a predefined message. This allows test of dynamic messages.
-      .next().atLine(9).withMessage("Issue raised on method.");
+      .next().atLine(14).withMessage("Avoid using annotations starting with a Z");
   }
 }

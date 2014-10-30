@@ -9,10 +9,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.sonar.api.BatchExtension;
-import org.sonar.api.resources.Java;
 import org.sonar.api.rules.AnnotationRuleParser;
 import org.sonar.api.rules.Rule;
 import org.sonar.api.rules.RuleRepository;
+import org.sonar.plugins.java.Java;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannersFactory;
 

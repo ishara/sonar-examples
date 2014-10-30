@@ -6,7 +6,13 @@ class ExampleCheck {
 
   int aField;
 
-  public void aMethod() { // We expect an issue at this line.
+  @MyAnnotation
+  public void aMethod() {
+
+  }
+
+  @Zuper // We expect an issue at this line.
+  public void aMethod() {
 
   }
 
