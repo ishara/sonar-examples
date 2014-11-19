@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.codehaus.sonar</groupId>
+  <artifactId>javascript-maven-JsTestDriver</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>JavaScript Sample Project analyzed with Maven reusing JsTestDriver reports</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- uncomment/comment according to your context -->
+    <!-- <path.to.browser>C:\Users\myUser\AppData\Local\Google\Chrome\Application\chrome.exe</path.to.browser> -->
+    <path.to.browser>/Applications/Google Chrome.app/Contents/MacOS/Google Chrome</path.to.browser>
+    <sonar.javascript.jstestdriver.reportsPath>target/jstestdriver</sonar.javascript.jstestdriver.reportsPath>
+  </properties>
+
+  <build>
+    <sourceDirectory>src/main/js</sourceDirectory>
+    <testSourceDirectory>src/test/js</testSourceDirectory>
+
+    <plugins>
+      <plugin>
+        <groupId>com.googlecode.jstd-maven-plugin</groupId>
+        <artifactId>jstd-maven-plugin</artifactId>
+        <version>1.3.5.1</version>
+        <configuration>
+          <verbose>true</verbose>
+          <browser>${path.to.browser}</browser>
+          <port>9876</port>
+          <testOutput>target/jstestdriver</testOutput>
+          <runnerMode>DEBUG</runnerMode> 
+        </configuration>
+        <executions>
+          <execution>
+            <id>run-tests</id>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
