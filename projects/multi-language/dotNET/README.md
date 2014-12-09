@@ -13,7 +13,7 @@ Usage
 * Launch MSBuild to build the project in the Debug configuration using the following command: 
   Note: You can skip this step if you disable all FxCop rules, which requires the assemblies to be built.
 
-		MSBuild.exe
+        MSBuild.exe
 
 * Analyze the project using the SonarQube Runner:
 
