@@ -5,34 +5,37 @@
  */
 package org.sonar.samples.java;
 
-import java.util.List;
-
 import org.sonar.api.rule.RuleKey;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
-import org.sonar.plugins.java.api.tree.AnnotationTree;
 import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
-import org.sonar.plugins.java.api.tree.IdentifierTree;
 import org.sonar.plugins.java.api.tree.MethodTree;
-import org.sonar.plugins.java.api.tree.Tree;
 
 /**
  * This class is an example of how to implement your own rules.
  * The (stupid) rule raises a minor issue each time a method is encountered.
- * The @Rule annotation allows to specify the rule key, name, description and default severity.
+ * The @Rule annotation allows to specify metadata like rule key, name, description
+ * or default severity.
  */
-@Rule(key = ExampleCheck.KEY, priority = Priority.MINOR, name = "Avoid using methods", description = "My stupid rule to avoid using methods.")
+@Rule(key = MethodCallCheck.KEY,
+  name = "Avoid using methods",
+  description = "My stupid rule to avoid using methods",
+  tags = {"stupid", "example"},
+
+  // default severity (formerly "priority") when rule is enabled in Quality profile
+  priority = Priority.MINOR
+)
 /**
  * The class extends BaseTreeVisitor: the visitor for the Java AST.
  * The logic of the rule is implemented by overriding its methods.
  * It also implements the JavaFileScanner interface to be injected with the JavaFileScannerContext to attach issues to this context.
  */
-public class ExampleCheck extends BaseTreeVisitor implements JavaFileScanner {
+public class MethodCallCheck extends BaseTreeVisitor implements JavaFileScanner {
 
-  public static final String KEY = "nomethod";
-  private final RuleKey RULE_KEY = RuleKey.of(JavaExtensionRulesRepository.REPOSITORY_KEY, KEY);
+  public static final String KEY = "NoMethodCall";
+  private final RuleKey RULE_KEY = RuleKey.of(MyJavaRulesDefinition.REPOSITORY_KEY, KEY);
 
   /**
    * Private field to store the context: this is the object used to create issues.
@@ -64,16 +67,8 @@ public class ExampleCheck extends BaseTreeVisitor implements JavaFileScanner {
 
     // All the code located before the call to the overridden method is executed before visiting the node
 
-    List<AnnotationTree> annotations = tree.modifiers().annotations();
-    for (AnnotationTree annotationTree : annotations) {
-      if (annotationTree.annotationType().is(Tree.Kind.IDENTIFIER)) {
-        IdentifierTree idf = (IdentifierTree) annotationTree.annotationType();
-        System.out.println(idf.name());
-      }
-    }
-
     // Adds an issue by attaching it with the tree and the rule
-    context.addIssue(tree, RULE_KEY, "Issue raised on method.");
+    context.addIssue(tree, RULE_KEY, "Avoid method calls (don't ask why)");
 
     // The call to the super implementation allows to continue the visit of the AST.
     // Be careful to always call this method to visit every node of the tree.
