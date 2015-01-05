@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Entry point of the plugin
+ * Entry point of plugin
  */
 public class MyJavaRulesPlugin extends SonarPlugin {
 

@@ -32,6 +32,6 @@ public class MyJavaFileScannersFactory implements JavaFileScannersFactory, Batch
    * Lists all the checks provided by the plugin
    */
   public static Class[] checkClasses() {
-    return new Class[] {ForbiddenAnnotationCheck.class, MethodCallCheck.class};
+    return new Class[] {AvoidAnnotationCheck.class, AvoidMethodDeclarationCheck.class};
   }
 }

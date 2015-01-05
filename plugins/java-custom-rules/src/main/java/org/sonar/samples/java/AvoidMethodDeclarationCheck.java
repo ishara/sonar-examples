@@ -19,9 +19,9 @@ import org.sonar.plugins.java.api.tree.MethodTree;
  * The @Rule annotation allows to specify metadata like rule key, name, description
  * or default severity.
  */
-@Rule(key = MethodCallCheck.KEY,
+@Rule(key = AvoidMethodDeclarationCheck.KEY,
   name = "Avoid using methods",
-  description = "My stupid rule to avoid using methods",
+  description = "My stupid rule to avoid calling methods",
   tags = {"stupid", "example"},
 
   // default severity (formerly "priority") when rule is enabled in Quality profile
@@ -32,9 +32,9 @@ import org.sonar.plugins.java.api.tree.MethodTree;
  * The logic of the rule is implemented by overriding its methods.
  * It also implements the JavaFileScanner interface to be injected with the JavaFileScannerContext to attach issues to this context.
  */
-public class MethodCallCheck extends BaseTreeVisitor implements JavaFileScanner {
+public class AvoidMethodDeclarationCheck extends BaseTreeVisitor implements JavaFileScanner {
 
-  public static final String KEY = "NoMethodCall";
+  public static final String KEY = "MethodDeclaration";
   private final RuleKey RULE_KEY = RuleKey.of(MyJavaRulesDefinition.REPOSITORY_KEY, KEY);
 
   /**

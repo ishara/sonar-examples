@@ -13,13 +13,13 @@ import org.sonar.plugins.java.api.tree.Tree;
 
 import java.util.List;
 
-@Rule(key = ForbiddenAnnotationCheck.KEY,
+@Rule(key = AvoidAnnotationCheck.KEY,
   name = "Avoid usage of annotation",
   description = "This rule detects usage of configured annotation",
   tags = {"example"})
-public class ForbiddenAnnotationCheck extends BaseTreeVisitor implements JavaFileScanner {
+public class AvoidAnnotationCheck extends BaseTreeVisitor implements JavaFileScanner {
 
-  public static final String KEY = "ForbiddenAnnotations";
+  public static final String KEY = "AvoidAnnotation";
   private static final String DEFAULT_VALUE = "Inject";
   private final RuleKey RULE_KEY = RuleKey.of(MyJavaRulesDefinition.REPOSITORY_KEY, KEY);
 

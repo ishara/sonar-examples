@@ -19,7 +19,7 @@ import java.io.File;
  * This class is the test of the ExampleCheck.
  * Checks by running it against a minimal valid file.
  */
-public class MethodCallCheckTest {
+public class AvoidMethodDeclarationCheckTest {
 
   @Rule
   public CheckMessagesVerifierRule checkMessagesVerifier = new CheckMessagesVerifierRule();
@@ -29,7 +29,7 @@ public class MethodCallCheckTest {
 
     // Parse a known file and use an instance of the check under test to raise the issue.
     SourceFile file = JavaAstScanner
-      .scanSingleFile(new File("src/test/files/ExampleCheck.java"), new VisitorsBridge(new MethodCallCheck()));
+      .scanSingleFile(new File("src/test/files/AvoidMethodDeclarationCheck.java"), new VisitorsBridge(new AvoidMethodDeclarationCheck()));
 
     // Check the message raised by the check
     checkMessagesVerifier.verify(file.getCheckMessages())
