@@ -1,4 +1,5 @@
 start server
+  with plugin java 2.7
 sonar-runner
 verify java-sonar-runner-simple
   measure lines is 14
