@@ -1,4 +1,5 @@
 start server
+  with plugin java 2.7
 sonar-runner
 verify java-sonar-runner-modules-own-configuration-file
   measure lines is 17
