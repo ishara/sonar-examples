@@ -9,8 +9,15 @@ int positive(int a) {
   }
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
+  int c = 0;
+  if (argc == 1) {
+    c = 1;
+  } else if (argc == 1) {
+    c = 2;
+  }
+  else {
+  }
 	return 0;
 }
 
