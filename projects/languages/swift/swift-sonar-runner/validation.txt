@@ -1,0 +1,14 @@
+start server
+  with plugin java 1.1
+sonar-runner
+verify swift_example_project
+  measure lines is 11
+  measure ncloc is 6
+  measure files is 1
+  measure classes is 0
+  measure functions is 1
+  measure statements is 6
+  issues is 1
+  complexity per file is 2
+  complexity per functions is 1
+stop server
