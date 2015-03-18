@@ -2,7 +2,7 @@ This example demonstrates how to analyze a simple Swift project with the Sonar R
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5.2 or higher
 * [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
 
 Usage
