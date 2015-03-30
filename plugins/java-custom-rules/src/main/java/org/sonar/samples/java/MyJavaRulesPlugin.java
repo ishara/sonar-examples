@@ -22,7 +22,7 @@ public class MyJavaRulesPlugin extends SonarPlugin {
       MyJavaRulesDefinition.class,
 
       // batch extensions -> objects are instantiated during code analysis
-      MyJavaFileScannersFactory.class);
+      MyJavaFileCheckRegistrar.class);
   }
 
 }

@@ -25,7 +25,7 @@ public class MyJavaRulesDefinition implements RulesDefinition, BatchExtension {
     // We could use a XML or JSON file to load all rule metadata, but
     // we prefer use annotations in order to have all information in a single place
     RulesDefinitionAnnotationLoader annotationLoader = new RulesDefinitionAnnotationLoader();
-    annotationLoader.load(repo, MyJavaFileScannersFactory.checkClasses());
+    annotationLoader.load(repo, MyJavaFileCheckRegistrar.checkClasses());
     repo.done();
   }
 }

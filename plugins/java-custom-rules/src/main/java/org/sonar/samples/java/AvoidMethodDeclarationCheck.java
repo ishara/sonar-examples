@@ -5,7 +5,6 @@
  */
 package org.sonar.samples.java;
 
-import org.sonar.api.rule.RuleKey;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
@@ -19,7 +18,7 @@ import org.sonar.plugins.java.api.tree.MethodTree;
  * The @Rule annotation allows to specify metadata like rule key, name, description
  * or default severity.
  */
-@Rule(key = AvoidMethodDeclarationCheck.KEY,
+@Rule(key = "MethodDeclaration",
   name = "Avoid using methods",
   description = "My stupid rule to avoid calling methods",
   tags = {"stupid", "example"},
@@ -33,9 +32,6 @@ import org.sonar.plugins.java.api.tree.MethodTree;
  * It also implements the JavaFileScanner interface to be injected with the JavaFileScannerContext to attach issues to this context.
  */
 public class AvoidMethodDeclarationCheck extends BaseTreeVisitor implements JavaFileScanner {
-
-  public static final String KEY = "MethodDeclaration";
-  private final RuleKey RULE_KEY = RuleKey.of(MyJavaRulesDefinition.REPOSITORY_KEY, KEY);
 
   /**
    * Private field to store the context: this is the object used to create issues.
@@ -68,7 +64,7 @@ public class AvoidMethodDeclarationCheck extends BaseTreeVisitor implements Java
     // All the code located before the call to the overridden method is executed before visiting the node
 
     // Adds an issue by attaching it with the tree and the rule
-    context.addIssue(tree, RULE_KEY, "Avoid method calls (don't ask why)");
+    context.addIssue(tree, this, "Avoid method calls (don't ask why)");
 
     // The call to the super implementation allows to continue the visit of the AST.
     // Be careful to always call this method to visit every node of the tree.

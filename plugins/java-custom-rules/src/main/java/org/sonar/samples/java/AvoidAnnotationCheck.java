@@ -1,6 +1,5 @@
 package org.sonar.samples.java;
 
-import org.sonar.api.rule.RuleKey;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
 import org.sonar.plugins.java.api.JavaFileScanner;
@@ -13,15 +12,13 @@ import org.sonar.plugins.java.api.tree.Tree;
 
 import java.util.List;
 
-@Rule(key = AvoidAnnotationCheck.KEY,
+@Rule(key = "AvoidAnnotation",
   name = "Avoid usage of annotation",
   description = "This rule detects usage of configured annotation",
   tags = {"example"})
 public class AvoidAnnotationCheck extends BaseTreeVisitor implements JavaFileScanner {
 
-  public static final String KEY = "AvoidAnnotation";
   private static final String DEFAULT_VALUE = "Inject";
-  private final RuleKey RULE_KEY = RuleKey.of(MyJavaRulesDefinition.REPOSITORY_KEY, KEY);
 
   private JavaFileScannerContext context;
 
@@ -52,7 +49,7 @@ public class AvoidAnnotationCheck extends BaseTreeVisitor implements JavaFileSca
         System.out.println(idf.name());
 
         if (idf.name().equals(name)) {
-          context.addIssue(idf, RULE_KEY, String.format("Avoid using annotation @%s", name));
+          context.addIssue(idf, this, String.format("Avoid using annotation @%s", name));
         }
       }
     }
