@@ -5,7 +5,6 @@
  */
 package org.sonar.samples.java;
 
-import org.sonar.api.BatchExtension;
 import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.api.server.rule.RulesDefinitionAnnotationLoader;
 
@@ -13,7 +12,7 @@ import org.sonar.api.server.rule.RulesDefinitionAnnotationLoader;
  * Declare rule metadata in server repository of rules. That allows to list the rules
  * in the page "Rules".
  */
-public class MyJavaRulesDefinition implements RulesDefinition, BatchExtension {
+public class MyJavaRulesDefinition implements RulesDefinition {
 
   public static final String REPOSITORY_KEY = "my-java-rules";
 
