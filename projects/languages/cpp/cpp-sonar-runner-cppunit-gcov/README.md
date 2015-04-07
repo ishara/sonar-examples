@@ -11,3 +11,5 @@ Usage
 * Analyze the project with SonarQube using the SonarQube Runner:
 
         sonar-runner
+
+* You can find an example on how to generate the gcov file in create_gcov_report.sh
