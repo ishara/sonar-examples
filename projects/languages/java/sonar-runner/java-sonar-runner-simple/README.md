@@ -2,8 +2,8 @@ This example demonstrates how to analyze a simple Java project with the Sonar Ru
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5 or higher
+* [SonarQube Runner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Runner) 2.4 or higher
 
 Usage
 =====
