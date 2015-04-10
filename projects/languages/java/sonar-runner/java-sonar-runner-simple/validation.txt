@@ -2,11 +2,14 @@ start server
   with plugin java 2.7
 sonar-runner
 verify java-sonar-runner-simple
-  measure lines is 14
-  measure ncloc is 10
-  measure files is 1
-  measure classes is 1
-verify java-sonar-runner-simple:src/Helloworld.java
-  measure lines is 14
-  measure ncloc is 10
+  measure lines is 35
+  measure ncloc is 31
+  measure files is 2
+  measure classes is 2
+verify java-sonar-runner-simple:src/HelloWorld.java
+  measure lines is 7
+  measure ncloc is 5
+verify java-sonar-runner-simple:src/ComplexMethod.java
+  measure lines is 28
+  measure ncloc is 26
 stop server
