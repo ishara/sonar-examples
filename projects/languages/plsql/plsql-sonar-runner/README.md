@@ -2,9 +2,9 @@ This example demonstrates how to analyze a PL/SQL project with the SonarQube Run
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
-* [SonarSource PL/SQL Plugin](http://www.sonarsource.com/products/plugins/languages/plsql/) 2.1 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5 or higher
+* [SonarQube Runner](http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Runner) 2.4 or higher
+* [SonarSource PL/SQL Plugin](http://www.sonarsource.com/products/plugins/languages/plsql/) 2.6 or higher
 
 Usage
 =====
