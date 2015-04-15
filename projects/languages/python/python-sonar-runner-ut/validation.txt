@@ -5,7 +5,7 @@ verify org.codehaus.sonar:python-ut-sonar-runner
   measure lines is 36
   measure ncloc is 26
   measure files is 3
-verify org.codehaus.sonar:python-ut-sonar-runner:src/datepattern.py
+verify org.codehaus.sonar:python-ut-sonar-runner:src/samples/datepattern.py
   measure lines is 34
   measure ncloc is 26
 stop server
