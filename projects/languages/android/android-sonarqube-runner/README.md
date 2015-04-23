@@ -10,8 +10,9 @@ Prerequisites
 Optional
 ========
 * [Android SDK](http://developer.android.com/sdk/index.html)
+
 For you own project you will need to run Android Lint by yourself so you will need Android SDK.
-Here, the Android Lint Report is already generated for the purpose of this example, see ...
+Here, the Android Lint Report is already generated for the purpose of this example in the file lint-report.xml
 
 Usage
 =====
