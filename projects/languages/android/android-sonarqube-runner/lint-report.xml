@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 24.1.2">
+
+    <issue
+        id="UsesMinSdkAttributes"
+        severity="Error"
+        message="Manifest should specify a minimum API level with `&lt;uses-sdk android:minSdkVersion=&quot;?&quot; />`; if it really supports all versions of Android set it to 1."
+        category="Correctness"
+        priority="9"
+        summary="Minimum SDK and target SDK attributes not defined"
+        explanation="The manifest should contain a `&lt;uses-sdk>` element which defines the minimum API Level required for the application to run, as well as the target version (the highest API level you have tested the version for.)"
+        url="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html"
+        urls="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html">
+        <location
+            file="AndroidManifest.xml"/>
+    </issue>
+
+    <issue
+        id="SdCardPath"
+        severity="Warning"
+        message="Do not hardcode &quot;/sdcard/&quot;; use `Environment.getExternalStorageDirectory().getPath()` instead"
+        category="Correctness"
+        priority="6"
+        summary="Hardcoded reference to `/sdcard`"
+        explanation="Your code should not reference the `/sdcard` path directly; instead use `Environment.getExternalStorageDirectory().getPath()`.
+
+Similarly, do not reference the `/data/data/` path directly; it can vary in multi-user scenarios. Instead, use `Context.getFilesDir().getPath()`."
+        url="http://developer.android.com/guide/topics/data/data-storage.html#filesExternal"
+        urls="http://developer.android.com/guide/topics/data/data-storage.html#filesExternal"
+        errorLine1="        String path = &quot;/sdcard&quot;; // Raise issue"
+        errorLine2="                      ~~~~~~~~~">
+        <location
+            file="src/com/example/MainActivity.java"
+            line="15"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="MissingApplicationIcon"
+        severity="Warning"
+        message="Should explicitly set `android:icon`, there is no default"
+        category="Usability:Icons"
+        priority="5"
+        summary="Missing application icon"
+        explanation="You should set an icon for the application as whole because there is no default. This attribute must be set as a reference to a drawable resource containing the image (for example `@drawable/icon`)."
+        url="http://developer.android.com/tools/publishing/preparing.html#publishing-configure"
+        urls="http://developer.android.com/tools/publishing/preparing.html#publishing-configure"
+        errorLine1="    &lt;application android:label=&quot;@string/app_name&quot; >"
+        errorLine2="    ^"
+        quickfix="studio">
+        <location
+            file="AndroidManifest.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Hello World, MainActivity&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="    android:text=&quot;Hello World, MainActivity&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="res/layout/main.xml"
+            line="10"
+            column="5"/>
+    </issue>
+
+</issues>
