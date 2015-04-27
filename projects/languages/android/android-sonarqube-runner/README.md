@@ -4,7 +4,7 @@ Prerequisites
 =============
 * [SonarQube](http://www.sonarsource.org/downloads/) 4.5 or higher
 * [SonarQube Runner](http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Runner) 2.4 or higher
-* [SonarQube Android Lint Plugin](http://docs.sonarqube.org/display/SONAR/Android+Lint+Plugin) 1.1+
+* [SonarQube Android Plugin](http://redirect.sonarsource.com/plugins/android.html ) 1.1+
 * [Ant](http://ant.apache.org/) 1.7.1 or higher
 
 Optional
