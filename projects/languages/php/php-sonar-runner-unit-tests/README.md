@@ -9,7 +9,6 @@ Prerequisites
 
 Usage
 =====
-* In "reports/phpunit.coverage.xml", change the path "C:\git\sonar-examples\projects\languages\php\php-sonar-runner-unit-tests\reports/src/Math.php" to the location of this file on your machine.
 * Analyze the project with SonarQube using the SonarQube Runner:
 
         sonar-runner
