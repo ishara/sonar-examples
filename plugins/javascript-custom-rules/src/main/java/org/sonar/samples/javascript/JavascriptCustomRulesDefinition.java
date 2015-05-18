@@ -11,7 +11,7 @@ import org.sonar.plugins.javascript.api.CustomJavaScriptRulesDefinition;
 /**
  * Extension point to define a custom JavaScript rule repository.
  */
-public class JavaCustomRulesDefinition extends CustomJavaScriptRulesDefinition {
+public class JavascriptCustomRulesDefinition extends CustomJavaScriptRulesDefinition {
 
   /**
    * Provide the repository name
@@ -35,6 +35,6 @@ public class JavaCustomRulesDefinition extends CustomJavaScriptRulesDefinition {
    */
   @Override
   public Class[] checkClasses() {
-    return new Class[] {ExampleCheck.class} ;
+    return new Class[] {ForbiddenFunctionUseCheck.class} ;
   }
 }
