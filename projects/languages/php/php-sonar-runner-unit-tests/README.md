@@ -9,6 +9,7 @@ Prerequisites
 
 Usage
 =====
+* In "reports/phpunit.coverage.xml", change the path "src/Math.php" to the full path of this file on your machine.
 * Analyze the project with SonarQube using the SonarQube Runner:
 
         sonar-runner
