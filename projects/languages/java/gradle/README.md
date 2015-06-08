@@ -1,1 +1,1 @@
-For multi-module project samples, see /projects/multi-module/gradle.
+For multi-module project samples, see /projects/multi-module/gradle

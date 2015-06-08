@@ -1,2 +1,5 @@
-displayName = "Module 1"
-description = "This is module #1"
+sonarqube {
+    properties {
+        property "sonar.projectName", "Module #1"
+    }
+}
