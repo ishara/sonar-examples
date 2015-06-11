@@ -43,6 +43,8 @@
         <extensions>true</extensions>
         <configuration>
           <pluginClass>org.sonar.samples.javascript.JavaScriptCustomRulesPlugin</pluginClass>
+          <basePlugin>javascript</basePlugin>
+          <pluginKey>custom</pluginKey>
         </configuration>
       </plugin>
 

@@ -6,12 +6,15 @@
 package org.sonar.samples.javascript;
 
 import com.google.common.collect.ImmutableSet;
+import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 import org.sonar.plugins.javascript.api.tree.expression.IdentifierTree;
 import org.sonar.plugins.javascript.api.visitors.BaseTreeVisitor;
+import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
+import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
 import java.util.Set;
 
@@ -28,7 +31,12 @@ import java.util.Set;
   key = "S1",
   priority = Priority.MAJOR,
   name = "Forbidden function should not be used.",
-  description = "<p>The following functions should not be used:</p> <ul><li>foo</li> <li>bar</li></ul>")
+  tags = {"convention"}
+// Description can either be given in this annotation or through HTML name <ruleKey>.html located in package src/resources/org/sonar/l10n/javascript/rules/<repositoryKey>
+// description = "<p>The following functions should not be used:</p> <ul><li>foo</li> <li>bar</li></ul>",
+  )
+@SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.DATA_RELIABILITY)
+@SqaleConstantRemediation("5min")
 public class ForbiddenFunctionUseCheck extends BaseTreeVisitor {
 
   private static final Set<String> FORBIDDEN_FUNCTIONS = ImmutableSet.of("foo", "bar");

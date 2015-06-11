@@ -9,7 +9,7 @@ package org.sonar.samples.javascript;
 import org.sonar.plugins.javascript.api.CustomJavaScriptRulesDefinition;
 
 /**
- * Extension point to define a custom JavaScript rule repository.
+ * Extension point to define a javascript JavaScript rule repository.
  */
 public class JavascriptCustomRulesDefinition extends CustomJavaScriptRulesDefinition {
 
@@ -26,7 +26,7 @@ public class JavascriptCustomRulesDefinition extends CustomJavaScriptRulesDefini
    */
   @Override
   public String repositoryKey() {
-    return "javascript-custom-rules";
+    return "custom";
   }
 
   /**
