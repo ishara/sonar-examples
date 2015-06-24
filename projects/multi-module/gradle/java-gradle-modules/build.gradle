@@ -31,6 +31,6 @@ buildscript {
       mavenLocal()
     }
     dependencies { 
-      classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0-SNAPSHOT'
+      classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
     }
 }
