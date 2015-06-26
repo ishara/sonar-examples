@@ -3,6 +3,7 @@ target/
 
 # Gradle
 .gradle/
+build/
 
 # Ant Working Directory
 .sonar/
@@ -11,6 +12,7 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea/
 
 # Eclipse
 .classpath
