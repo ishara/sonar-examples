@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "org.sonarqube.gradle:gradle-sonarqube-plugin:1.0"
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'jacoco'
+apply plugin: 'org.sonarqube'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.3'
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'junit:junit:4.12'
+}
+
+sonarqube {
+    properties {
+        property "sonar.groovy.jacoco.reportPath", "$buildDir/jacoco/test.exec" //TODO: Could be set by default when Groovy plugin is detected
+    }
+}
