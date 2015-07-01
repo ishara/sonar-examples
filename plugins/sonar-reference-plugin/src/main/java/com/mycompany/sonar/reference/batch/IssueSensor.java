@@ -1,7 +1,5 @@
 package com.mycompany.sonar.reference.batch;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.Sensor;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.batch.fs.FileSystem;
@@ -12,8 +10,6 @@ import org.sonar.api.resources.Project;
 import org.sonar.api.rule.RuleKey;
 
 public class IssueSensor implements Sensor {
-
-  private static final Logger LOG = LoggerFactory.getLogger(IssueSensor.class);
 
   private final FileSystem fs;
   private final ResourcePerspectives perspectives;
@@ -26,11 +22,13 @@ public class IssueSensor implements Sensor {
     this.perspectives = perspectives;
   }
 
+  @Override
   public boolean shouldExecuteOnProject(Project project) {
     // This sensor is executed only when there are Java files
     return fs.hasFiles(fs.predicates().hasLanguage("java"));
   }
 
+  @Override
   public void analyse(Project project, SensorContext sensorContext) {
     // This sensor create an issue on each java file
     for (InputFile inputFile : fs.inputFiles(fs.predicates().hasLanguage("java"))) {

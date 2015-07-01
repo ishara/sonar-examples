@@ -1,6 +1,5 @@
 package com.mycompany.sonar.reference.batch;
 
-import com.mycompany.sonar.reference.ExampleMetrics;
 import org.apache.commons.lang.math.RandomUtils;
 import org.sonar.api.batch.Decorator;
 import org.sonar.api.batch.DecoratorContext;
@@ -9,12 +8,16 @@ import org.sonar.api.resources.Project;
 import org.sonar.api.resources.Resource;
 import org.sonar.api.resources.ResourceUtils;
 
+import com.mycompany.sonar.reference.ExampleMetrics;
+
 public class RandomDecorator implements Decorator {
 
+  @Override
   public boolean shouldExecuteOnProject(Project project) {
     return true;
   }
 
+  @Override
   public void decorate(Resource resource, DecoratorContext context) {
     // This method is executed on the whole tree of resources.
     // Bottom-up navigation : Files -> Dirs -> modules -> project

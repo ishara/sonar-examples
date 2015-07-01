@@ -1,11 +1,11 @@
 package com.mycompany.sonar.reference;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.sonar.api.measures.CoreMetrics;
 import org.sonar.api.measures.Metric;
 import org.sonar.api.measures.Metrics;
-
-import java.util.Arrays;
-import java.util.List;
 
 public final class ExampleMetrics implements Metrics {
 
@@ -25,6 +25,7 @@ public final class ExampleMetrics implements Metrics {
 
   // getMetrics() method is defined in the Metrics interface and is used by
   // Sonar to retrieve the list of new metrics
+  @Override
   public List<Metric> getMetrics() {
     return Arrays.<Metric>asList(MESSAGE, RANDOM);
   }
