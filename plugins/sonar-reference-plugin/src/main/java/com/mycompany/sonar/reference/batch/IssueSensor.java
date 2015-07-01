@@ -36,8 +36,8 @@ public class IssueSensor implements Sensor {
     for (InputFile inputFile : fs.inputFiles(fs.predicates().hasLanguage("java"))) {
       Issuable issuable = perspectives.as(Issuable.class, inputFile);
       issuable.addIssue(issuable.newIssueBuilder()
-        .ruleKey(RuleKey.of("my-repo", "XYZ"))
-        .message("Bla bla")
+        .ruleKey(RuleKey.of("java-example", "ExampleRule1"))
+        .message("Message explaining why this issue has been raised.")
         .line(1)
         .build());
     }

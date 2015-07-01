@@ -31,7 +31,7 @@ public final class ExamplePlugin extends SonarPlugin {
   public List getExtensions() {
     return Arrays.asList(
       // Definitions
-      ExampleMetrics.class,
+      ExampleMetrics.class, ExampleRulesDefinition.class,
 
       // Batch
       ExampleSensor.class, RandomDecorator.class, IssueSensor.class, ListAllIssuesPostJob.class,
