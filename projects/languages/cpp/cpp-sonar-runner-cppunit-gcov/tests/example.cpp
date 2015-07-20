@@ -56,7 +56,7 @@ int main( int ac, char **av ) {
   runner.addTest( CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest() );
   runner.run( controller );
 
-  std::ofstream xmlout ( "../reports/cppunit.xml" );
+  std::ofstream xmlout ( "../reports/cppunit/cppunit.xml" );
   CPPUNIT_NS::XmlOutputter xmlOutputter ( &result, xmlout );
   xmlOutputter.write();
 
