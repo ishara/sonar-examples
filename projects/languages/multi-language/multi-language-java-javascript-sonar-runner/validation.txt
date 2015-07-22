@@ -1,6 +1,6 @@
 start server
-  with plugin java 2.7
-  with plugin javascript 1.6
+  with plugin java 3.4
+  with plugin javascript 2.7
 sonar-runner
 verify org.codehaus.sonar:multi-language-project-java-javascript-sonar-runner
   measure lines is 22
