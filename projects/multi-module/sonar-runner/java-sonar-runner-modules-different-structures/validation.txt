@@ -1,5 +1,5 @@
 start server
-  with plugin java 2.7
+  with plugin java 3.4
 sonar-runner
 verify java-sonar-runner-modules-different-structures
   measure lines is 17
