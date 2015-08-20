@@ -1,3 +1,7 @@
+# SonarQube
+.sonarqube/
+.sonar/
+
 # User-specific files
 *.suo
 *.user
