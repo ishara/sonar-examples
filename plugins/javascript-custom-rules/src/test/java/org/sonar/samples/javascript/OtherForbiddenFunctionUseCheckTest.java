@@ -7,15 +7,13 @@ import org.sonar.squidbridge.checks.CheckMessagesVerifier;
 /**
  * Test class to test the check implementation.
  */
-public class ForbiddenFunctionUseCheckTest extends TreeCheckTest {
+public class OtherForbiddenFunctionUseCheckTest extends TreeCheckTest {
 
   @Test
   public void test() throws Exception {
-    CheckMessagesVerifier.verify(getIssues("src/test/resources/checks/forbiddenFunctionUseCheck.js", new ForbiddenFunctionUseCheck()))
+    CheckMessagesVerifier.verify(getIssues("src/test/resources/checks/otherForbiddenFunctionUseCheck.js", new OtherForbiddenFunctionUseCheck()))
       .next().atLine(1).withMessage("Remove the usage of this forbidden function.")
       .next().atLine(2)
-      .next().atLine(4)
-      .next().atLine(5)
       .noMore();
   }
 

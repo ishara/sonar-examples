@@ -35,6 +35,6 @@ public class JavascriptCustomRulesDefinition extends CustomJavaScriptRulesDefini
    */
   @Override
   public Class[] checkClasses() {
-    return new Class[] {ForbiddenFunctionUseCheck.class} ;
+    return new Class[] {ForbiddenFunctionUseCheck.class, OtherForbiddenFunctionUseCheck.class};
   }
 }
