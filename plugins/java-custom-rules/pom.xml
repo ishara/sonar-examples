@@ -20,10 +20,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.codehaus.sonar-plugins.java</groupId>
+			<groupId>org.sonarsource.java</groupId>
 			<artifactId>sonar-java-plugin</artifactId>
 			<type>sonar-plugin</type>
-			<version>3.3</version>
+			<version>3.4</version>
 			<scope>provided</scope>
 		</dependency>
 
