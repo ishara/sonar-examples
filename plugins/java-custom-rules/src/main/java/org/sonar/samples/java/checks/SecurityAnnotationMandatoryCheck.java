@@ -1,4 +1,4 @@
-package org.sonar.samples.java;
+package org.sonar.samples.java.checks;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class SecurityAnnotationMandatoryCheck extends BaseTreeVisitor implements
   @RuleProperty(
     defaultValue = DEFAULT_VALUE,
     description = "Name of the mandatory annotation")
-  String name;
+  protected String name;
 
   @Override
   public void scanFile(JavaFileScannerContext context) {

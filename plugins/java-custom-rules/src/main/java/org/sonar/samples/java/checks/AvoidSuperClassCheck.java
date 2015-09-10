@@ -1,7 +1,7 @@
 /*
  * Creation : 20 avr. 2015
  */
-package org.sonar.samples.java;
+package org.sonar.samples.java.checks;
 
 import com.google.common.collect.ImmutableList;
 import org.sonar.check.Rule;
@@ -20,7 +20,7 @@ import java.util.List;
   tags = {"stupid", "example"})
 public class AvoidSuperClassCheck extends IssuableSubscriptionVisitor {
 
-  public final static List<String> SUPER_CLASS_AVOID = ImmutableList.of("org.apache.log4j.Logger");
+  public static final List<String> SUPER_CLASS_AVOID = ImmutableList.of("org.apache.log4j.Logger");
 
   @Override
   public List<Tree.Kind> nodesToVisit() {

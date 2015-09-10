@@ -4,7 +4,7 @@
  * mailto:contact AT sonarsource DOT com
  */
 
-package org.sonar.samples.java;
+package org.sonar.samples.java.checks;
 
 import java.io.File;
 
@@ -12,6 +12,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.sonar.java.JavaAstScanner;
 import org.sonar.java.model.VisitorsBridge;
+import org.sonar.samples.java.checks.AvoidBrandInMethodNamesCheck;
 import org.sonar.squidbridge.api.SourceFile;
 import org.sonar.squidbridge.checks.CheckMessagesVerifier;
 import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;

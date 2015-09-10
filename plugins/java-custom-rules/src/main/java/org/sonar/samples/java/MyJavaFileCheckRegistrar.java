@@ -2,6 +2,10 @@ package org.sonar.samples.java;
 
 import org.sonar.plugins.java.api.CheckRegistrar;
 import org.sonar.plugins.java.api.JavaCheck;
+import org.sonar.samples.java.checks.AvoidAnnotationCheck;
+import org.sonar.samples.java.checks.AvoidBrandInMethodNamesCheck;
+import org.sonar.samples.java.checks.AvoidMethodDeclarationCheck;
+import org.sonar.samples.java.checks.SecurityAnnotationMandatoryCheck;
 
 import java.util.Arrays;
 

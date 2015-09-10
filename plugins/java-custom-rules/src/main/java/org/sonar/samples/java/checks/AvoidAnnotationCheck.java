@@ -1,4 +1,4 @@
-package org.sonar.samples.java;
+package org.sonar.samples.java.checks;
 
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
@@ -21,8 +21,6 @@ public class AvoidAnnotationCheck extends BaseTreeVisitor implements JavaFileSca
   private static final String DEFAULT_VALUE = "Inject";
 
   private JavaFileScannerContext context;
-  
-  
 
   /**
    * Name of the annotation to avoid. Value can be set by users in Quality profiles.
@@ -31,7 +29,7 @@ public class AvoidAnnotationCheck extends BaseTreeVisitor implements JavaFileSca
   @RuleProperty(
     defaultValue = DEFAULT_VALUE,
     description = "Name of the annotation to avoid, without the prefix @, for instance 'Override'")
-  String name;
+  protected String name;
 
   @Override
   public void scanFile(JavaFileScannerContext context) {

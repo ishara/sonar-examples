@@ -1,4 +1,4 @@
-package org.sonar.samples.java;
+package org.sonar.samples.java.checks;
 
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
