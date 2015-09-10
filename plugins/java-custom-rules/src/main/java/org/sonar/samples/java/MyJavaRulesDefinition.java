@@ -14,12 +14,12 @@ import org.sonar.api.server.rule.RulesDefinitionAnnotationLoader;
  */
 public class MyJavaRulesDefinition implements RulesDefinition {
 
-  public static final String REPOSITORY_KEY = "my-java-rules";
+  public static final String REPOSITORY_KEY = "connexis-rules";
 
   @Override
   public void define(Context context) {
     NewRepository repo = context.createRepository(REPOSITORY_KEY, "java");
-    repo.setName("My Java Rules");
+    repo.setName("Connexis");
 
     // We could use a XML or JSON file to load all rule metadata, but
     // we prefer use annotations in order to have all information in a single place

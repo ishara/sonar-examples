@@ -21,6 +21,8 @@ public class AvoidAnnotationCheck extends BaseTreeVisitor implements JavaFileSca
   private static final String DEFAULT_VALUE = "Inject";
 
   private JavaFileScannerContext context;
+  
+  
 
   /**
    * Name of the annotation to avoid. Value can be set by users in Quality profiles.

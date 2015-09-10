@@ -18,7 +18,7 @@ public class MyJavaFileCheckRegistrar implements CheckRegistrar {
    */
   @Override
   public void register(RegistrarContext registrarContext) {
-    //Call to registerClassesForRepository to associate the classes with the correct repository key
+    // Call to registerClassesForRepository to associate the classes with the correct repository key
     registrarContext.registerClassesForRepository(MyJavaRulesDefinition.REPOSITORY_KEY, Arrays.asList(checkClasses()));
   }
 
@@ -26,6 +26,7 @@ public class MyJavaFileCheckRegistrar implements CheckRegistrar {
    * Lists all the checks provided by the plugin
    */
   public static Class<? extends JavaCheck>[] checkClasses() {
-    return new Class[] {MyCustomSubscriptionRule.class, AvoidAnnotationCheck.class, AvoidMethodDeclarationCheck.class};
+    return new Class[] {SecurityAnnotationMandatoryCheck.class, MyCustomSubscriptionRule.class, AvoidAnnotationCheck.class, AvoidMethodDeclarationCheck.class,
+      AvoidBrandInMethodNamesCheck.class};
   }
 }
