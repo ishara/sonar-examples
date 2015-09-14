@@ -28,6 +28,13 @@
 		</dependency>
 
 		<dependency>
+            <groupId>org.sonarsource.java</groupId>
+            <artifactId>java-checks-testkit</artifactId>
+            <version>3.6-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+
+		<dependency>
 			<groupId>org.codehaus.sonar.sslr</groupId>
 			<artifactId>sslr-testing-harness</artifactId>
 			<version>1.19.2</version>

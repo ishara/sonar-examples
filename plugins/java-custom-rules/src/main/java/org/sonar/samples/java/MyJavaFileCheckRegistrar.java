@@ -30,8 +30,13 @@ public class MyJavaFileCheckRegistrar implements CheckRegistrar {
    * Lists all the checks provided by the plugin
    */
   public static Class<? extends JavaCheck>[] checkClasses() {
-    return new Class[] {SecurityAnnotationMandatoryCheck.class, MyCustomSubscriptionRule.class, AvoidAnnotationCheck.class, AvoidMethodDeclarationCheck.class,
-      AvoidBrandInMethodNamesCheck.class};
+    return new Class[] {
+      SecurityAnnotationMandatoryCheck.class, 
+      MyCustomSubscriptionRule.class, 
+      AvoidAnnotationCheck.class, 
+      AvoidMethodDeclarationCheck.class,
+      AvoidBrandInMethodNamesCheck.class
+      };
   }
 
   /**

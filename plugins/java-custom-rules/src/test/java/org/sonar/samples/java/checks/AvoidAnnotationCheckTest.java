@@ -1,18 +1,9 @@
 package org.sonar.samples.java.checks;
 
-import java.io.File;
-
-import org.junit.Rule;
 import org.junit.Test;
-import org.sonar.java.ast.JavaAstScanner;
-import org.sonar.java.model.VisitorsBridge;
-import org.sonar.squidbridge.api.SourceFile;
-import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;
+import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
 public class AvoidAnnotationCheckTest {
-
-  @Rule
-  public CheckMessagesVerifierRule checkMessagesVerifier = new CheckMessagesVerifierRule();
 
   @Test
   public void detected() {
@@ -21,11 +12,7 @@ public class AvoidAnnotationCheckTest {
     AvoidAnnotationCheck check = new AvoidAnnotationCheck();
     check.name = "Zuper";
 
-    SourceFile file = JavaAstScanner
-      .scanSingleFile(new File("src/test/files/AvoidAnnotationCheck.java"), new VisitorsBridge(check));
-
-    // Check the message raised by the check
-    checkMessagesVerifier.verify(file.getCheckMessages())
-      .next().atLine(14).withMessage("Avoid using annotation @Zuper");
+    // Verifies that the check will raise the adequate issues with the expected message
+    JavaCheckVerifier.verify("src/test/files/AvoidAnnotationCheck.java", check);
   }
 }

@@ -11,7 +11,7 @@ class AvoidAnnotationCheck {
 
   }
 
-  @Zuper // We expect an issue at this line.
+  @Zuper // Noncompliant {{Avoid using annotation @Zuper}}
   public void aMethod() {
 
   }
