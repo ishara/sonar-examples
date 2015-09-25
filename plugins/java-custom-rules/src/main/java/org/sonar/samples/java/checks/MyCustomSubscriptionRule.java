@@ -1,4 +1,4 @@
-package org.sonar.samples.java;
+package org.sonar.samples.java.checks;
 
 import java.util.List;
 
