@@ -6,11 +6,11 @@ class AvoidBrandInNamesCheck {
 
   int aField;
 
-  public void methodWithMYCOMPANY() { // We expect an issue at this line.
+  public void methodWithMYCOMPANY() { // Noncompliant {{Avoid using Brand in method name}}
 
   }
 
-  public void methodWithMyCompany() { // We expect an issue at this line.
+  public void methodWithMyCompany() { // Noncompliant {{Avoid using Brand in method name}}
 
   }
 

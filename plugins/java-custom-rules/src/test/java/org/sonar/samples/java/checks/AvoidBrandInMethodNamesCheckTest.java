@@ -6,29 +6,16 @@
 
 package org.sonar.samples.java.checks;
 
-import java.io.File;
-
-import org.junit.Rule;
 import org.junit.Test;
-import org.sonar.java.ast.JavaAstScanner;
-import org.sonar.java.model.VisitorsBridge;
-import org.sonar.squidbridge.api.SourceFile;
-import org.sonar.squidbridge.checks.CheckMessagesVerifier;
-import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;
+import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
 public class AvoidBrandInMethodNamesCheckTest {
 
-  @Rule
-  public CheckMessagesVerifierRule checkMessagesVerifierRule = new CheckMessagesVerifierRule();
-
   @Test
   public void detected() {
-
-    SourceFile file = JavaAstScanner
-      .scanSingleFile(new File("src/test/files/AvoidBrandInMethodNamesCheck.java"), new VisitorsBridge(new AvoidBrandInMethodNamesCheck()));
-
-    CheckMessagesVerifier checkMessagesVerifier = checkMessagesVerifierRule.verify(file.getCheckMessages());
-    checkMessagesVerifier.next().atLine(9).withMessage("Avoid using Brand in method name");
-    checkMessagesVerifier.next().atLine(13).withMessage("Avoid using Brand in method name");
+    // Verifies that the check will raise the adequate issues with the expected message.
+    // In the test file, lines which should raise an issue have been commented out
+    // by using the following syntax: "// Noncompliant {{EXPECTED_MESSAGE}}"
+    JavaCheckVerifier.verify("src/test/files/AvoidBrandInMethodNamesCheck.java", new AvoidBrandInMethodNamesCheck());
   }
 }

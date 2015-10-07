@@ -13,7 +13,7 @@ class BusinessClassDelegate implements MySecurityInterface, SecondInterface {
 
   }
 
-  public void aMethod() {
+  public void aMethod() { // Noncompliant {{Mandatory Annotation not set @MySecurityAnnotation}}
 
   }
 

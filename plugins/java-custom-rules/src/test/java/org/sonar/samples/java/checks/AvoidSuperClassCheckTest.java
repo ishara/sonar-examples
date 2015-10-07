@@ -3,16 +3,12 @@
  */
 package org.sonar.samples.java.checks;
 
+import org.junit.Test;
+import org.sonar.java.checks.verifier.JavaCheckVerifier;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.Rule;
-import org.junit.Test;
-import org.sonar.java.ast.JavaAstScanner;
-import org.sonar.java.model.VisitorsBridge;
-import org.sonar.squidbridge.api.SourceFile;
-import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;
 
 public class AvoidSuperClassCheckTest {
 
@@ -30,16 +26,14 @@ public class AvoidSuperClassCheckTest {
     }
   }
 
-  @Rule
-  public CheckMessagesVerifierRule checkMessagesVerifier = new CheckMessagesVerifierRule();
-
   @Test
   public void checkWithJarDependenciesInClassPath() throws Exception {
-    AvoidSuperClassCheck customRule = new AvoidSuperClassCheck();
+    // As external sources are required to run the rule ('symbolType' used in custom rule, which is
+    // part of the semantic API), the test requires external dependencies in order to be run correctly.
 
-    // 'symbolType' used in custom rule => unit test scanner requires project jar dependencies
-    SourceFile file = JavaAstScanner.scanSingleFile(new File("src/test/files/AvoidSuperClassCheck.java"), new VisitorsBridge(customRule, CLASSPATH_JAR));
-
-    checkMessagesVerifier.verify(file.getCheckMessages()).next().atLine(11);
+    // Verifies that the check will raise the adequate issues with the expected message.
+    // In the test file, lines which should raise an issue have been commented out
+    // by using the following syntax: "// Noncompliant {{EXPECTED_MESSAGE}}"
+    JavaCheckVerifier.verify("src/test/files/AvoidSuperClassCheck.java", new AvoidSuperClassCheck(), CLASSPATH_JAR);
   }
 }

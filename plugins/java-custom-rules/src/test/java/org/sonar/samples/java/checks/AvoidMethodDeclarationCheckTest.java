@@ -6,14 +6,8 @@
 
 package org.sonar.samples.java.checks;
 
-import java.io.File;
-
-import org.junit.Rule;
 import org.junit.Test;
-import org.sonar.java.ast.JavaAstScanner;
-import org.sonar.java.model.VisitorsBridge;
-import org.sonar.squidbridge.api.SourceFile;
-import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;
+import org.sonar.java.checks.verifier.JavaCheckVerifier;
 
 /**
  * This class is the test of the ExampleCheck.
@@ -21,19 +15,11 @@ import org.sonar.squidbridge.checks.CheckMessagesVerifierRule;
  */
 public class AvoidMethodDeclarationCheckTest {
 
-  @Rule
-  public CheckMessagesVerifierRule checkMessagesVerifier = new CheckMessagesVerifierRule();
-
   @Test
   public void detected() {
-
-    // Parse a known file and use an instance of the check under test to raise the issue.
-    SourceFile file = JavaAstScanner
-      .scanSingleFile(new File("src/test/files/AvoidMethodDeclarationCheck.java"), new VisitorsBridge(new AvoidMethodDeclarationCheck()));
-
-    // Check the message raised by the check
-    checkMessagesVerifier.verify(file.getCheckMessages())
-      // Expecting an issue at line 9 with a predefined message. This allows test of dynamic messages.
-      .next().atLine(9).withMessage("Avoid method calls (don't ask why)");
+    // Verifies that the check will raise the adequate issues with the expected message.
+    // In the test file, lines which should raise an issue have been commented out
+    // by using the following syntax: "// Noncompliant {{EXPECTED_MESSAGE}}"
+    JavaCheckVerifier.verify("src/test/files/AvoidMethodDeclarationCheck.java", new AvoidMethodDeclarationCheck());
   }
 }

@@ -8,11 +8,15 @@ public class AvoidAnnotationCheckTest {
   @Test
   public void detected() {
 
-    // Parse a known file and use an instance of the check under test to raise the issue.
+    // Use an instance of the check under test to raise the issue.
     AvoidAnnotationCheck check = new AvoidAnnotationCheck();
+
+    // define the forbidden annotation name
     check.name = "Zuper";
 
-    // Verifies that the check will raise the adequate issues with the expected message
+    // Verifies that the check will raise the adequate issues with the expected message.
+    // In the test file, lines which should raise an issue have been commented out
+    // by using the following syntax: "// Noncompliant {{EXPECTED_MESSAGE}}"
     JavaCheckVerifier.verify("src/test/files/AvoidAnnotationCheck.java", check);
   }
 }
