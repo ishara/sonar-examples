@@ -8,6 +8,10 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>sonar-plugin</packaging>
 
+	<properties>
+		<java.plugin.version>3.6</java.plugin.version>
+	</properties>
+
 	<name>Java Custom Rules</name>
 	<description>Java custom rules</description>
 
@@ -23,14 +27,14 @@
 			<groupId>org.sonarsource.java</groupId>
 			<artifactId>sonar-java-plugin</artifactId>
 			<type>sonar-plugin</type>
-			<version>3.6-SNAPSHOT</version>
+			<version>${java.plugin.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.sonarsource.java</groupId>
 			<artifactId>java-checks-testkit</artifactId>
-			<version>3.6-SNAPSHOT</version>
+			<version>${java.plugin.version}</version>
 			<scope>test</scope>
 		</dependency>
 
