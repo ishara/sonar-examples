@@ -5,23 +5,27 @@
  */
 package org.sonar.samples.php;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
+import org.sonar.plugins.php.api.tree.Tree;
 import org.sonar.plugins.php.api.tree.Tree.Kind;
 import org.sonar.plugins.php.api.tree.declaration.NamespaceNameTree;
 import org.sonar.plugins.php.api.tree.expression.ExpressionTree;
 import org.sonar.plugins.php.api.tree.expression.FunctionCallTree;
+import org.sonar.plugins.php.api.visitors.PHPSubscriptionCheck;
 import org.sonar.plugins.php.api.visitors.PHPVisitorCheck;
 import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
 import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
+import java.util.List;
 import java.util.Set;
 
 /**
- * Example of implementation of a check by extending {@link PHPVisitorCheck}.
- * PHPVisitorCheck provides method to visit node of the Abstract Syntax Tree
+ * Example of implementation of a check by extending {@link PHPSubscriptionCheck}.
+ * PHPSubscriptionCheck provides method to visit node of the Abstract Syntax Tree
  * that represents the source code.
  * <p>
  * Those methods can be overriding to process information
@@ -38,24 +42,26 @@ import java.util.Set;
   )
 @SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.DATA_RELIABILITY)
 @SqaleConstantRemediation("5min")
-public class ForbiddenFunctionUseCheck extends PHPVisitorCheck {
+public class OtherForbiddenFunctionUseCheck extends PHPSubscriptionCheck {
 
   private static final Set<String> FORBIDDEN_FUNCTIONS = ImmutableSet.of("foo", "bar");
+
+  @Override
+  public List<Kind> nodesToVisit() {
+    return ImmutableList.of(Kind.FUNCTION_CALL);
+  }
 
   /**
    * Overriding method visiting the call expression to create an issue
    * each time a call to "foo()" or "bar()" is done.
    */
   @Override
-  public void visitFunctionCall(FunctionCallTree tree) {
-    ExpressionTree callee = tree.callee();
+  public void visitNode(Tree tree) {
+    ExpressionTree callee = ((FunctionCallTree) tree).callee();
 
     if (callee.is(Kind.NAMESPACE_NAME) && FORBIDDEN_FUNCTIONS.contains(((NamespaceNameTree) callee).qualifiedName())) {
       context().newIssue(this, "Remove the usage of this forbidden function.").tree(tree);
     }
-
-    // super method must be called in order to visit function node's children
-    super.visitFunctionCall(tree);
   }
 
 }
