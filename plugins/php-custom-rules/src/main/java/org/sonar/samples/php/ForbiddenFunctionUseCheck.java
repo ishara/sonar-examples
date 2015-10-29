@@ -21,10 +21,10 @@ import java.util.Set;
 
 /**
  * Example of implementation of a check by extending {@link PHPVisitorCheck}.
- * PHPVisitorCheck provides method to visit node of the Abstract Syntax Tree
+ * PHPVisitorCheck provides methods to visit nodes of the Abstract Syntax Tree
  * that represents the source code.
  * <p>
- * Those methods can be overriding to process information
+ * Those methods can be overridden to process information
  * related to node and issue can be created via the context that can be
  * accessed through {@link PHPVisitorCheck#context()}.
  */
@@ -34,7 +34,7 @@ import java.util.Set;
   name = "Forbidden function should not be used.",
   tags = {"convention"}
 // Description can either be given in this annotation or through HTML name <ruleKey>.html located in package src/resources/org/sonar/l10n/php/rules/<repositoryKey>
-// description = "<p>The following functions should not be used:</p> <ul><li>foo</li> <li>bar</li></ul>",
+// description = "<p>The following functions should not be used:</p> <ul><li>foo</li> <li>bar</li></ul>"
   )
 @SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.DATA_RELIABILITY)
 @SqaleConstantRemediation("5min")
@@ -54,7 +54,7 @@ public class ForbiddenFunctionUseCheck extends PHPVisitorCheck {
       context().newIssue(this, "Remove the usage of this forbidden function.").tree(tree);
     }
 
-    // super method must be called in order to visit function node's children
+    // super method must be called in order to visit function call node's children
     super.visitFunctionCall(tree);
   }
 

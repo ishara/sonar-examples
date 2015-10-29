@@ -25,10 +25,10 @@ import java.util.Set;
 
 /**
  * Example of implementation of a check by extending {@link PHPSubscriptionCheck}.
- * PHPSubscriptionCheck provides method to visit node of the Abstract Syntax Tree
- * that represents the source code.
+ * PHPSubscriptionCheck provides method {@link PHPSubscriptionCheck#visitNode} to visit nodes of the Abstract Syntax Tree
+ * that represents the source code. Provide the list of nodes you want to visit through {@link PHPSubscriptionCheck#nodesToVisit}.
  * <p>
- * Those methods can be overriding to process information
+ * Those methods should be overridden to process information
  * related to node and issue can be created via the context that can be
  * accessed through {@link PHPVisitorCheck#context()}.
  */

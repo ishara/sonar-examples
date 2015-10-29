@@ -35,7 +35,7 @@ public class PHPRulesDefinition extends PHPCustomRulesDefinition {
    * to be part of the rule repository
    */
   @Override
-  public ImmutableList checkClasses() {
-    return ImmutableList.of(ForbiddenFunctionUseCheck.class);
+  public ImmutableList<Class> checkClasses() {
+    return ImmutableList.<Class>of(ForbiddenFunctionUseCheck.class);
   }
 }
