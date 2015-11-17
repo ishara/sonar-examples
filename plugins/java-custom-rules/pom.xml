@@ -9,7 +9,7 @@
 	<packaging>sonar-plugin</packaging>
 
 	<properties>
-		<java.plugin.version>3.6</java.plugin.version>
+		<java.plugin.version>3.7.1</java.plugin.version>
 	</properties>
 
 	<name>Java Custom Rules</name>
@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>org.codehaus.sonar</groupId>
 			<artifactId>sonar-plugin-api</artifactId>
-			<version>4.5</version>
+			<version>4.5.4</version>
 			<scope>provided</scope>
 		</dependency>
 

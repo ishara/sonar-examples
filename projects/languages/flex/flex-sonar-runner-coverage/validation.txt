@@ -1,5 +1,5 @@
 start server
-  with plugin flex 2.2.1
+  with plugin flex 2.2
 sonar-runner
 verify org.sonarqube:flex-coverage-sq-runner
   measure lines is 22
