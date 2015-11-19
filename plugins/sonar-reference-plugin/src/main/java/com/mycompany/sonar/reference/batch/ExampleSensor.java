@@ -30,12 +30,19 @@ public class ExampleSensor implements Sensor {
 
   @Override
   public boolean shouldExecuteOnProject(Project project) {
+    LOG.info("ProjectName: " + project.getName());
+    LOG.info("ProjectScope: " + project.getScope());
+    LOG.info("Project isRoot ?" + project.isRoot());
+    LOG.info("Project isModule ?" + project.isModule());
+
     // This sensor is executed only when there are Java files
     return fs.hasFiles(fs.predicates().hasLanguage("java"));
   }
 
   @Override
   public void analyse(Project project, SensorContext sensorContext) {
+    LOG.info("ExampleSensor.analyse(...) method called for Project: " + project.getName());
+
     // This sensor create a measure for metric MESSAGE on each Java file
     String value = settings.getString(ExamplePlugin.MY_PROPERTY);
     LOG.info(ExamplePlugin.MY_PROPERTY + "=" + value);
