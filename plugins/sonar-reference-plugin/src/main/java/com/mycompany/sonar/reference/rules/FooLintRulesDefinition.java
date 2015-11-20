@@ -1,4 +1,4 @@
-package com.mycompany.sonar.reference;
+package com.mycompany.sonar.reference.rules;
 
 import java.io.InputStream;
 import java.util.List;
@@ -8,15 +8,16 @@ import org.sonar.api.server.rule.RulesDefinitionXmlLoader;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.ImmutableList;
+import com.mycompany.sonar.reference.FooLanguage;
 
-public final class ExampleRulesDefinition implements RulesDefinition {
+public final class FooLintRulesDefinition implements RulesDefinition {
 
-  protected static final String KEY = "example";
-  protected static final String NAME = "Example";
+  protected static final String KEY = "foolint";
+  protected static final String NAME = "FooLint";
 
-  protected static final List<String> LANGUAGE_KEYS = ImmutableList.of("java");
+  protected static final List<String> LANGUAGE_KEYS = ImmutableList.of(FooLanguage.KEY);
 
-  public ExampleRulesDefinition() {
+  public FooLintRulesDefinition() {
   }
 
   protected String rulesDefinitionFilePath() {
@@ -38,7 +39,7 @@ public final class ExampleRulesDefinition implements RulesDefinition {
   @Override
   public void define(Context context) {
     for (String languageKey : LANGUAGE_KEYS) {
-      defineRulesForLanguage(context, ExampleRulesDefinition.getRepositoryKeyForLanguage(languageKey), ExampleRulesDefinition.getRepositoryNameForLanguage(languageKey),
+      defineRulesForLanguage(context, FooLintRulesDefinition.getRepositoryKeyForLanguage(languageKey), FooLintRulesDefinition.getRepositoryNameForLanguage(languageKey),
         languageKey);
     }
   }

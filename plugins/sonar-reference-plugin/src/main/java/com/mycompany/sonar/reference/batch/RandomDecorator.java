@@ -10,6 +10,9 @@ import org.sonar.api.resources.ResourceUtils;
 
 import com.mycompany.sonar.reference.ExampleMetrics;
 
+/**
+ * Decorator is removed in 5.2
+ */
 public class RandomDecorator implements Decorator {
 
   @Override
