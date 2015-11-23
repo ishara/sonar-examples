@@ -1,9 +1,9 @@
-This example demonstrates how to analyze a simple Android project with SonarQube Runner.
+This example demonstrates how to analyze a simple Android App with SonarQube Scanner.
 
 Prerequisites
 =============
 * [SonarQube](http://www.sonarsource.org/downloads/) 4.5 or higher
-* [SonarQube Runner](http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Runner) 2.4 or higher
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Scanner) 2.4 or higher
 * [SonarQube Android Lint Plugin](http://docs.sonarqube.org/display/SONAR/Android+Lint+Plugin) 1.1+
 * [Ant](http://ant.apache.org/) 1.7.1 or higher
 
