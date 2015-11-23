@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: "org.sonarqube"
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Hello World Android with SQ Scanner for Gradle"
+        property "sonar.version", "1.0"
+
+        property "sonar.sources", "./src/main/java"
+        property "sonar.tests", "./src/test/java"
+
+        property "sonar.java.binaries", "./build/intermediates/classes/release"
+        
+        property "sonar.junit.reportsPath", "./build/test-results/release"
+
+        property "sonar.android.lint.report", "./build/outputs/lint-results.xml"
+
+        property "sonar.verbose", "false"
+    }
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "org.sonarqube.helloworldandroid"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:design:22.+'
+}
