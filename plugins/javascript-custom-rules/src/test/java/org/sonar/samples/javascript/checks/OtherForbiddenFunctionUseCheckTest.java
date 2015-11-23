@@ -1,7 +1,8 @@
-package org.sonar.samples.javascript;
+package org.sonar.samples.javascript.checks;
 
 import org.junit.Test;
 import org.sonar.plugins.javascript.api.tests.TreeCheckTest;
+import org.sonar.samples.javascript.checks.OtherForbiddenFunctionUseCheck;
 import org.sonar.squidbridge.checks.CheckMessagesVerifier;
 
 /**
