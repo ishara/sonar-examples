@@ -1,5 +1,5 @@
 This example demonstrates how to collect code coverage by integration tests, tests are located in a separate Java Maven module.
-SonarQube aggregates code coverage by unit tests and integration tersts to compute an overall code coverage (this feature requires SonarQube 3.3).
+SonarQube aggregates code coverage by unit tests and integration tests to compute an overall code coverage (this feature requires SonarQube 3.3).
 
 Prerequisites
 =============
