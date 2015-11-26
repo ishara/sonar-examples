@@ -7,7 +7,9 @@ package org.sonar.samples.php;
 
 
 import com.google.common.collect.ImmutableList;
+
 import org.sonar.plugins.php.api.visitors.PHPCustomRulesDefinition;
+import org.sonar.samples.php.checks.ForbiddenFunctionUseCheck;
 
 /**
  * Extension point to define a PHP rule repository.

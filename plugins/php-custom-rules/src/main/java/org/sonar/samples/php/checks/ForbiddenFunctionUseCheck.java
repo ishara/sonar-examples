@@ -3,7 +3,7 @@
  * All rights reserved
  * mailto:contact AT sonarsource DOT com
  */
-package org.sonar.samples.php;
+package org.sonar.samples.php.checks;
 
 import com.google.common.collect.ImmutableSet;
 import org.sonar.api.server.rule.RulesDefinition;
