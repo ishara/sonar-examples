@@ -1,0 +1,8 @@
+start server
+  with plugin cobol 2.8
+sonar-runner
+verify org.sonarqube:cobol-simple-sq-scanner
+  measure lines is 822
+  measure ncloc is 706
+  measure files is 5
+stop server
