@@ -2,9 +2,9 @@ This example demonstrates how to analyze a simple JavaScript project with the So
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
-* [SonarQube JavaScript](http://docs.codehaus.org/x/KwChCw) 1.3 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [Sonar JavaScript Plugin](http://docs.sonarqube.org/display/PLUG/JavaScript+Plugin) 2.8+
 
 Usage
 =====

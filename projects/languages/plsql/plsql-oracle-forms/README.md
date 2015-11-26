@@ -2,10 +2,10 @@ This example demonstrates how to analyze PL/SQL from Oracle Forms.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.7.1 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.3 or higher
-* [SonarSource PL/SQL Plugin](http://www.sonarsource.com/products/plugins/languages/plsql/) 2.6 or higher
-* [SonarQube Oracle Forms PL/SQL Extractor](http://docs.codehaus.org/pages/viewpage.action?pageId=239370845) 1.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarSource PL/SQL Plugin](http://www.sonarsource.com/products/plugins/languages/plsql/) 2.7+
+* [SonarQube Oracle Forms PL/SQL Extractor](https://github.com/SonarCommunity/sonar-forms-plsql-extractor) 1.1+
 
 Usage
 =====

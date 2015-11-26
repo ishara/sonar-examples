@@ -2,10 +2,10 @@ This example demonstrates how to analyze a multi-language project (Java / JavaSc
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.2 or higher
-* [SonarQube Java](http://docs.codehaus.org/x/tZC7DQ) 2.1 or higher
-* [SonarQube JavaScript](http://docs.codehaus.org/x/KwChCw) 1.6 or higher
-* Maven 2.2.1 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Java Plugin](http://docs.sonarqube.org/display/PLUG/Java+Plugin) 3.7.1+
+* [SonarQube JavaScript Plugin](http://docs.sonarqube.org/display/PLUG/JavaScript+Plugin) 2.8+
+* Maven 3.0+
 
 Usage
 =====

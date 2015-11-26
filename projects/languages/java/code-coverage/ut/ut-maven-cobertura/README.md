@@ -2,10 +2,10 @@ This example demonstrates how to import JUnit and Cobertura reports.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.2 or higher
-* [SonarQube Java Ecosystem](http://docs.codehaus.org/x/tZC7DQ) 2.2 or higher
-* [SonarQube Cobertura Plugin](http://docs.codehaus.org/x/fZS7DQ) 1.5 or higher
-* Maven 2.2.1 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Java Plugin](http://docs.sonarqube.org/display/PLUG/Java+Plugin) 3.7.1+
+* [SonarQube Cobertura Plugin](http://docs.sonarqube.org/display/PLUG/Cobertura+Plugin) 1.6.3+
+* Maven 3.0+
 
 Usage
 =====

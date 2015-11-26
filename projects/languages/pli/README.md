@@ -2,8 +2,8 @@ This example demonstrates how to analyze a PL/I project with the SonarQube Runne
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
 * [SonarSource PL/I Plugin](http://www.sonarsource.com/products/plugins/languages/pli/) 1.0 or higher
 
 Usage

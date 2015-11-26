@@ -2,10 +2,10 @@ This example demonstrates how to use the generic coverage plugin with the SonarQ
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.2 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
-* [SonarQube Generic Coverage Plugin](http://docs.codehaus.org/display/SONAR/Generic+Test+Coverage) 1.1 or higher
-* [SonarQube Javascript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) 2.0 or higher to enable Javascript report
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarQube Generic Coverage Plugin](http://docs.sonarqube.org/display/PLUG/Generic+Test+Coverage) 1.1+
+* [SonarQube Javascript Plugin](http://docs.sonarqube.org/display/PLUG/JavaScript+Plugin) 2.8
 
 Usage
 =====

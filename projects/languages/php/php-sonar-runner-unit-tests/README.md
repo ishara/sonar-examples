@@ -3,9 +3,9 @@ It reuses existing unit test execution and code coverage reports from PHPUnit.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.2 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.3 or higher
-* [SonarQube PHP Plugin](http://docs.codehaus.org/x/xAE_Cw) 2.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarQube PHP Plugin](http://docs.sonarqube.org/display/PLUG/PHP+Plugin) 2.7+
 
 Usage
 =====

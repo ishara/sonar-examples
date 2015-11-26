@@ -3,9 +3,9 @@ File validation against a custom schema.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
-* [SonarQube XML Plugin](http://docs.codehaus.org/display/SONAR/XML+Plugin) 1.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarQube XML Plugin](http://docs.sonarqube.org/display/PLUG/XML+Plugin) 1.3+
 
 Usage
 =====

@@ -2,9 +2,8 @@ This example demonstrates how to analyze an SAP ABAP project with the SonarQube 
 
 Prerequisites
 =============
-
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
 * [SonarSource ABAP Plugin](http://www.sonarsource.com/products/plugins/languages/abap/) 2.0.2 or higher
 
 Usage

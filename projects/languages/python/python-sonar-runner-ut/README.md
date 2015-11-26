@@ -2,9 +2,9 @@ This example demonstrates how to import Python Tests Execution Results into Sona
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.4 or higher
-* [SonarQube Python Plugin](http://docs.codehaus.org/display/SONAR/Python+Plugin) 1.5 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarQube Python Plugin](http://docs.sonarqube.org/display/PLUG/Python+Plugin) 1.5+
 
 Tests Execution Results Generation
 ==================================

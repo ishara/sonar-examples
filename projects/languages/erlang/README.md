@@ -2,9 +2,9 @@ This example demonstrates how to analyze a simple Erlang project with the SonarQ
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.3 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.0 or higher
-* [SonarQube Erlang Plugin](http://docs.codehaus.org/display/SONAR/Erlang+Plugin) 0.1 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarQube Erlang Plugin](https://github.com/SonarCommunity/sonar-erlang) 1.1+
 
 Usage
 =====

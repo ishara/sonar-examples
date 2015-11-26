@@ -2,11 +2,11 @@ This example demonstrates how to analyze a multi-language project (Java / JavaSc
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.2 or higher
-* [SonarQube Java](http://docs.codehaus.org/x/tZC7DQ) 2.1 or higher
-* [SonarQube JavaScript](http://docs.codehaus.org/x/KwChCw) 1.6 or higher
-* [SonarQube Ant Task](http://docs.codehaus.org/x/QYKxDQ) 2.3 or higher
-* [Ant](http://ant.apache.org/) 1.7.1 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner for Ant](http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Scanner+for+Ant) 2.3+
+* [SonarQube Java Plugin](http://docs.sonarqube.org/display/PLUG/Java+Plugin) 3.7+
+* [SonarQube JavaScript Plugin](http://docs.sonarqube.org/display/PLUG/JavaScript+Plugin) 2.8+
+* [Ant](http://ant.apache.org/) 1.7.1+
 
 Usage
 =====

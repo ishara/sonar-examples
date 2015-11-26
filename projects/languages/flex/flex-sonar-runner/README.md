@@ -2,9 +2,9 @@ This example demonstrates how to analyze a Flex project with the SonarQube Runne
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.7 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.3 or higher
-* [SonarQube Flex Plugin](http://docs.codehaus.org/display/SONAR/Flex+Plugin) 2.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarQube Flex Plugin](http://docs.sonarqube.org/display/PLUG/Flex+Plugin) 2.2.1
 
 Usage
 =====

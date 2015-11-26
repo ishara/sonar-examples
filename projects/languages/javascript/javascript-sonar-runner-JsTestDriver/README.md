@@ -2,9 +2,9 @@ This example demonstrates how to analyze a JavaScript project with Sonar Runner 
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.7+
-* [Sonar Runner](http://docs.codehaus.org/display/SONAR/Installing+and+Configuring+Sonar+Runner) 2.4+
-* [Sonar JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) 2.2+
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [Sonar JavaScript Plugin](http://docs.sonarqube.org/display/PLUG/JavaScript+Plugin) 2.8+
 
 Usage
 =====

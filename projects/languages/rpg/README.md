@@ -2,8 +2,8 @@ This example demonstrates how to analyze an RPG project with the SonarQube Runne
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.7 or higher
-* [SonarQube Runner](http://docs.codehaus.org/x/N4KxDQ) 2.3 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
 * [SonarSource RPG Plugin](http://www.sonarsource.com/products/plugins/languages/rpg/) 0.9 or higher
 
 Usage
