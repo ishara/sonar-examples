@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.example.app-example</groupId>
+    <groupId>org.sonarqube</groupId>
     <artifactId>parent</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>app-it</artifactId>
 
-  <name>JaCoCo Examples :: app-example :: app-it</name>
+  <name>Java :: JaCoco Multi Modules :: App IT</name>
 
   <dependencies>
     <dependency>

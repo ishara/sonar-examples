@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example.app-example</groupId>
+  <groupId>org.sonarqube</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
 
-  <name>JaCoCo Examples :: app-example :: parent</name>
+  <name>Java :: JaCoco Multi Modules :: Parent</name>
 
   <modules>
     <module>app</module>

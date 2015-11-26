@@ -3,8 +3,8 @@
 
   <!-- ========= Define the main properties of this project ========= -->
   <!-- Define the SonarQube properties -->
-  <property name="sonar.projectKey" value="org.codehaus.sonar:multi-language-project-java-javascript-ant" />
-  <property name="sonar.projectName" value="Multi-language project (Java / JavaScript) analyzed with the SonarQube Ant Task" />
+  <property name="sonar.projectKey" value="org.sonarqube:multi-language-project-java-javascript-ant" />
+  <property name="sonar.projectName" value="Java and JavaScript :: SonarQube Scanner for Ant" />
   <property name="sonar.projectVersion" value="1.0" />
   <property name="sonar.sources" value="src" />
   <property name="sonar.binaries" value="classes" />

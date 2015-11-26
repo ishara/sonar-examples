@@ -7,8 +7,8 @@
 	<property name="classes.dir" value="${build.dir}/classes" />
 	
 	<!-- Define the Sonar properties -->
-	<property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant" />
-	<property name="sonar.projectName" value="Simple Java Project analyzed with the Sonar Ant Task" />
+	<property name="sonar.projectKey" value="org.sonarqube:java-simple-ant" />
+	<property name="sonar.projectName" value="Java :: Simple Project :: SonarQube Scanner for Ant" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.language" value="java" />
 	<property name="sonar.sources" value="src" />
