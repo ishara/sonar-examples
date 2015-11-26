@@ -1,17 +1,17 @@
 start server
   with plugin flex 2.2.1
 sonar-runner
-verify org.sonarqube:flex-coverage-sq-runner
+verify org.sonarqube:flex-coverage-sq-scanner
   measure lines is 22
   measure ncloc is 16
   measure files is 2
   measure classes is 2
   measure coverage is 50
-verify org.sonarqube:flex-coverage-sq-runner:src/Circle.as
+verify org.sonarqube:flex-coverage-sq-scanner:src/Circle.as
   measure lines is 11
   measure ncloc is 8
   measure coverage is 100
-verify org.sonarqube:flex-coverage-sq-runner:src/UncoveredCircle.as
+verify org.sonarqube:flex-coverage-sq-scanner:src/UncoveredCircle.as
   measure lines is 11
   measure ncloc is 8
   measure coverage is 0
