@@ -1,13 +1,13 @@
 start server
   with plugin groovy 1.1.1
 sonar-runner
-verify org.codehaus.sonar:example-groovy-sonar-runner-cobertura
+verify org.sonarqube:groovy-cobertura-sq-scanner
   measure lines is 23
   measure ncloc is 17
   measure files is 2
   measure classes is 3
   measure coverage is 25.0
-verify org.codehaus.sonar:example-groovy-sonar-runner-cobertura:src/example/Greeting.groovy
+verify org.sonarqube:groovy-cobertura-sq-scanner:src/example/Greeting.groovy
   measure lines is 8
   measure ncloc is 6
   measure coverage is 100.0

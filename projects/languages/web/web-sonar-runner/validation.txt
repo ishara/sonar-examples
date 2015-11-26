@@ -1,11 +1,11 @@
 start server
   with plugin web 2.4
 sonar-runner
-verify org.codehaus.sonar:example-web-sonar-runner
+verify org.sonarqube:web-sq-scanner
   measure lines is 48
   measure ncloc is 35
   measure files is 1
-verify org.codehaus.sonar:example-web-sonar-runner:src/sample.xhtml
+verify org.sonarqube:web-sq-scanner:src/sample.xhtml
   measure lines is 48
   measure ncloc is 35
 stop server
