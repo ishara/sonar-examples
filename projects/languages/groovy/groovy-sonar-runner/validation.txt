@@ -1,5 +1,5 @@
 start server
-  with plugin groovy 1.1.1
+  with plugin groovy 1.3
 sonar-runner
 verify org.sonarqube:groovy-simple-sq-scanner
   measure lines is 23

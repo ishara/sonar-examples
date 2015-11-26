@@ -1,6 +1,6 @@
 start server
-  with plugin java 3.4
-  with plugin javascript 2.7
+  with plugin java 3.7.1
+  with plugin javascript 2.8
 sonar-runner
 verify org.sonarqube:multi-language-project-java-javascript-sq-scanner
   measure lines is 22
