@@ -1,0 +1,11 @@
+start server
+  with plugin python 1.5
+sonar-runner
+verify org.sonarqube:python-simple-sonar-scanner
+  measure lines is 498
+  measure ncloc is 215
+  measure files is 9
+verify org.sonarqube:python-simple-sonar-scanner:src/badfortune.py
+  measure lines is 93
+  measure ncloc is 41
+stop server
