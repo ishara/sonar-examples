@@ -8,3 +8,4 @@ verify org.sonarqube:xml-sq-scanner
 verify org.sonarqube:xml-sq-scanner:src/sonar_backup.xml
   measure lines is 233
   measure ncloc is 233
+stop server

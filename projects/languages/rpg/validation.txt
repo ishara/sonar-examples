@@ -1,0 +1,11 @@
+start server
+  with plugin rpg 1.4.1
+sonar-runner
+verify org.sonarqube:rpg-sq-scanner
+  measure lines is 53
+  measure ncloc is 49
+  measure files is 1
+verify org.sonarqube:rpg-sq-scanner:src/MYPROGRAM.rpg
+  measure lines is 53
+  measure ncloc is 49
+stop server
