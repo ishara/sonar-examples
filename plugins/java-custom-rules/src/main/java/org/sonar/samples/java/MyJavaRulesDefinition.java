@@ -6,25 +6,21 @@
 package org.sonar.samples.java;
 
 import org.sonar.api.server.rule.RulesDefinition;
-import org.sonar.api.server.rule.RulesDefinitionAnnotationLoader;
+import org.sonar.plugins.java.Java;
+import org.sonar.squidbridge.annotations.AnnotationBasedRulesDefinition;
 
 /**
- * Declare rule metadata in server repository of rules. That allows to list the rules
- * in the page "Rules".
+ * Declare rule metadata in server repository of rules. 
+ * That allows to list the rules in the page "Rules".
  */
 public class MyJavaRulesDefinition implements RulesDefinition {
 
-  public static final String REPOSITORY_KEY = "connexis-rules";
-
   @Override
   public void define(Context context) {
-    NewRepository repo = context.createRepository(REPOSITORY_KEY, "java");
-    repo.setName("Connexis");
+    NewRepository repository = context.createRepository(RulesList.REPOSITORY_KEY, Java.KEY);
+    repository.setName("MyRepo");
 
-    // We could use a XML or JSON file to load all rule metadata, but
-    // we prefer use annotations in order to have all information in a single place
-    RulesDefinitionAnnotationLoader annotationLoader = new RulesDefinitionAnnotationLoader();
-    annotationLoader.load(repo, MyJavaFileCheckRegistrar.checkClasses());
-    repo.done();
+    AnnotationBasedRulesDefinition.load(repository, "java", RulesList.getChecks());
+    repository.done();
   }
 }

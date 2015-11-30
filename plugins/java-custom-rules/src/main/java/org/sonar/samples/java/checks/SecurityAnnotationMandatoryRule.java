@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
+import org.sonar.java.model.PackageUtils;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.AnnotationTree;
@@ -16,14 +18,18 @@ import org.sonar.plugins.java.api.tree.IdentifierTree;
 import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.TypeTree;
+import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
+import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
 @Rule(key = "SecurityAnnotationMandatory",
   name = "Security Annotation Mandatory",
   description = "Security Annotation Mandatory",
   tags = {"security"})
-public class SecurityAnnotationMandatoryCheck extends BaseTreeVisitor implements JavaFileScanner {
+@SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.ARCHITECTURE_CHANGEABILITY)
+@SqaleConstantRemediation("10min")
+public class SecurityAnnotationMandatoryRule extends BaseTreeVisitor implements JavaFileScanner {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(SecurityAnnotationMandatoryCheck.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(SecurityAnnotationMandatoryRule.class);
 
   private static final String DEFAULT_VALUE = "MySecurityAnnotation";
 
@@ -58,9 +64,10 @@ public class SecurityAnnotationMandatoryCheck extends BaseTreeVisitor implements
   @Override
   public void visitCompilationUnit(CompilationUnitTree tree) {
 
-    // if (tree.packageDeclaration() != null) {
-    // String name = PackageUtils.packageName(tree.packageDeclaration(), ".");
-    // }
+    if (tree.packageDeclaration() != null) {
+      String packageName = PackageUtils.packageName(tree.packageDeclaration(), ".");
+      LOGGER.info("PackageName : " + packageName);
+    }
 
     super.visitCompilationUnit(tree);
   }

@@ -5,12 +5,15 @@
  */
 package org.sonar.samples.java.checks;
 
+import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
 import org.sonar.plugins.java.api.tree.MethodTree;
+import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
+import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
 /**
  * This class is an example of how to implement your own rules.
@@ -22,16 +25,16 @@ import org.sonar.plugins.java.api.tree.MethodTree;
   name = "Avoid using methods",
   description = "My stupid rule to avoid calling methods",
   tags = {"stupid", "example"},
-
   // default severity (formerly "priority") when rule is enabled in Quality profile
-  priority = Priority.MINOR
-)
+  priority = Priority.MINOR)
+@SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.ARCHITECTURE_CHANGEABILITY)
+@SqaleConstantRemediation("10min")
 /**
  * The class extends BaseTreeVisitor: the visitor for the Java AST.
  * The logic of the rule is implemented by overriding its methods.
  * It also implements the JavaFileScanner interface to be injected with the JavaFileScannerContext to attach issues to this context.
  */
-public class AvoidMethodDeclarationCheck extends BaseTreeVisitor implements JavaFileScanner {
+public class AvoidMethodDeclarationRule extends BaseTreeVisitor implements JavaFileScanner {
 
   /**
    * Private field to store the context: this is the object used to create issues.

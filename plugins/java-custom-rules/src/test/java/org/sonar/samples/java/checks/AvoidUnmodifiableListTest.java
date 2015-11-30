@@ -12,7 +12,7 @@ public class AvoidUnmodifiableListTest {
     // All the classes from this jar will then be read when verifying the ticket, allowing correct type resolution.
 
     // Verifies automatically that the check will raise the adequate issues with the expected message
-    JavaCheckVerifier.verify("src/test/files/AvoidUnmodifiableList.java", new AvoidUnmodifiableList());
+    JavaCheckVerifier.verify("src/test/files/AvoidUnmodifiableList.java", new AvoidUnmodifiableListRule());
   }
 
 }

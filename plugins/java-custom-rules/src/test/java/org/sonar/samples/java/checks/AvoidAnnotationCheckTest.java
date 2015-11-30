@@ -9,7 +9,7 @@ public class AvoidAnnotationCheckTest {
   public void detected() {
 
     // Use an instance of the check under test to raise the issue.
-    AvoidAnnotationCheck check = new AvoidAnnotationCheck();
+    AvoidAnnotationRule check = new AvoidAnnotationRule();
 
     // define the forbidden annotation name
     check.name = "Zuper";

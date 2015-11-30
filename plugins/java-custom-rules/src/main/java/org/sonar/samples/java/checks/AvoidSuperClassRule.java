@@ -5,10 +5,13 @@ package org.sonar.samples.java.checks;
 
 import java.util.List;
 
+import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.tree.ClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
+import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
 import com.google.common.collect.ImmutableList;
 
@@ -19,7 +22,9 @@ import com.google.common.collect.ImmutableList;
   name = "Avoid using SuperClass",
   description = "My stupid rule to avoid extends some SuperClass",
   tags = {"stupid", "example"})
-public class AvoidSuperClassCheck extends IssuableSubscriptionVisitor {
+@SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.ARCHITECTURE_CHANGEABILITY)
+@SqaleConstantRemediation("10min")
+public class AvoidSuperClassRule extends IssuableSubscriptionVisitor {
 
   public static final List<String> SUPER_CLASS_AVOID = ImmutableList.of("org.apache.log4j.Logger");
 

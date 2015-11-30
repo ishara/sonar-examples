@@ -1,19 +1,25 @@
 package org.sonar.samples.java.checks;
 
-import com.google.common.collect.ImmutableList;
+import java.util.List;
+
+import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.tree.NewClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
+import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
-import java.util.List;
+import com.google.common.collect.ImmutableList;
 
 @Rule(
   key = "AvoidUnmodifiableList",
   name = "Avoid usage of UnmodifiableList",
   description = "This rule detects instanciation of apache commons collections UnmodifableList",
   tags = {"example"})
-public class AvoidUnmodifiableList extends IssuableSubscriptionVisitor {
+@SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.ARCHITECTURE_CHANGEABILITY)
+@SqaleConstantRemediation("10min")
+public class AvoidUnmodifiableListRule extends IssuableSubscriptionVisitor {
 
   @Override
   public List<Tree.Kind> nodesToVisit() {

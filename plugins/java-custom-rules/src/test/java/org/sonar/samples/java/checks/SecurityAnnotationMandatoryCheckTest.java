@@ -14,7 +14,7 @@ public class SecurityAnnotationMandatoryCheckTest {
   public void detected() {
 
     // Use an instance of the check under test to raise the issue.
-    SecurityAnnotationMandatoryCheck check = new SecurityAnnotationMandatoryCheck();
+    SecurityAnnotationMandatoryRule check = new SecurityAnnotationMandatoryRule();
 
     // define the mandatory annotation name
     check.name = "MySecurityAnnotation";

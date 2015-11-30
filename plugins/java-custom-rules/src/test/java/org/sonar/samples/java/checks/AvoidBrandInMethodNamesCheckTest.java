@@ -16,6 +16,6 @@ public class AvoidBrandInMethodNamesCheckTest {
     // Verifies that the check will raise the adequate issues with the expected message.
     // In the test file, lines which should raise an issue have been commented out
     // by using the following syntax: "// Noncompliant {{EXPECTED_MESSAGE}}"
-    JavaCheckVerifier.verify("src/test/files/AvoidBrandInMethodNamesCheck.java", new AvoidBrandInMethodNamesCheck());
+    JavaCheckVerifier.verify("src/test/files/AvoidBrandInMethodNamesCheck.java", new AvoidBrandInMethodNamesRule());
   }
 }
