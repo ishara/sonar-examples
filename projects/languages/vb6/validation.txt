@@ -2,7 +2,7 @@ start server
   with plugin vb 2.1
 sonar-runner
 verify org.sonarqube:vb-simple-sq-scanner
-  measure ncloc is 664
-  measure lines is 453
+  measure lines is 664
+  measure ncloc is 453
   measure files is 3
 stop server
