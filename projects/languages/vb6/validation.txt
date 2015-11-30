@@ -3,6 +3,6 @@ start server
 sonar-runner
 verify org.sonarqube:vb-simple-sq-scanner
   measure lines is 453
-  measure ncloc is 140
+  measure ncloc is 664
   measure files is 3
 stop server
