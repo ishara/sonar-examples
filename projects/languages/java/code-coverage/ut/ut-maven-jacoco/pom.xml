@@ -62,9 +62,9 @@
 
       <dependencies>
         <dependency>
-          <groupId>org.codehaus.sonar-plugins.java</groupId>
+          <groupId>org.sonarsource.java</groupId>
           <artifactId>sonar-jacoco-listeners</artifactId>
-          <version>1.2</version>
+          <version>3.8</version>
           <scope>test</scope>
         </dependency>
       </dependencies>
