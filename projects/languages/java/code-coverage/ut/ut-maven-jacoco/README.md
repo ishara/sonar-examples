@@ -2,9 +2,9 @@ This example demonstrates how to import JUnit and JaCoCo reports.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.2 or higher
-* [SonarQube Java Ecosystem](http://docs.sonarqube.org/display/SONAR/Java+Plugin) 2.2 or higher
-* Maven 2.2.1 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Java Plugin](http://docs.sonarqube.org/display/SONAR/Java+Plugin) 3.8+
+* Maven 3.0+
 
 
 Usage
@@ -15,7 +15,7 @@ Usage
 
 * To get coverage per tests information, you will need to activate the profile when running the instrumented tests:
 
-        mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean install -Pcoverage-per-test
+        mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pcoverage-per-test
 
 * Analyze the project with SonarQube using Maven:
 
