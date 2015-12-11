@@ -1,5 +1,5 @@
 start server
-  with plugin cpp 3.7
+  with plugin cpp 3.8
 sonar-runner
 verify org.sonarqube:c-simple-sq-scanner
   measure lines is 26

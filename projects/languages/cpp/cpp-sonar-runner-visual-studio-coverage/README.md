@@ -2,10 +2,10 @@ This example demonstrates how to analyze a Visual Studio project with code cover
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5.2 or higher
-* [SonarQube Runner](http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Runner) 2.0 or higher
-* [SonarSource C/C++ Plugin](http://www.sonarsource.com/products/plugins/languages/cpp/) 3.4 or higher
-* [SonarSource Build Wrapper](http://www.sonarsource.com/products/plugins/languages/c-cpp-objectivec/downloads/) 3.2 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner) 2.4+
+* [SonarSource C/C++ Plugin](http://www.sonarsource.com/products/plugins/languages/cpp/) 3.8+
+* [SonarSource Build Wrapper](http://www.sonarsource.com/products/plugins/languages/c-cpp-objectivec/downloads/) 3.8+
 
 Usage
 =====
