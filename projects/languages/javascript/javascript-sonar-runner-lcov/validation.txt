@@ -1,5 +1,5 @@
 start server
-  with plugin javascript 2.8
+  with plugin javascript 2.9
 sonar-runner
 verify org.sonarqube:javascript-lcov-sq-scanner
   measure lines is 141
