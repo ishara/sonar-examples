@@ -1,0 +1,14 @@
+<errors>
+	<error>
+		<type>ExampleRule1</type>
+		<details>More precise description of the error</details>
+		<filePath>MyClass.foo</filePath>
+		<line>5</line>
+	</error>
+	<error>
+		<type>ExampleRule2</type>
+		<details>More precise description of the error</details>
+		<filePath>MyClass.foo</filePath>
+		<line>9</line>
+	</error>
+</errors>
