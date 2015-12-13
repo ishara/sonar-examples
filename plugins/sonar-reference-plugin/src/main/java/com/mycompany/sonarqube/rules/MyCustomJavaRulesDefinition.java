@@ -1,4 +1,4 @@
-package com.mycompany.sonar.reference.rules;
+package com.mycompany.sonarqube.rules;
 
 import org.sonar.api.rule.RuleStatus;
 import org.sonar.api.rule.Severity;

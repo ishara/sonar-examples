@@ -1,4 +1,4 @@
-package com.mycompany.sonar.reference.batch;
+package com.mycompany.sonarqube.scanner;
 
 import org.sonar.api.batch.Sensor;
 import org.sonar.api.batch.SensorContext;

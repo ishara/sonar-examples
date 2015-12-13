@@ -17,19 +17,14 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package com.mycompany.sonar.reference.rules;
+package com.mycompany.sonarqube.rules;
 
+import com.mycompany.sonarqube.FooLanguage;
 import org.sonar.api.profiles.ProfileDefinition;
 import org.sonar.api.profiles.RulesProfile;
 import org.sonar.api.utils.ValidationMessages;
 
-import com.mycompany.sonar.reference.FooLanguage;
-
 public final class FooLintProfile extends ProfileDefinition {
-
-  public FooLintProfile() {
-
-  }
 
   @Override
   public RulesProfile createProfile(ValidationMessages validation) {

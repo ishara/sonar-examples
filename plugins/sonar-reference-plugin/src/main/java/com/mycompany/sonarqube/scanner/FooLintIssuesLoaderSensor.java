@@ -1,15 +1,13 @@
-package com.mycompany.sonar.reference.batch;
+package com.mycompany.sonarqube.scanner;
 
+import com.mycompany.sonarqube.rules.FooLintRulesDefinition;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.annotation.CheckForNull;
 import javax.xml.stream.XMLStreamException;
 
 import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.Sensor;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.batch.fs.FileSystem;
@@ -21,8 +19,10 @@ import org.sonar.api.issue.Issue;
 import org.sonar.api.resources.Project;
 import org.sonar.api.rule.RuleKey;
 import org.sonar.api.rules.RuleFinder;
+import org.sonar.api.utils.log.Logger;
+import org.sonar.api.utils.log.Loggers;
 
-import com.mycompany.sonar.reference.rules.FooLintRulesDefinition;
+import static java.lang.String.format;
 
 /**
  * The goal of this Sensor is to load the results of an analysis performed by a fictive external tool named: FooLint
@@ -31,7 +31,7 @@ import com.mycompany.sonar.reference.rules.FooLintRulesDefinition;
  */
 public class FooLintIssuesLoaderSensor implements Sensor {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(FooLintIssuesLoaderSensor.class);
+  private static final Logger LOGGER = Loggers.get(FooLintIssuesLoaderSensor.class);
 
   protected static final String REPORT_PATH_KEY = "sonar.foolint.reportPath";
 
@@ -106,7 +106,7 @@ public class FooLintIssuesLoaderSensor implements Sensor {
     }
   }
 
-  private boolean saveIssue(@CheckForNull InputFile inputFile, int line, String externalRuleKey, String message) {
+  private boolean saveIssue(InputFile inputFile, int line, String externalRuleKey, String message) {
     RuleKey rule = RuleKey.of(FooLintRulesDefinition.getRepositoryKeyForLanguage(inputFile.language()), externalRuleKey);
 
     Issuable issuable = perspectives.as(Issuable.class, inputFile);
@@ -124,9 +124,9 @@ public class FooLintIssuesLoaderSensor implements Sensor {
       LOGGER.debug("issue == null? " + (issue == null));
       try {
         result = issuable.addIssue(issue);
-        LOGGER.debug("after addIssue: result=" + result);
+        LOGGER.debug("after addIssue: result={}", result);
       } catch (org.sonar.api.utils.MessageException me) {
-        LOGGER.error(String.format("Can't add issue on file %s at line %d.", inputFile.absolutePath(), line), me);
+        LOGGER.error(format("Can't add issue on file %s at line %d.", inputFile.absolutePath(), line), me);
       }
 
     } else {

@@ -1,24 +1,15 @@
-package com.mycompany.sonar.reference.rules;
+package com.mycompany.sonarqube.rules;
 
+import com.mycompany.sonarqube.FooLanguage;
 import java.io.InputStream;
-import java.util.List;
-
+import java.nio.charset.StandardCharsets;
 import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.api.server.rule.RulesDefinitionXmlLoader;
-
-import com.google.common.base.Charsets;
-import com.google.common.collect.ImmutableList;
-import com.mycompany.sonar.reference.FooLanguage;
 
 public final class FooLintRulesDefinition implements RulesDefinition {
 
   protected static final String KEY = "foolint";
   protected static final String NAME = "FooLint";
-
-  protected static final List<String> LANGUAGE_KEYS = ImmutableList.of(FooLanguage.KEY);
-
-  public FooLintRulesDefinition() {
-  }
 
   protected String rulesDefinitionFilePath() {
     return "/rules.xml";
@@ -30,7 +21,7 @@ public final class FooLintRulesDefinition implements RulesDefinition {
     InputStream rulesXml = this.getClass().getResourceAsStream(rulesDefinitionFilePath());
     if (rulesXml != null) {
       RulesDefinitionXmlLoader rulesLoader = new RulesDefinitionXmlLoader();
-      rulesLoader.load(repository, rulesXml, Charsets.UTF_8.name());
+      rulesLoader.load(repository, rulesXml, StandardCharsets.UTF_8.name());
     }
 
     repository.done();
@@ -38,10 +29,9 @@ public final class FooLintRulesDefinition implements RulesDefinition {
 
   @Override
   public void define(Context context) {
-    for (String languageKey : LANGUAGE_KEYS) {
-      defineRulesForLanguage(context, FooLintRulesDefinition.getRepositoryKeyForLanguage(languageKey), FooLintRulesDefinition.getRepositoryNameForLanguage(languageKey),
-        languageKey);
-    }
+    String repositoryKey = FooLintRulesDefinition.getRepositoryKeyForLanguage(FooLanguage.KEY);
+    String repositoryName = FooLintRulesDefinition.getRepositoryNameForLanguage(FooLanguage.KEY);
+    defineRulesForLanguage(context, repositoryKey, repositoryName, FooLanguage.KEY);
   }
 
   public static String getRepositoryKeyForLanguage(String languageKey) {

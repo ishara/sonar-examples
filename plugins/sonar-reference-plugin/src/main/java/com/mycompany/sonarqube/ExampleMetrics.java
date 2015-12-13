@@ -1,4 +1,4 @@
-package com.mycompany.sonar.reference;
+package com.mycompany.sonarqube;
 
 import java.util.Arrays;
 import java.util.List;
