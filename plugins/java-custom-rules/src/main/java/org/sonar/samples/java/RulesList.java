@@ -15,8 +15,6 @@ import com.google.common.collect.ImmutableList;
 
 public final class RulesList {
 
-  public static final String REPOSITORY_KEY = "myrepo";
-
   private RulesList() {
   }
 

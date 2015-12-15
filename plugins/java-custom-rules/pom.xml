@@ -30,6 +30,12 @@
 			<version>${java.plugin.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.sonarsource.java</groupId>
+			<artifactId>java-squid</artifactId>
+			<version>${java.plugin.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.sonarsource.sslr-squid-bridge</groupId>

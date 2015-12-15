@@ -15,9 +15,11 @@ import org.sonar.squidbridge.annotations.AnnotationBasedRulesDefinition;
  */
 public class MyJavaRulesDefinition implements RulesDefinition {
 
+  public static final String REPOSITORY_KEY = "myrepo";
+
   @Override
   public void define(Context context) {
-    NewRepository repository = context.createRepository(RulesList.REPOSITORY_KEY, Java.KEY);
+    NewRepository repository = context.createRepository(REPOSITORY_KEY, Java.KEY);
     repository.setName("MyRepo");
 
     AnnotationBasedRulesDefinition.load(repository, "java", RulesList.getChecks());
