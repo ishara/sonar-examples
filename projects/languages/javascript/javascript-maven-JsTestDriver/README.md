@@ -3,7 +3,7 @@ This example demonstrates how to analyze a JavaScript project with Maven running
 Prerequisites
 =============
 * [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
-* [Sonar JavaScript Plugin](http://docs.sonarqube.org/display/PLUG/JavaScript+Plugin) 2.9+
+* [Sonar JavaScript Plugin](http://docs.sonarqube.org/display/PLUG/JavaScript+Plugin) 2.10+
 * Maven 3.0+
 
 Usage
