@@ -7,7 +7,7 @@ namespace NUnitTestProject1
     public class NUnitTest1
     {
         [TestAttribute]
-        public void TestMethod1()
+        public void NUnitTestMethod1()
         {
             Assert.AreEqual(42, Program.Add(40, 2));
             Assert.AreEqual(42, Program.Add(0, 42));
