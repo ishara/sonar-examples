@@ -19,9 +19,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- Sonar -->
-    <sonar.language>java</sonar.language>
-    <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
   </properties>
 
@@ -30,18 +27,19 @@
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
-        <version>0.21.0</version>
+        <version>0.24.0</version>
         <extensions>true</extensions>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.7.1.201405082137</version>
+        <version>0.7.5.201505241946</version>
         <configuration>
+          <append>true</append>
           <includes>
             <include>example.*</include>
           </includes>
-          <destFile>${project.basedir}/../target/jacoco.exec</destFile>
+          <destFile>${sonar.jacoco.reportPath}</destFile>
         </configuration>
         <executions>
           <execution>
