@@ -2,7 +2,7 @@ This example demonstrates how to analyze a simple Java Maven project.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 2.12 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
 * Maven 2.2.1 or higher
 
 Usage

@@ -1,5 +1,5 @@
 start server
- with plugin java 3.8
+ with plugin java 3.10
 sonar-runner
 verify org.sonarqube:example-it-jacoco-sonar-scanner
   measure lines is 12
