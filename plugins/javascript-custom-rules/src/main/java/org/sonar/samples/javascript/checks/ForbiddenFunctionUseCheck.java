@@ -6,26 +6,25 @@
 package org.sonar.samples.javascript.checks;
 
 import com.google.common.collect.ImmutableSet;
+import java.util.Set;
 import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
+import org.sonar.plugins.javascript.api.tree.Tree.Kind;
 import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 import org.sonar.plugins.javascript.api.tree.expression.IdentifierTree;
-import org.sonar.plugins.javascript.api.visitors.BaseTreeVisitor;
+import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitorCheck;
 import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
 import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
-import java.util.Set;
-
 /**
- * Example of implementation of a check by extending {@link BaseTreeVisitor}.
- * BaseTreeVisitor provides method to visit node of the Abstract Syntax Tree
+ * Example of implementation of a check by extending {@link DoubleDispatchVisitorCheck}.
+ * DoubleDispatchVisitorCheck provides methods to visit nodes of the Abstract Syntax Tree
  * that represents the source code.
  * <p>
- * Those methods can be overriding to process information
- * related to node and issue can be created via the context that can be
- * accessed through {@link BaseTreeVisitor#getContext()}.
+ * Those methods can be overridden to process information
+ * related to node and issues can be created via {@link DoubleDispatchVisitorCheck#addIssue} methods}.
  */
 @Rule(
   key = "S1",
@@ -37,7 +36,7 @@ import java.util.Set;
   )
 @SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.DATA_RELIABILITY)
 @SqaleConstantRemediation("5min")
-public class ForbiddenFunctionUseCheck extends BaseTreeVisitor {
+public class ForbiddenFunctionUseCheck extends DoubleDispatchVisitorCheck {
 
   private static final Set<String> FORBIDDEN_FUNCTIONS = ImmutableSet.of("foo", "bar");
 
@@ -49,11 +48,11 @@ public class ForbiddenFunctionUseCheck extends BaseTreeVisitor {
   public void visitCallExpression(CallExpressionTree tree) {
     ExpressionTree callee = tree.callee();
 
-    if (callee instanceof IdentifierTree && FORBIDDEN_FUNCTIONS.contains(((IdentifierTree) callee).name())) {
-      getContext().addIssue(this, tree, "Remove the usage of this forbidden function.");
+    if (callee.is(Kind.IDENTIFIER_REFERENCE) && FORBIDDEN_FUNCTIONS.contains(((IdentifierTree) callee).name())) {
+      addIssue(tree, "Remove the usage of this forbidden function.");
     }
 
-    // super method must be called in order to visit what is under the function node in the
+    // super method must be called in order to visit what is under the function node in the syntax tree
     super.visitCallExpression(tree);
   }
 

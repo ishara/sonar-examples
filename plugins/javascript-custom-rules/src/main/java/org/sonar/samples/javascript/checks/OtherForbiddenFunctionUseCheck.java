@@ -7,6 +7,8 @@ package org.sonar.samples.javascript.checks;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import java.util.List;
+import java.util.Set;
 import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
@@ -15,15 +17,12 @@ import org.sonar.plugins.javascript.api.tree.Tree.Kind;
 import org.sonar.plugins.javascript.api.tree.expression.CallExpressionTree;
 import org.sonar.plugins.javascript.api.tree.expression.ExpressionTree;
 import org.sonar.plugins.javascript.api.tree.expression.IdentifierTree;
-import org.sonar.plugins.javascript.api.visitors.SubscriptionBaseTreeVisitor;
+import org.sonar.plugins.javascript.api.visitors.SubscriptionVisitorCheck;
 import org.sonar.squidbridge.annotations.SqaleConstantRemediation;
 import org.sonar.squidbridge.annotations.SqaleSubCharacteristic;
 
-import java.util.List;
-import java.util.Set;
-
 /**
- * Example of a check extending {@link SubscriptionBaseVisitor}.
+ * Example of a check extending {@link SubscriptionVisitorCheck}.
  * 
  * We define the kinds of the nodes that we subscribe to in {@link #nodesToVisit()}.
  * We can then override visitNode or leaveNode: these methods will be called for all nodes
@@ -38,7 +37,7 @@ import java.util.Set;
   )
 @SqaleSubCharacteristic(RulesDefinition.SubCharacteristics.DATA_RELIABILITY)
 @SqaleConstantRemediation("5min")
-public class OtherForbiddenFunctionUseCheck extends SubscriptionBaseTreeVisitor {
+public class OtherForbiddenFunctionUseCheck extends SubscriptionVisitorCheck {
 
   private static final Set<String> FORBIDDEN_FUNCTIONS = ImmutableSet.of("baz");
 
@@ -52,8 +51,8 @@ public class OtherForbiddenFunctionUseCheck extends SubscriptionBaseTreeVisitor 
     // we can do this cast because we subscribed only to nodes of kind CALL_EXPRESSION
     CallExpressionTree callExpressionTree = (CallExpressionTree) tree;
     ExpressionTree callee = callExpressionTree.callee();
-    if (callee instanceof IdentifierTree && FORBIDDEN_FUNCTIONS.contains(((IdentifierTree) callee).name())) {
-      getContext().addIssue(this, tree, "Remove the usage of this forbidden function.");
+    if (callee.is(Kind.IDENTIFIER_REFERENCE) && FORBIDDEN_FUNCTIONS.contains(((IdentifierTree) callee).name())) {
+      addIssue(tree, "Remove the usage of this forbidden function.");
     }
   }
 
