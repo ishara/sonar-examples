@@ -1,5 +1,5 @@
 start server
-  with plugin java 3.10
+  with plugin java 3.12
 sonar-runner
 verify org.sonarqube:java-simple-sq-scanner
   measure lines is 35
