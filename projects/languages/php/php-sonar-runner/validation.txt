@@ -1,5 +1,5 @@
 start server
-  with plugin php 2.7
+  with plugin php 2.8
 sonar-runner
 verify org.sonarqube:php-simple-sq-scanner
   measure lines is 215
