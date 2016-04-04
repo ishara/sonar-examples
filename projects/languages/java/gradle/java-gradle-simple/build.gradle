@@ -1,13 +1,7 @@
-apply plugin: 'java'
-apply plugin: 'org.sonarqube'
-apply plugin: 'jacoco'
-
-allprojects {  
-  ext.baseVersion = "0.1"
-  ext.snapshotVersion = true
-  
-  group = "org.sonarqube"
-  version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
+plugins {
+  id "java"
+  id "jacoco"
+  id "org.sonarqube" version "1.2"
 }
 
 sonarqube {
@@ -18,34 +12,29 @@ sonarqube {
     }
 }
 
-buildscript {
-    repositories { 
-      maven {
-        url "http://repo1.maven.org/maven2/"
-      }
-      maven {
-        url "https://plugins.gradle.org/m2/"
-      }
-      mavenLocal()
-    }
-    dependencies { 
-      classpath 'org.ajoberstar:gradle-jacoco:0.1.0'
-      classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
-    }
+allprojects {
+  ext.baseVersion = "0.1"
+  ext.snapshotVersion = true
+
+  group = "org.sonarqube"
+  version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
 }
 
 test {
   ignoreFailures = true
 }
 
-repositories { 
-  repositories { 
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+repositories {
+  repositories {
     maven {
       url "http://repo1.maven.org/maven2/"
     }
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
   }
-}
-
-dependencies {
-    testCompile 'junit:junit:4.12'
 }
