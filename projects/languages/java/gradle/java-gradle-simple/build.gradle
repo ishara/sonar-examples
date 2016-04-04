@@ -1,3 +1,4 @@
+// Uses DSL plugins resolution introduced in Gradle 2.1
 plugins {
   id "java"
   id "jacoco"
