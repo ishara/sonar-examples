@@ -1,10 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'org.sonarqube'
 
-allprojects {  
+allprojects {
   ext.baseVersion = "0.1"
   ext.snapshotVersion = true
-  
+
   group = "org.sonarqube"
   version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
 }
@@ -21,7 +21,7 @@ subprojects {
 }
 
 buildscript {
-    repositories { 
+    repositories {
       maven {
         url "http://repo1.maven.org/maven2/"
       }
@@ -30,7 +30,7 @@ buildscript {
       }
       mavenLocal()
     }
-    dependencies { 
-      classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
+    dependencies {
+      classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:1.2'
     }
 }

@@ -1,5 +1,0 @@
-sonarqube {
-    properties {
-        property "sonar.projectName", "Module #1"
-    }
-}
