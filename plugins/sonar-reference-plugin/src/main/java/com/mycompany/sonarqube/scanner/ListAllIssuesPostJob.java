@@ -52,7 +52,7 @@ public class ListAllIssuesPostJob implements org.sonar.api.batch.PostJob, CheckP
       String severity = issue.severity();
       boolean isNew = issue.isNew();
 
-      // just to illustrate, we dump some fields of the 'issue' in sysout (bad, very bad)
+      // just to illustrate, we dump some fields of the 'issue' into the logs
       LOGGER.info("{} : {}({})", ruleKey, issue.componentKey(), issueLine);
       LOGGER.info("isNew: {} | severity: {}", isNew, severity);
     }
