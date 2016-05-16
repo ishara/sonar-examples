@@ -24,7 +24,7 @@ REPORT ZZBGS106  MESSAGE-ID Z1.
 *              2.2F                                                    *
 *              3.0D                                                    *
 *                                                                      *
-* Programmer:  Benny G. S�rensen, BGS-Consulting                       *
+* Programmer:  Benny G. Serensen, BGS-Consulting                       *
 * Date:        Nov 1996.                                               *
 *                                                                      *
 * Version  1
