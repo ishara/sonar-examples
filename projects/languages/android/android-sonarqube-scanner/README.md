@@ -19,3 +19,6 @@ Usage
 * Analyze the project with SonarQube using the SonarQube Runner:
 
         sonar-runner
+
+
+In order to benefit from Android Lint rules, do not forget to use a SonarQube quality profile that contains Android Lint rules for your analyses.
