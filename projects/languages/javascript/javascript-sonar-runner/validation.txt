@@ -8,6 +8,4 @@ verify org.sonarqube:javascript-simple-sq-scanner
 verify org.sonarqube:javascript-simple-sq-scanner:src/Person.js
   measure lines is 32
   measure ncloc is 23
-  measure blocker_violations 4
-  measure major_violations 5
 stop server
