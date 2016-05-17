@@ -1,3 +1,22 @@
-# Analyze this project with SonarQube
+This example demonstrates how to analyze a .Net project with the SonarQube Scanner for MSBuild.
 
-See http://docs.sonarqube.org/x/bAAW for details on how to analyze this project using the MSBuild SonarQube Runner.
+Prerequisites
+=============
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner for MSBuild](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild) 2.0+
+* [SonarSource C# Plugin](http://docs.sonarqube.org/display/PLUG/C%23+Plugin) 5.0+
+* [Compatible .Net build environment](http://docs.sonarqube.org/display/SCAN/From+the+Command+Line)
+
+Usage
+=====
+* Run SonarQube Scanner for MSBuild begin phase:
+
+        MSBuild.SonarQube.Runner.exe begin /k:"org.sonarqube:csharp-simple-sq-scanner-msbuild" /n:"C# :: Simple Project :: SonarQube Scanner for MSBuild" /v:"1.0"
+
+* Build the project with MSBuild:
+
+        MSBuild.exe" /t:Rebuild
+
+* Run SonarQube Scanner for MSBuild end phase:
+
+        MSBuild.SonarQube.Runner.exe end
