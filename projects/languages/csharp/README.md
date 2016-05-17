@@ -2,10 +2,10 @@ This example demonstrates how to analyze a .Net project with the SonarQube Scann
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
 * [SonarQube Scanner for MSBuild](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild) 2.0+
 * [SonarSource C# Plugin](http://docs.sonarqube.org/display/PLUG/C%23+Plugin) 5.0+
-* [Compatible .Net build environment](http://docs.sonarqube.org/display/SCAN/From+the+Command+Line)
+* [Compatible .NET Build Environment](http://docs.sonarqube.org/display/SCAN/From+the+Command+Line)
 
 Usage
 =====
@@ -15,7 +15,7 @@ Usage
 
 * Build the project with MSBuild:
 
-        MSBuild.exe" /t:Rebuild
+        MSBuild.exe /t:Rebuild
 
 * Run SonarQube Scanner for MSBuild end phase:
 
