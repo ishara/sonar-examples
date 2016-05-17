@@ -2,8 +2,8 @@ This example demonstrates how to analyze a simple Android App with SonarQube Sca
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5 or higher
-* [SonarQube Scanner for Gradle Runner](http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner+for+Gradle) 1.1 or higher
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
+* [SonarQube Scanner for Gradle Runner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Gradle) 1.1 or higher
 * [SonarQube Android Lint Plugin](http://docs.sonarqube.org/display/SONAR/Android+Lint+Plugin) 1.1+
 * [Android SDK 23](http://developer.android.com/sdk/index.html)
 * [Android Build Tools 23.0.3](http://developer.android.com/tools/help/sdk-manager.html)
