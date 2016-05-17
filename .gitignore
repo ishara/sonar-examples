@@ -1,4 +1,7 @@
-# Maven
+# Android
+local.properties
+
+/# Maven
 target/
 
 # Gradle
