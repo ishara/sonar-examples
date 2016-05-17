@@ -2,11 +2,12 @@
 //   usage:
 //      BiggestUnInt2 <starting number> (optional argument, default is 1)
 //   example:
-//      BiggestUnInt2 4194305 
+//      BiggestUnInt2 4194305
 //   features:
 
 #include <iostream>
 #include <cstdlib>
+#include <cstdio>
 
 using namespace std;
 
@@ -19,8 +20,8 @@ int main(int argc, char* argv[])
   if(argc>1)   {
     sscanf( argv[1], "%u", &i ) ; // starting value
   }
-  cout << "#\ti \ti+(i-1)\t2i\n" ; 
-  cout << "#\t#### \t#######\t###\n" ; 
+  cout << "#\ti \ti+(i-1)\t2i\n" ;
+  cout << "#\t#### \t#######\t###\n" ;
   do {
     oldi = i ;
     j = i-1 ;
@@ -40,9 +41,9 @@ int main(int argc, char* argv[])
 
 void bitsout( unsigned int m )
 {
-  int lastbit  ; 
+  int lastbit  ;
   unsigned int two_to_power_i ;
-  
+
   for ( int i = 31 ; i >= 0 ; i -- ) {
     two_to_power_i = (1<<i) ;
     lastbit = ( two_to_power_i & m ) == 0 ? 0 : 1 ;
