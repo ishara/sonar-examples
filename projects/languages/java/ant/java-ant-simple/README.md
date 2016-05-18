@@ -2,8 +2,8 @@ This example demonstrates how to analyze a simple Java project with Ant.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
-* [SonarQube Scanner for Ant](http://docs.sonarqube.org/display/SONAR/Installing+and+Configuring+SonarQube+Scanner+for+Ant) 2.3+
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
+* [SonarQube Scanner for Ant](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Ant) 2.4.1+
 * [Ant](http://ant.apache.org/) 1.7.1 or higher
 
 Usage

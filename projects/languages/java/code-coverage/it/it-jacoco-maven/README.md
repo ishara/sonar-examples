@@ -2,7 +2,7 @@ This example demonstrates how to add information on integration tests coverage f
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
 * Maven 3.0+
 
 Usage
@@ -14,5 +14,3 @@ Usage
 * Analyze the project with SonarQube using Maven:
 
         mvn sonar:sonar
-
-

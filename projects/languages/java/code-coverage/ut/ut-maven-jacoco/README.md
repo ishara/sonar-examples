@@ -2,8 +2,8 @@ This example demonstrates how to import JUnit and JaCoCo reports.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
-* [SonarQube Java Plugin](http://docs.sonarqube.org/display/SONAR/Java+Plugin) 3.10+
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
+* [SonarQube Java Plugin](http://docs.sonarqube.org/display/PLUG/Java+Plugin) 3.13+
 * Maven 3.0+
 
 
@@ -20,4 +20,3 @@ Usage
 * Analyze the project with SonarQube using Maven:
 
         mvn sonar:sonar
-

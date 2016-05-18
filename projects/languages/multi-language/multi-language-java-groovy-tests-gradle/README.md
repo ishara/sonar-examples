@@ -2,7 +2,7 @@ This example demonstrates how to analyze Gradle project with mixed Groovy (Spock
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
 * [SonarQube Groovy Plugin](http://docs.sonarqube.org/display/PLUG/Groovy+Plugin) 1.3+
 
 Usage

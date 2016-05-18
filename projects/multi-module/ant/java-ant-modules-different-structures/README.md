@@ -3,8 +3,8 @@ Modules have different structures.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 3.0 or higher
-* [SonarQube Ant Task](http://docs.codehaus.org/x/QYKxDQ) 2.0 or higher
+* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube Scanner for Ant](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Ant) 2.4.1+
 * [Ant](http://ant.apache.org/) 1.7.1 or higher
 
 Usage

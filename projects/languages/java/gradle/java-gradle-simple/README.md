@@ -2,7 +2,7 @@ This example demonstrates how to analyze a simple Java project with Gradle.
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5.2 or higher
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
 * [Gradle](http://www.gradle.org/) 2.1 or higher
 
 Usage

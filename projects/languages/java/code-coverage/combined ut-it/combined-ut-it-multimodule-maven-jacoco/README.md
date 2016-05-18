@@ -3,7 +3,7 @@ SonarQube aggregates code coverage by unit tests and integration tests to comput
 
 Prerequisites
 =============
-* [SonarQube](http://www.sonarsource.org/downloads/) 4.5+
+* [SonarQube](http://www.sonarqube.org/downloads/) 4.5+
 * Maven 2.2.1 or higher
 
 Usage
