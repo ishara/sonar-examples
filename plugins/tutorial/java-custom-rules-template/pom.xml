@@ -10,7 +10,7 @@
 
   <properties>
     <sonar.plugin.api.version>4.5.7</sonar.plugin.api.version>
-    <java.plugin.version>6.0.0.20538</java.plugin.version>
+    <java.plugin.version>6.9.0.23563</java.plugin.version>
   </properties>
 
   <name>Java Custom Rules - Template</name>
