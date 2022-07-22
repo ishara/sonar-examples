@@ -9,7 +9,7 @@
   <packaging>sonar-plugin</packaging>
 
   <properties>
-    <sonar.plugin.api.version>4.5.7</sonar.plugin.api.version>
+    <sonar.plugin.api.version>5.1</sonar.plugin.api.version>
     <java.plugin.version>7.5.0.28054</java.plugin.version>
   </properties>
 
