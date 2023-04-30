@@ -1,0 +1,8 @@
+start server
+  with plugin cpp 3.8
+sonar-runner
+verify org.sonarqube:c-simple-sq-scanner
+  measure lines is 26
+  measure ncloc is 12
+  measure files is 1
+stop server

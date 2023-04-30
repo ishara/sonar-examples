@@ -1,0 +1,11 @@
+start server
+  with plugin javascript 2.11
+sonar-runner
+verify org.sonarqube:javascript-simple-sq-scanner
+  measure lines is 32
+  measure ncloc is 23
+  measure files is 1
+verify org.sonarqube:javascript-simple-sq-scanner:src/Person.js
+  measure lines is 32
+  measure ncloc is 23
+stop server

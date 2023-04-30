@@ -1,0 +1,14 @@
+start server
+  with plugin xml 1.4
+sonar-runner
+verify org.sonarqube:xml-custom-schema-sq-scanner
+  measure lines is 40
+  measure ncloc is 38
+  measure files is 2
+verify org.sonarqube:xml-custom-schema-sq-scanner:src/shiporder1.xml
+  measure lines is 22
+  measure ncloc is 21
+verify org.sonarqube:xml-custom-schema-sq-scanner:src/shiporder2.xml
+  measure lines is 18
+  measure ncloc is 17
+stop server

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BullseyeCoverage name="coverage.cov" dir="/Users/mpaladin/projects/sonar-examples/projects/languages/cpp/cpp-sonar-runner-bullseye/" buildId="532cbc332015-05-11 11:43:46" version="4" xmlns="http://www.bullseye.com/covxml">
+<src name="example.c" mtime="1431336404" fn_cov="1" fn_total="1" cd_cov="1" cd_total="2" d_cov="1" d_total="2">
+<fn name="main(int)" fn_cov="1" fn_total="1" cd_cov="1" cd_total="2" d_cov="1" d_total="2">
+<probe line="2" column="3" kind="function" event="full"/>
+<probe line="3" kind="decision" event="false"/>
+</fn>
+</src>
+</BullseyeCoverage>

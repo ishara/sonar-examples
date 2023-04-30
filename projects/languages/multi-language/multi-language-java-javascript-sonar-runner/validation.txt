@@ -1,0 +1,16 @@
+start server
+  with plugin java 3.7.1
+  with plugin javascript 2.8
+sonar-runner
+verify org.sonarqube:multi-language-project-java-javascript-sq-scanner
+  measure lines is 22
+  measure ncloc is 16
+  measure files is 2
+  measure classes is 1
+verify org.sonarqube:multi-language-project-java-javascript-sq-scanner:src/Helloworld.java
+  measure lines is 9
+  measure ncloc is 6
+verify org.sonarqube:multi-language-project-java-javascript-sq-scanner:src/Person.js
+  measure lines is 13
+  measure ncloc is 10
+stop server

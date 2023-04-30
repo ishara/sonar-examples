@@ -1,0 +1,8 @@
+start server
+  with plugin python 1.5
+sonar-runner
+verify org.sonarqube:python-coverage-sonar-scanner
+  measure lines is 10
+  measure ncloc is 8
+  measure files is 1
+stop server

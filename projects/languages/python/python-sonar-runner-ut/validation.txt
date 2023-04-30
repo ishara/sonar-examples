@@ -1,0 +1,11 @@
+start server
+  with plugin python 1.5
+sonar-runner
+verify org.sonarqube:python-ut-sonar-scanner
+  measure lines is 36
+  measure ncloc is 26
+  measure files is 3
+verify org.sonarqube:python-ut-sonar-scanner:src/samples/datepattern.py
+  measure lines is 34
+  measure ncloc is 26
+stop server

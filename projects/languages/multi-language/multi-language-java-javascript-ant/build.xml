@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Multi-language project (Java / JavaScript) analyzed with the SonarQube Ant Task" default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
+
+  <!-- ========= Define the main properties of this project ========= -->
+  <!-- Define the SonarQube properties -->
+  <property name="sonar.projectKey" value="org.sonarqube:multi-language-project-java-javascript-ant" />
+  <property name="sonar.projectName" value="Java and JavaScript :: SonarQube Scanner for Ant" />
+  <property name="sonar.projectVersion" value="1.0" />
+  <property name="sonar.sources" value="src" />
+  <property name="sonar.binaries" value="classes" />
+  <property name="sonar.sourceEncoding" value="UTF-8" />
+  
+  <!-- Add your basic SonarQube configuration below: sonar.jdbc.url, sonar.jdbc.username, etc. properties -->
+  <!--
+    <property name="sonar.jdbc.url" value="jdbc:..." />
+    <property name="sonar.jdbc.username" value="..." />
+    <property name="sonar.jdbc.password" value="..." />
+  -->
+
+  <!-- ========= Define "regular" targets: clean, compile, ... ========= -->
+  <path id="classpath">
+  </path>
+  
+  <property name="classes.dir" value="classes" />
+  <property name="sources.dir" value="src" />
+  
+  <target name="clean">
+    <delete dir=".sonar"/>
+	<delete dir="${classes.dir}"/>
+  </target>
+  
+  <target name="init">
+    <mkdir dir="${classes.dir}" />
+  </target>
+
+  <target name="compile" depends="init">
+    <javac destdir="${classes.dir}" classpathref="classpath" fork="true" debug="true" includeAntRuntime="false">
+      <src path="${sources.dir}" />
+    </javac>
+  </target>
+  
+  <!-- ========= Define SonarQube target ========= -->
+  <target name="sonar" depends="compile">
+    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+	  <!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+	  <classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
+    </taskdef>
+    
+	<!-- Execute SonarQube -->
+	<sonar:sonar />
+  </target>
+
+  <!-- ========= The main target "all" ========= -->  
+  <target name="all" depends="clean,compile,sonar"/>
+
+</project>

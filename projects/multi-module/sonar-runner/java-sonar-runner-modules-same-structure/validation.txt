@@ -1,0 +1,25 @@
+start server
+  with plugin java 3.7.1
+sonar-runner
+verify java-sonar-runner-modules-same-structure
+  measure lines is 17
+  measure ncloc is 10
+  measure files is 2
+  measure classes is 2
+verify java-sonar-runner-modules-same-structure:module1
+  measure lines is 9
+  measure ncloc is 5
+  measure files is 1
+  measure classes is 1
+verify java-sonar-runner-modules-same-structure:module1:src/Helloworld1.java
+  measure lines is 9
+  measure ncloc is 5
+verify java-sonar-runner-modules-same-structure:module2
+  measure lines is 8
+  measure ncloc is 5
+  measure files is 1
+  measure classes is 1
+verify java-sonar-runner-modules-same-structure:module2:src/Helloworld2.java
+  measure lines is 8
+  measure ncloc is 5
+stop server

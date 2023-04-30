@@ -1,8 +1,12 @@
-# Maven
+# Android
+local.properties
+
+/# Maven
 target/
 
 # Gradle
 .gradle/
+build/
 
 # Ant Working Directory
 .sonar/
@@ -11,6 +15,7 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea/
 
 # Eclipse
 .classpath
@@ -18,7 +23,7 @@ target/
 .settings
 
 # ---- Mac OS X
-.DS_Store?
+.DS_Store
 Icon?
 # Thumbnails
 ._*

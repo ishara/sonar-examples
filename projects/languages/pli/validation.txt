@@ -1,0 +1,8 @@
+start server
+  with plugin pli 1.3.1
+sonar-runner
+verify org.sonarqube:pli-simple-sq-scanner
+  measure lines is 1289
+  measure ncloc is 970
+  measure files is 4
+stop server

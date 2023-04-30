@@ -1,0 +1,10 @@
+start server
+  with plugin java 3.7.1
+  with plugin android 1.1
+ant debug
+sonar-runner
+verify org.sonarqube:android-simple-sq-scanner
+  measure lines is 18
+  measure ncloc is 13
+  measure files is 1
+stop server

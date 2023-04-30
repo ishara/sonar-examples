@@ -1,0 +1,11 @@
+start server
+  with plugin php 2.8
+sonar-runner
+verify org.sonarqube:php-simple-sq-scanner
+  measure lines is 215
+  measure ncloc is 115
+  measure files is 1
+verify org.sonarqube:php-simple-sq-scanner:src/Math.php
+  measure lines is 215
+  measure ncloc is 115
+stop server

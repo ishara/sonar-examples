@@ -1,0 +1,15 @@
+start server
+  with plugin java 3.12
+sonar-runner
+verify org.sonarqube:java-simple-sq-scanner
+  measure lines is 35
+  measure ncloc is 31
+  measure files is 2
+  measure classes is 2
+verify org.sonarqube:java-simple-sq-scanner:src/HelloWorld.java
+  measure lines is 7
+  measure ncloc is 5
+verify org.sonarqube:java-simple-sq-scanner:src/ComplexMethod.java
+  measure lines is 28
+  measure ncloc is 26
+stop server

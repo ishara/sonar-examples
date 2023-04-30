@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="3" errors="1" failures="1" skip="0"><testcase classname="src.samples.datepattern.DatePatternTest" name="testMatchesWeekday" time="0.000"><error type="exceptions.TypeError" message="__init__() takes exactly 4 arguments (5 given)"><![CDATA[Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 331, in run
+    testMethod()
+  File "/Users/alexandregigleux/Repos/sonar-examples/projects/languages/python/python-sonar-runner-ut/src/samples/datepattern.py", line 24, in testMatchesWeekday
+    p = DatePattern(0, 0, 0, 2) # 2 is Wednesday
+TypeError: __init__() takes exactly 4 arguments (5 given)
+]]></error></testcase><testcase classname="src.samples.datepattern.DatePatternTest" name="testMatchesYearAndMonthAsWildCards" time="0.000"><failure type="exceptions.AssertionError" message="False is not true"><![CDATA[Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 331, in run
+    testMethod()
+  File "/Users/alexandregigleux/Repos/sonar-examples/projects/languages/python/python-sonar-runner-ut/src/samples/datepattern.py", line 21, in testMatchesYearAndMonthAsWildCards
+    self.failUnless(p.matches(d))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 614, in deprecated_func
+    return original_func(*args, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 424, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+]]></failure></testcase><testcase classname="src.samples.datepattern.DatePatternTest" name="testMatchesYearAsWildCard" time="0.000"></testcase></testsuite>

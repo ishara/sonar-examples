@@ -1,0 +1,12 @@
+start server
+  with plugin flex 2.2.1
+sonar-runner
+verify org.sonarqube:flex-simple-sq-scanner
+  measure lines is 14
+  measure ncloc is 13
+  measure files is 1
+  measure classes is 1
+verify org.sonarqube:flex-simple-sq-scanner:src/Greeter.as
+  measure lines is 14
+  measure ncloc is 13
+stop server

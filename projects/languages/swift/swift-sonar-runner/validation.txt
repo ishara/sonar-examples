@@ -1,0 +1,11 @@
+start server
+  with plugin swift 1.5
+sonar-runner
+verify org.sonarqube:swift-simple-sq-scanner
+  measure lines is 11
+  measure ncloc is 6
+  measure files is 1
+verify org.sonarqube:swift-simple-sq-scanner:src/example.swift
+  measure lines is 11
+  measure ncloc is 6
+stop server

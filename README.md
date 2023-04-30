@@ -1,18 +1,17 @@
-# Sonar Usage and Examples
-
-Please add usage scenarios or links to articles that mention special use-cases below.
-Note that these examples are usually for Sonar 2.10 and greater versions.
-
 ## Configuration of Projects
 
-The directory /projects contains some typical configurations of projects for the multiple supported build tools (Maven, Ant, Java Runner).
+The directory /projects contains sample projects for:
+ * the different analyzers (SonarQube Runner, Maven, Ant)
+ * the different languages (Java, Cobol, .Net, etc.)
+ * the different ways to execute unit tests and get code coverage data
 
-## Sonar Plugins
+## SonarQube Plugins
 
-The directory /plugins contains the most frequent kinds of plugins :
- 
- * Extensions of rule engines like Checkstyle or PMD
+The directory /plugins contains the most frequent kinds of plugins:
+ * Extensions of rule engines like Java and JavaScript
  * Define a new metric, compute measures and display them in web app
 
+## SonarQube Web Service API
 
-
+The directory /ws contains project samples using the SonarQube web service API.
+ 

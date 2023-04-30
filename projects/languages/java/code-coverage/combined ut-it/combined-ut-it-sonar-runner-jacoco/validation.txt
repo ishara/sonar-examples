@@ -1,0 +1,21 @@
+start server
+  with plugin java 3.10
+sonar-runner
+verify org.sonarqube:java-ut-it-jacoco-sq-scanner
+  measure lines is 21
+  measure ncloc is 15
+  measure files is 1
+  measure classes is 1
+  measure tests is 1
+  measure test_success_density is 100.0	
+  measure coverage is 40.0
+  measure it_coverage is 50.0
+  measure overall_coverage is 80.0
+verify org.sonarqube:java-ut-it-jacoco-sq-scanner:src/main/java/example/HelloWorld.java
+  measure lines is 21
+  measure ncloc is 15
+  measure lines_to_cover is 10
+  measure uncovered_lines is 6
+  measure it_lines_to_cover is 10
+  measure it_uncovered_lines is 5
+stop server

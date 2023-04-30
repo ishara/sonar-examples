@@ -1,0 +1,11 @@
+start server
+  with plugin xml 1.4
+sonar-runner
+verify org.sonarqube:xml-sq-scanner
+  measure lines is 233
+  measure ncloc is 233
+  measure files is 1
+verify org.sonarqube:xml-sq-scanner:src/sonar_backup.xml
+  measure lines is 233
+  measure ncloc is 233
+stop server

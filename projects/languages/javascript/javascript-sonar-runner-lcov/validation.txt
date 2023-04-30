@@ -1,0 +1,13 @@
+start server
+  with plugin javascript 2.11
+sonar-runner
+verify org.sonarqube:javascript-lcov-sq-scanner
+  measure lines is 141
+  measure ncloc is 107
+  measure files is 4
+  measure coverage is 38.1
+verify org.sonarqube:javascript-lcov-sq-scanner:sources/com/company/Car.js
+  measure lines is 50
+  measure ncloc is 42
+  measure coverage is 58.3
+stop server

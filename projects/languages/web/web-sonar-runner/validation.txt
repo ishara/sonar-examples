@@ -1,0 +1,11 @@
+start server
+  with plugin web 2.4
+sonar-runner
+verify org.sonarqube:web-sq-scanner
+  measure lines is 51
+  measure ncloc is 37
+  measure files is 1
+verify org.sonarqube:web-sq-scanner:src/sample.xhtml
+  measure lines is 51
+  measure ncloc is 37
+stop server

@@ -1,0 +1,11 @@
+start server
+  with plugin css 1.5
+sonar-runner
+verify org.sonarqube:css-simple-sq-scanner
+  measure lines is 7258
+  measure ncloc is 7254
+  measure files is 2
+verify org.sonarqube:css-simple-sq-scanner:src/sonar.css
+  measure lines is 7169
+  measure ncloc is 7165
+stop server
